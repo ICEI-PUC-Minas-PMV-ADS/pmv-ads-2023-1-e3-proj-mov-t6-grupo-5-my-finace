@@ -26,6 +26,11 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 ## Modelo Físico
 
 Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+Além do arquivo fisico do BD, colocamos algumas imagens da representação dele
+![Arquitetura da Solução](img/tabela%20de%20usuario.png)
+![Arquitetura da Solução](img/meta.png)
+![Arquitetura da Solução](img/renda.png)
+![Arquitetura da Solução](img/despesas.png)
 
 ## Tecnologias Utilizadas
 
