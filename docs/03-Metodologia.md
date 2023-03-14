@@ -7,56 +7,67 @@ Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Defini�
 
 ## Relação de Ambientes de Trabalho
 
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito deverá ser apresentada em uma tabela que especifica que detalha Ambiente, Plataforma e Link de Acesso. 
-Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
+Para que tenhamos uma boa produtividade no desenvolvimento do nosso software iremos usar as seguintes ferramentas:
+|Ambiente                        | Plataforma            |Link de Acesso                                           |
+|--------------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Documentos do Projeto           |One Drive              | https://sgapucminasbr-my.sharepoint.com/:w:/r/personal/1348060_sga_pucminas_br/_layouts/15/Doc.aspx?sourcedoc=%7B8A7122F0-07A5-4299-B679-9A09154F41A9%7D&file=MY%20FINANCES%20.docx&action=default&mobileredirect=true |
+|Repositório de Código Fonte      |Git Hub                | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t6-grupo-5-my-finace |
+|Projeto de Interface e wireframes |Figma                  | |
+|Gerenciamento de Projeto          |Trello             | https://trello.com/b/TCtybrpI/projeto-eixo-3  |
 
 ## Controle de Versão
+O controle de versão é importante para que haja uma organização de atualizações e mudanças que estão sendo feitas pela equipe no projeto. 
 
-A ferramenta de controle de versão adotada no projeto foi o
-[Git](https://git-scm.com/), sendo que o [Github](https://github.com)
-foi utilizado para hospedagem do repositório.
+A ferramenta de controle de versão adotada no projeto foi o Git, sendo que o Github foi utilizado para hospedagem do repositório. 
 
-O projeto segue a seguinte convenção para o nome de branches:
+O projeto segue a seguinte convenção para o nome de branches: 
 
-- `main`: versão estável já testada do software
-- `unstable`: versão já testada do software, porém instável
-- `testing`: versão em testes do software
-- `dev`: versão de desenvolvimento do software
+main: versão estável já testada do software. 
 
-Quanto à gerência de issues, o projeto adota a seguinte convenção para
-etiquetas:
+unstable: versão já testada do software, porém instável. 
 
-- `documentation`: melhorias ou acréscimos à documentação
-- `bug`: uma funcionalidade encontra-se com problemas
-- `enhancement`: uma funcionalidade precisa ser melhorada
-- `feature`: uma nova funcionalidade precisa ser introduzida
+testing: versão em testes do software. 
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
+dev: versão de desenvolvimento do software. 
 
-> **Links Úteis**:
-> - [Microfundamento: Gerência de Configuração](https://pucminas.instructure.com/courses/87878/)
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
->  - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
-> - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
+Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas: 
+
+documentation: melhorias ou acréscimos à documentação. 
+
+bug: uma funcionalidade encontra-se com problemas. 
+
+enhancement: uma funcionalidade precisa ser melhorada. 
+
+feature: uma nova funcionalidade precisa ser introduzida. 
 
 ## Gerenciamento de Projeto
 
+Para gerenciamento do projeto utilizaremos a metodologia ágil scrum. 
+
 ### Divisão de Papéis
 
-Apresente a divisão de papéis entre os membros do grupo.
+Matheus Ferreira Pires – Desenvolvedor 
 
-Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
-- Scrum Master: Felipe Domingos;
-- Product Owner: Rommel Carneiro;
-- Equipe de Desenvolvimento: Pedro Penna, Pedro Ivo, Rodrigo Richard;
-- Equipe de Design: Simone Nogueira.
+Luis Othávio Santos da Silva - Desenvolvedor 
 
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-> - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles)
+Matheus Lemos Sampaio – Design e Desenvolvedor 
+
+Pedro Assis Silva de Almeida - Product Owner e Desenvolvedor 
+
+Vitor Hugo Silva Ribeiro- Scrum Master e Desenvolvedor  
+
+Para organização e distribuição de tarefas do projeto, utilizaremos o Trello estruturado da seguinte forma: 
+
+Backlog: Nessa parte fica todas as tarefas que vão ser desenvolvidas no projeto. Caso apareça alguma nova e direcionada nessa parte. 
+
+A Fazer (Sprint Backlog): E a sprint atual que estamos trabalhando. 
+
+Em Andamento: Quando a tarefas foi iniciada. 
+
+Concluido: Quando a tarefa for finalizada. 
+
+O quadro kanban do grupo no Trello disponível em: https://trello.com/b/TCtybrpI/projeto-eixo-3 , na figura mostra com ele está.
+
 
 ### Processo
 
