@@ -44,23 +44,21 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Atualmente, apps de instituições bancárias e outros sistemas financeiros não têm, ou não potencializam o uso de seu sistema para facilitar ao usuário a visualização sucinta de sua vida financeira para que o mesmo possa controlar suas finanças. 
+
+Para ilustrar, a seguir segue um diagrama referenciado no My Finances de como deverá funcionar de forma simplista os processos de visualização de finanças no sistema.
+
+![Situação Atual](img/AnaliseSituacaoAtual.png)
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+A concepção da modelagem dos processos de negócio neste projeto tem como principal alvo demonstrar de forma objetiva a função de cada requisito, deixando-os o mais claro possível para a organização. Facilitando a rotina para o desenvolvimento da aplicação.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 01 - Funcionamento do Sistema
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+Abaixo demonstra-se o diagrama BPMN de como deverá funcionar o sistema de acordo com os seus requisitos. 
 
-![Processo 1](img/02-bpmn-proc1.png)
-
-### Processo 2 – NOME DO PROCESSO
-
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
-
-![Processo 2](img/02-bpmn-proc2.png)
+![Diagrama BPMN](img/BPMN02.png)
 
 ## Indicadores de Desempenho
 

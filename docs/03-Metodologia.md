@@ -68,6 +68,8 @@ Concluido: Quando a tarefa for finalizada.
 
 O quadro kanban do grupo no Trello disponível em: https://trello.com/b/TCtybrpI/projeto-eixo-3 , na figura mostra com ele está.
 
+![Trello](img/TrelloConfig.png)
+
 
 ### Processo
 
