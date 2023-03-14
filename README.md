@@ -1,10 +1,10 @@
-# TÍTULO DO PROJETO
+# MY FINANCES
 
 `Analise e Desenvolvimento de Sistemas`
 
 `Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio`
 
-`1º/2023`
+`3º/2023`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
