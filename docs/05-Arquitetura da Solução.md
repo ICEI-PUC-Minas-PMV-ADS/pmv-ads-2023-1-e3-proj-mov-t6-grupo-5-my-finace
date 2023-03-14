@@ -50,15 +50,40 @@ Explique como a hospedagem e o lançamento da plataforma foi feita.
 
 ## Qualidade de Software
 
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
+Utilizaremos com base na norma de qualidade de produto de software ISO/IEC 9126. Assim levantamos 6 características com 2 subcaracterísticas cada:
 
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
+1. **Funcionalidade**
 
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
+* **Adequação:** Será analisado se o software atende a demanda para qual foi proposto. Foi escolhida essa sub-característica devido estar focada em atender pessoas que não tem o hábito de poupar seus ganhos ou não terem controle de quanto está restando de sua renda no final do mês.
+ 
+* **Segurança:** Manter os dados protegidos é uma das principais preocupações quando se fala em aplicação mobile, sendo assim, esse tópico irá avaliar a segurança da senha de acesso e os dados inseridos pelo usuário.
 
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
+2. **Confiabilidade:**
+
+* **Tolerância a falhas:** Se tratando de uma aplicação que exige a inserção de dados do usuário manualmente, pode-se estar sujeita a falhas como perda dos dados em sua inclusão. A tolerância deve ser avaliada de modo que o usuário não perca informações essenciais. 
+
+* **Recuperabilidade:** Relacionado ao tópico anterior, será avaliado a recuperação de dados em eventos de falhas.
+
+3. **Usabilidade**
+
+* **Inteligibilidade:** Um software é voltado para o usuário e de nada vale um software que não cumpre suas funcionalidades e que possui um visual confuso. Pensando nisso, criaremos uma interface com o propósito de fácil visibildiade e intuitiva. 
+ 
+* **Apreensibilidade:** Nesse tópico será avaliada a dificuldade para realização de determinadas tarefas dentro do aplicativo.
+
+4. **Eficiência**
+
+* **Comportamento em relação ao tempo:** Em um aplicativo mobile é evidente que o usuário espera agilidade na apresentação das informações em sua tela, com isto, iremos aprimorar o desempenho da aplicação. 
+
+* **Utilização de Recursos:** Com relação com o tópico anterior, será analisada a entrega de dados para garantir um tempo aceitável nas apresentações das informações ao usuário, sem necessitar de um grande uso de sua memória.
+
+5. **Manutenabilidade**
+
+* **Analisabilidade:** Pensando numa maior facilidade para a equipe de desenvolvimento, será analisado o código e averiguado a dificuldade ou facilidade na identificação de problemas que precisam ser resolvidos. 
+
+* **Modificabilidade:** Analisar a documentação e a identação de códigos, assim os desenvolvedores teram uma maior facilidade para identificar as funções de cada parte do código.
+
+6. **Portabilidade:**	 
+
+* **Capacidade de instalação:** Nesse tópico será feito a avaliação das possíveis dificuldades enfrentadas para a instalação do aplicativo. 
+
+* **Coexistência:** Será avaliado se há conflitos com os sistemas operacionais mobile.
