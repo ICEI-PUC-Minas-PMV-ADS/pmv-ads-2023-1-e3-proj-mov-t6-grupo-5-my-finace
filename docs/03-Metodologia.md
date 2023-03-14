@@ -22,23 +22,23 @@ A ferramenta de controle de versão adotada no projeto foi o Git, sendo que o Gi
 
 O projeto segue a seguinte convenção para o nome de branches: 
 
-main: versão estável já testada do software. 
+- `main`: versão estável já testada do software. 
 
-unstable: versão já testada do software, porém instável. 
+- `unstable`: versão já testada do software, porém instável. 
 
-testing: versão em testes do software. 
+- `testing`: versão em testes do software. 
 
-dev: versão de desenvolvimento do software. 
+- `dev`: versão de desenvolvimento do software. 
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas: 
 
-documentation: melhorias ou acréscimos à documentação. 
+- `documentation`: melhorias ou acréscimos à documentação. 
 
-bug: uma funcionalidade encontra-se com problemas. 
+- `bug`: uma funcionalidade encontra-se com problemas. 
 
-enhancement: uma funcionalidade precisa ser melhorada. 
+- `enhancement`: uma funcionalidade precisa ser melhorada. 
 
-feature: uma nova funcionalidade precisa ser introduzida. 
+- `feature`: uma nova funcionalidade precisa ser introduzida. 
 
 ## Gerenciamento de Projeto
 
@@ -46,25 +46,25 @@ Para gerenciamento do projeto utilizaremos a metodologia ágil scrum.
 
 ### Divisão de Papéis
 
-Matheus Ferreira Pires – Desenvolvedor 
+- Luis Othávio Santos da Silva - Desenvolvedor
 
-Luis Othávio Santos da Silva - Desenvolvedor 
+- Matheus Ferreira Pires – Desenvolvedor  
 
-Matheus Lemos Sampaio – Design e Desenvolvedor 
+- Matheus Lemos Sampaio – Design e Desenvolvedor 
 
-Pedro Assis Silva de Almeida - Product Owner e Desenvolvedor 
+- Pedro Assis Silva de Almeida - Product Owner e Desenvolvedor 
 
-Vitor Hugo Silva Ribeiro- Scrum Master e Desenvolvedor  
+- Vitor Hugo Silva Ribeiro- Scrum Master e Desenvolvedor  
 
 Para organização e distribuição de tarefas do projeto, utilizaremos o Trello estruturado da seguinte forma: 
 
-Backlog: Nessa parte fica todas as tarefas que vão ser desenvolvidas no projeto. Caso apareça alguma nova e direcionada nessa parte. 
+- `Backlog`: Nessa parte fica todas as tarefas que vão ser desenvolvidas no projeto. Caso apareça alguma nova e direcionada nessa parte. 
 
-A Fazer (Sprint Backlog): E a sprint atual que estamos trabalhando. 
+- `A Fazer (Sprint Backlog)`: E a sprint atual que estamos trabalhando. 
 
-Em Andamento: Quando a tarefas foi iniciada. 
+- `Em Andamento`: Quando a tarefas foi iniciada. 
 
-Concluido: Quando a tarefa for finalizada. 
+- `Concluido`: Quando a tarefa for finalizada.
 
 O quadro kanban do grupo no Trello disponível em: https://trello.com/b/TCtybrpI/projeto-eixo-3 , na figura mostra com ele está.
 
