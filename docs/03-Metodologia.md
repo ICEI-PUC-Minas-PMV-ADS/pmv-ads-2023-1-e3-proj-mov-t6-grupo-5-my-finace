@@ -91,7 +91,7 @@ Para a gerenciar os processos e automatizar os fluxos de tarefas do projeto, o t
 
 O quadro kanban de processos encontra-se no Trello disponível em: https://trello.com/b/TCtybrpI/projeto-eixo-3, a seguir temos a imagem para visualização:
 
-![Trello](img/02-trello.jpg)
+![Trello](img/03-Trello.jpg)
 
 
 ### Ferramentas
