@@ -66,62 +66,42 @@ Para organização e distribuição de tarefas do projeto, utilizaremos o Trello
 
 - `Concluido`: Quando a tarefa for finalizada.
 
-O quadro kanban do grupo no Trello disponível em: https://trello.com/b/TCtybrpI/projeto-eixo-3 , na imagem abaixo mostra como ele está.
+O quadro kanban do grupo no Trello disponível em: https://trello.com/b/TCtybrpI/projeto-eixo-3, na imagem abaixo mostra como ele está.
 
 ![Trello](img/TrelloConfig.png)
 
 
 ### Processo
 
-Para a gerenciar os processos e automatização dos fluxos de tarefas do projeto, o time My Finances utiliza-se o work board ou work space, ferramenta visual do Trello, com estrutura simples, flexível e poderosa para o desenvolvimento com os seguintes status:
+Para a gerenciar os processos e automatizar os fluxos de tarefas do projeto, o time My Finances utiliza-se o work board ou work space, ferramenta visual do Trello, com estrutura simples, flexível e poderosa para o desenvolvimento com os seguintes status:
 
+- **Documentation:** sequência das tarefas referentes à documentação de contexto que serão trabalhadas pela equipe, conforme cronograma do curso de Análise Desenvolvimento de Sistemas da Pontifícia Universidade Católica de Minas Gerais (PUC Minas).
 
+- **Useful Links:** Nesse cartão tem os links dos templetes de consulta para auxilio do processo do projeto.
 
+- **Backlog:** Nessa coluna, encontra-se todas as pendências das etapas da entrega a ser processadas. 
 
+- **To Do:** Nessa coluna, estão alocadas as tarefas estabelecidas para a Sprint atual e que ainda não foram iniciadas, assim como os membros da equipe responsáveis por cada item.
 
+- **In Progress:** Tarefas que já foram iniciadas mas ainda não finalizadas, são acompanhadas rotineiramente seguindo os ritos da metodologia ágil.
 
+- **Test Phase:** Tarefas iniciadas e finalizadas. Etapa de extrema importância no processo de desenvolvimento de software, visam validar se a aplicação está funcionando corretamente e se atende aos requisitos especificados.
 
+- **Concluded:** Tarefas concluídas e aprovadas no teste de qualidade.
 
+O quadro kanban de processos encontra-se no Trello disponível em: https://trello.com/b/TCtybrpI/projeto-eixo-3, a seguir temos a imagem para visualização:
 
+![Trello](img/TrelloConfig.png)
 
-
-To Do: Nessa coluna, estão alocadas as tarefas estabelecidas para a Sprint atual e que ainda não foram iniciadas, assim como os membros da equipe responsáveis por cada item.
-
-In progress: Tarefas que já foram iniciadas mas ainda não finalizadas, são acompanhadas rotineiramente seguindo os ritos da metodologia ágil.
-
-Test: Tarefas iniciadas e finalizadas, passam por validações de negócio e de lógica, assim preservando um controle de qualidade e evitando que aconteça bugs inesperados.
-
-Test Return: Coluna para sinalizar tarefas que de alguma maneira não passaram no teste de qualidade e sendo necessário um retrabalho para passar no teste de qualidade.
-
-Waiting Deploy: Quando uma tarefa tiver sido iniciada e finalizada, é movida para a coluna de waiting deploy, para que o responsável revise o código feito e aprove para as branch de teste.
-
-Done: Tarefas concluídas e aprovadas no teste de qualidade.
-
-
-
-
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links Úteis**:
-> - [Planejamento e Gestáo Ágil de Projetos](https://pucminas.instructure.com/courses/87878/pages/unidade-2-tema-2-utilizacao-de-ferramentas-para-controle-de-versoes-de-software)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards)
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
 
 ### Ferramentas
 
-As ferramentas empregadas no projeto são:
+A seguir temos as ferramentas empregadas no projeto: 
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
-
-O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. As ferramentas de comunicação utilizadas possuem integração semelhante e por isso foram selecionadas. Por fim, para criar diagramas utilizamos essa ferramenta por melhor captar as necessidades da nossa solução.
-
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
+- **Editor de Código:** O editor de código escolhido foi o _Visual Studio_ pela integração com outras ferramentas utilizadas no projeto como _GitHub_ e o _SQL Server_.
+- **Ferramentas de comunicação:** A ferramenta de comunicação escolhida foi o _Microsoft Teams_ e _Discord_ devido a facilidade de comunicação, reuniões em vídeo, compartilhamento de arquivos e a criação de um ambiente de trabalho exclusivamente focado no nosso projeto.
+- **Ferramentas de desenho de tela (wireframing):** A ferramenta escolhida para a elaboração dos wireframes foi o _Figma_. A escolha se deu dado a sua capacidade de geração de wireframes interativos detalhados.
+- **Ferramentas de elaboração de diagramas:** Para a elaboração dos diversos diagramas do projeto (diagramas de fluxo, diagramas de classes, modelo ER e esquema relacional), a ferramenta _Figma_ foi escolhida por conta de sua versatilidade para elaboração de diagramas de diversos tipos.
+- **Ferramentas de controle de versão:** A ferramenta de controle de versão escolhida foi o _Git_, cuja utilização se deu através da integração com o editor de código _Visual Studio_, para a hospedagem do repositório será utilizado o _GitHub_. Essa escolha foi feita devido à robustez dessas ferramentas e a familiaridade dos membros da equipe com as elas.
+- **Ferramenta de gerenciamento de projeto:** A ferramenta _Github_ foi escolhida para a organização e distribuição das tarefas seguindo o modelo Scrum, conforme descrito na subseção “Processo”. A ferramenta foi escolhida dada sua facilidade de uso e sua compatibilidade com a metodologia Scrum, com diversos materiais disponíveis sobre sua integração com esta.
+   
