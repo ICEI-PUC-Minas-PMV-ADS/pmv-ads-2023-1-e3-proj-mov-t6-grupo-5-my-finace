@@ -66,12 +66,39 @@ Para organização e distribuição de tarefas do projeto, utilizaremos o Trello
 
 - `Concluido`: Quando a tarefa for finalizada.
 
-O quadro kanban do grupo no Trello disponível em: https://trello.com/b/TCtybrpI/projeto-eixo-3 , na figura mostra com ele está.
+O quadro kanban do grupo no Trello disponível em: https://trello.com/b/TCtybrpI/projeto-eixo-3 , na imagem abaixo mostra como ele está.
 
 ![Trello](img/TrelloConfig.png)
 
 
 ### Processo
+
+Para a gerenciar os processos e automatização dos fluxos de tarefas do projeto, o time My Finances utiliza-se o work board ou work space, ferramenta visual do Trello, com estrutura simples, flexível e poderosa para o desenvolvimento com os seguintes status:
+
+
+
+
+
+
+
+
+
+
+
+To Do: Nessa coluna, estão alocadas as tarefas estabelecidas para a Sprint atual e que ainda não foram iniciadas, assim como os membros da equipe responsáveis por cada item.
+
+In progress: Tarefas que já foram iniciadas mas ainda não finalizadas, são acompanhadas rotineiramente seguindo os ritos da metodologia ágil.
+
+Test: Tarefas iniciadas e finalizadas, passam por validações de negócio e de lógica, assim preservando um controle de qualidade e evitando que aconteça bugs inesperados.
+
+Test Return: Coluna para sinalizar tarefas que de alguma maneira não passaram no teste de qualidade e sendo necessário um retrabalho para passar no teste de qualidade.
+
+Waiting Deploy: Quando uma tarefa tiver sido iniciada e finalizada, é movida para a coluna de waiting deploy, para que o responsável revise o código feito e aprove para as branch de teste.
+
+Done: Tarefas concluídas e aprovadas no teste de qualidade.
+
+
+
 
 Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
  
