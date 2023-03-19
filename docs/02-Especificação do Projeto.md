@@ -98,6 +98,32 @@ Lembre-se que cada requisito deve corresponder à uma e somente uma
 característica alvo da sua solução. Além disso, certifique-se de que
 todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
+
+## Mapeamento dos Requisitos
+
+Com o mapeamento dos processos organizacionais demonstrado anteriormente no Diagrama BPMN, podem ser feitas as seguintes relações quanto aos requisitos funcionais e não-funcionais elicitados e os processos mapeados: 
+
+
+| REQUISITOS FUNCIONAIS | PROCESSOS | TIPO DE USUÁRIO |
+|---|:---:|:---:|
+|RF- 01: O sistema deve possibilitar o usuário a criar metas para poupar dinheiro.  | - Fazer Login;<br> - Ir para Aba de criar metas. | Usuário |
+| RF-02: O sistema deve possibilitar o usuário a criar um Login para ter acesso as suas informações de maneira privada.  |  - Criar uma conta utilizando seus dados pessoais. | Usuário |
+| RF-03: O sistema deve permitir que o usuário registre todas as suas despesas para que o mesmo tenha um maior controle sobre seus gastos. | - Fazer login;<br> -Informar despesas. | Usuário |
+| RF-04: O sistema deve disponibilizar um gráfico que mostre a evolução das despesas do usuário mês a mês, para que o mesmo veja se está conseguindo alcançar seus objetivos. | - Fazer login;<br> - Informar despesas;<br> - Informar ganhos. | Usuário |
+| RF-05: O sistema deve possibilitar ao usuário registrar todas suas fontes de renda, para que o mesmo consiga gerenciar de onde está vindo o seu dinheiro. |  - Fazer login;<br> - Informar ganhos. | Usuário |
+| RF-06: O sistema enviará notificações ao usuário alertando sobre gastos excessivos ou alcance de metas. | - Estar conectado ao aplicativo. | Servidor |
+
+| REQUISITOS NÃO-FUNCIONAIS | PROCESSOS | BPMN |
+|:---:|:---:|:---:|
+| RNF-01: Aplicações deve ser compatível com os principais sistemas mobile. | - Todos | Ambas |
+| RNF-02: Site terá um layout minimalista.   | - Todos | Cliente |
+| RNF-03: Sistema deve ser organizado e de fácil visibilidade e ter uma interface dinâmica.  | - Todos | Cleinte |
+
+
+
+
+
+
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
