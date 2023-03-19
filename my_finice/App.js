@@ -1,14 +1,13 @@
 
 //import cabecalho from "./componentes/header.js";
 import React,{useState}from "react";
-import { View,Text,StyleSheet } from "react-native";
-import { TextInput,RadioButton,Switch,Button} from "react-native-paper";
+import { View,StyleSheet } from "react-native";
+import { TextInput,RadioButton,Switch,Button,Text} from "react-native-paper";
 
 function App() {
-const [data,setdata] = useState('');
-const [checked, setChecked] = React.useState('sim');
-const [isSwitchOn, setIsSwitchOn] = React.useState(false);
-const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
+  const [value, setValue] = React.useState('first');
+  const [isSwitchOn, setIsSwitchOn] = React.useState(false);
+  const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
   return (
     <View>
       <View>
@@ -24,6 +23,7 @@ const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
         placeholder="R$0,00"
         style={style.input}
         mode="outlined"
+        keyboardType="decimal-pad"
         theme={{ colors: { primary: 'green',underlineColor:'transparent',textColor:'red'}}}
       />
         <TextInput
@@ -33,66 +33,23 @@ const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
         mode="outlined"
         theme={{ colors: { primary: 'green',underlineColor:'transparent',}}}
       />
-    <View style={style.check}>
-      <Text>
-        {"Repete ?"}
-        <Switch color="green" label="repete"value={isSwitchOn} onValueChange={onToggleSwitch} />
-      </Text>
-      <Text>
-      {"Categoria da despesa"}
-      </Text>
-
-      <Text>
-        {"Educação"}
-        <RadioButton
-          color="green"
-          value="sim"
-          status={ checked === 'sim' ? 'checked' : 'unchecked' }
-          onPress={() => setChecked('sim')}
-        />
-         </Text>
-         <Text>
-        {"Saúde"}
-        <RadioButton
-        color="green"
-          value="Saúde"
-          status={ checked === 'Saúde' ? 'checked' : 'unchecked' }
-          onPress={() => setChecked('Saúde')}
-        />
-         </Text>
-         <Text>
-        {"Alimentação"}
-        <RadioButton
-        color="green"
-          value="Alimentação"
-          status={ checked === 'Alimentação' ? 'checked' : 'unchecked' }
-          onPress={() => setChecked('Alimentação')}
-        />
-        </Text>
-        <Text>
-          {"Lazer"}
-          <RadioButton
-            value="Lazer"
-            color="green"
-            status={ checked === 'Lazer' ? 'checked' : 'unchecked' }
-            onPress={() => setChecked('Lazer')}
-          />
-        </Text>
-        <Text>
-          {"Outros"}
-          <RadioButton
-            value="Outros"
-            color="green"
-            status={ checked === 'Outros' ? 'checked' : 'unchecked' }
-            onPress={() => setChecked('Outros')}
-          />
-        </Text>
-          <Button style={style.botao} mode="contained" onPress={() => console.log('Pressed')}>
-          SALVAR
-        </Button>
+     <View style={style.check}>
+      <Text>Categoria da despesa</Text>
+        <RadioButton.Group onValueChange={value => setValue(value)} value={value}>
+          <RadioButton.Item color="green"label="Saúde" value="Saúde" />
+          <RadioButton.Item color="green" label="Educação" value="Educação" />
+          <RadioButton.Item color="green" label="Lazer" value="Lazer" />
+          <RadioButton.Item color="green" label="Outros" value="Outros" />    
+        </RadioButton.Group>
+        
+      <Text variant="bodyMedium"> Repete ?</Text>
+        <Switch style={style.s} color="green" label="repete"value={isSwitchOn} onValueChange={onToggleSwitch} />
+            <Button style={style.botao} mode="contained" onPress={() => console.log('Pressed')}>
+            SALVAR
+          </Button>
       </View>
     </View>
-    </View>
+ </View>
   );
 }
 
@@ -111,8 +68,9 @@ const style = StyleSheet.create({
   check:{
     margin:8
   },
-  radios:{
-    color:"green"
+  s:{
+    top:-15,
+   
   }
 })
 
