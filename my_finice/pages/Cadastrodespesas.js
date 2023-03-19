@@ -1,16 +1,19 @@
 import React,{useState}from "react";
 import { View,StyleSheet } from "react-native";
-import { TextInput,RadioButton,Switch,Button,Text, Appbar,icon } from "react-native-paper";
+import { TextInput,RadioButton,Switch,Button,Text, Appbar } from "react-native-paper";
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Cb from "../componentes/Cb";
 import Input from "../componentes/Input";
+import { NavigationContainer } from "@react-navigation/native";
 function Cadastrodespesas() {
   const [value, setValue] = React.useState('first');
   const [isSwitchOn, setIsSwitchOn] = React.useState(false);
   const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
   return (
+
     <SafeAreaProvider>
         <View>
+
             <Cb  icon="keyboard-backspace" title="CADASTRO DE DESPESAS"/>
             <View>
               <Input
