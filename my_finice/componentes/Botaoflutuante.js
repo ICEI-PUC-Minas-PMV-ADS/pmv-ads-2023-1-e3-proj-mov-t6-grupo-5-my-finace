@@ -5,6 +5,7 @@ import { FAB } from 'react-native-paper';
 const Botaoflutuante = (prop) => (
   <FAB
     icon="plus"
+    color='#fff'
     style={styles.fab}
     {...prop}
    
@@ -15,8 +16,9 @@ const styles = StyleSheet.create({
   fab: {
     position: 'absolute',
     margin: 16,
-    right: 0,
-    bottom: 0,
+    right: 50,
+    top:600,
+    backgroundColor:"green"
   },
 })
 

@@ -2,9 +2,13 @@
 import * as React from 'react';
 import { Appbar } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
-const Cb = (props) => (
+const Cb = (props,{goBack}) => (
   
     <Appbar.Header mode='center-aligned'>
+      {
+        goBack &&
+        <Appbar.BackAction onPress={goBack}/>
+      }
       <Appbar.Action {...props}/>
       <Appbar.Content color="green" {...props} />
     </Appbar.Header>

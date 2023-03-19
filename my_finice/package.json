@@ -10,9 +10,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
     "react": "18.2.0",
+    "react-icons": "^4.8.0",
     "react-native": "0.71.4",
     "react-native-paper": "^5.4.1",
     "react-native-safe-area-context": "^4.5.0",

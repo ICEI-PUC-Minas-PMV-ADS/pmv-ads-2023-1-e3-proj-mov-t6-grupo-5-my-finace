@@ -7,7 +7,8 @@ import  VisualizacaoDespesa  from './VisualizacaoDespesa';
 const Home = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-      { key: 'T', title: 't', focusedIcon: 'heart'},
+    { key: 'T', title: 'Gastos', focusedIcon: 'credit-card-outline'},
+    
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
@@ -20,9 +21,12 @@ const Home = () => {
     <BottomNavigation
       color = "green"
       navigationState={{ index, routes }}
+      activeColor='green'
+      inactiveColor='green'
       onIndexChange={setIndex}
-      renderScene={renderScene}
-    />
+       renderScene={renderScene}
+       barStyle={{ backgroundColor: '#fff' }}
+  />
     </SafeAreaProvider>
   );
 };
