@@ -1,44 +1,62 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
-
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+AS personas são personagens fictícios criados para representar perfis de clientes ou usuários de determinado produto ou serviço. O objetivo é ter uma compreensão mais profunda das necessidades, desejos e comportamentos desses usuários, para que os desenvolvedores do My Finances possam criar o software que atendam às suas expectativas.
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+A criação de personas ajuda a equipe de desenvolvimento a entender as necessidades e desejos dos diferentes tipos de usuários e a projetar uma experiência mais personalizada e eficaz para eles.
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+A seguir temos as personas com os perfis criados com os diferentes tipos de usuários que o My Finances possa ter. Algumas das características comuns que foram incluídas nas personas foram nome, idade, gênero, nível de educação, recebimento salarial mensal, nível de gastos com cartões de créditos, interesses e objetivos.
 
-## Histórias de Usuários
+`PERSONA 1`
+(IMG)
+
+> - Nome: Letícia Ofélia 
+> - Idade: 20 anos 
+> - Profissão: Desenvolvedora de software. 
+> - Uso do cartão de crédito: Regular, gasto de 1 a 3 salários-mínimos. 
+> - Salário: 1 a 3 salários-mínimos. 
+> - Usa cartão de crédito: sim. 
+> - O que acha sobre uma aplicação financeira que ajuda a controlar os gastos: Uma ótima e necessária ideia.
+ 
+`PERSONA 2`
+(IMG)
+
+> - Nome: Albert Fiorini
+> - Idade: 30 anos 
+> - Profissão: Drifiteiro 
+> - Uso do cartão de crédito: Regular, gasto de 1 a 3 salários-mínimos. 
+> - Salário: menos que 1 salários-mínimos. 
+> - Usa cartão de crédito: sim. 
+> - O que acha sobre uma aplicação financeira que ajuda a controlar os gastos: Não tenho muito conhecimento, mas gostaria de saber mais sobre. 
+
+ 
+`PERSONA 3`
+(IMG)
+
+> - Nome: Andrew Wiggins
+> - Idade:25 
+> - Profissão: Bancário 
+> - Uso do cartão de crédito: Regular, gasto de 1 a 3 salários-mínimos. 
+> - Salário: 3 a 5 salários-mínimos. 
+> - Usa cartão de crédito: sim. 
+> - O que acha sobre uma aplicação financeira que ajuda a controlar os gastos: Acredito que seja algo extremamente necessário.
+
+
+
+
+
+## Historias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE`                                      |PARA ... `MOTIVO/VALOR`                                                        |
+|--------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+|Letícia             | Controlar meus gastos.                                                  | Para ter maior controle sobre meu dinheiro.                                   |
+|Andrew              | Acompanhar a evolução dos meus gastos.                                  | Para saber se estou gastando muito ou pouco mensalmente.                       |
+|Andrew              | Controlar a renda que entra todos os meses.                             | Para planejar meus gastos de uma forma mais previsível.                       | 
+|Albert              | Acompanhar a quantidade de dinheiro que consegui juntar.                | Para saber se estou próximo de alcançar meu objetivo.                         |
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
 
 ## Modelagem do Processo de Negócio 
 
