@@ -6,7 +6,7 @@
 
 `3º/2023`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Temos como objetivo a criação de uma plataforma de gestão financeira, que possa permitir aos jovens analisar e gerenciar de uma forma simplificada suas finanças, e possa permiti-las realizar tomadas de decisões. 
 
 ## Integrantes
 
