@@ -9,7 +9,7 @@ A criação de personas ajuda a equipe de desenvolvimento a entender as necessid
 A seguir temos as personas com os perfis criados com os diferentes tipos de usuários que o My Finances possa ter. Algumas das características comuns que foram incluídas nas personas foram nome, idade, gênero, nível de educação, recebimento salarial mensal, nível de gastos com cartões de créditos, interesses e objetivos.
 
 `PERSONA 1`
-(IMG)
+![Persona 1](img/Persona-1.png)
 
 > - Nome: Letícia Ofélia 
 > - Idade: 20 anos 
@@ -20,7 +20,7 @@ A seguir temos as personas com os perfis criados com os diferentes tipos de usu�
 > - O que acha sobre uma aplicação financeira que ajuda a controlar os gastos: Uma ótima e necessária ideia.
  
 `PERSONA 2`
-(IMG)
+![Persona 2](img/Persona-2.png)
 
 > - Nome: Albert Fiorini
 > - Idade: 30 anos 
@@ -32,7 +32,7 @@ A seguir temos as personas com os perfis criados com os diferentes tipos de usu�
 
  
 `PERSONA 3`
-(IMG)
+![Persona 3](img/Persona-3.png)
 
 > - Nome: Andrew Wiggins
 > - Idade:25 
