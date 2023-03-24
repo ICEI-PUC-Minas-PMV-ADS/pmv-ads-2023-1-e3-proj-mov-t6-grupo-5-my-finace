@@ -20,7 +20,7 @@ A seguir temos as personas com os perfis criados com os diferentes tipos de usu�
 > - O que acha sobre uma aplicação financeira que ajuda a controlar os gastos: Uma ótima e necessária ideia.
  
 `PERSONA 2`
-![Persona 2](img/Persona-2.png)
+![Persona 2](img/Persona-2R.png)
 
 > - Nome: Albert Fiorini
 > - Idade: 30 anos 
@@ -32,7 +32,7 @@ A seguir temos as personas com os perfis criados com os diferentes tipos de usu�
 
  
 `PERSONA 3`
-![Persona 3](img/Persona-3.png)
+![Persona 3](img/Persona-3R.png)
 
 > - Nome: Andrew Wiggins
 > - Idade:25 
