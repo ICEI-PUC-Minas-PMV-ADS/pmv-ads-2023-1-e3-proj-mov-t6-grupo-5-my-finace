@@ -8,10 +8,10 @@ import { useNavigation } from '@react-navigation/native';
 import { NavigationContainer } from "@react-navigation/native";
 import { insertDespesas,getDespesas} from '../Services/Despesasdb';
 function Cadastrodespesas() {
-  const [text, setText] = useState(null);
-  const [valorDivida, setvalorDivida] = useState(null);
-  const [descricao, setdescricao] = useState(null);
-  const [numeroParcela, setnumeroParcela] = useState(null);
+  const [text, setText] = useState();
+  const [valorDivida, setvalorDivida] = useState();
+  const [descricao, setdescricao] = useState();
+  const [numeroParcela, setnumeroParcela] = useState();
   const [value, setValue] = React.useState('first');
   const navigation = useNavigation();
   return (
