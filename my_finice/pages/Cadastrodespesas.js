@@ -1,5 +1,5 @@
 import React,{useState}from "react";
-import { View,StyleSheet } from "react-native";
+import { View,StyleSheet,Alert } from "react-native";
 import { TextInput,RadioButton,Switch,Button,Text, Appbar } from "react-native-paper";
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Cb from "../componentes/Cb";
@@ -45,7 +45,19 @@ function Cadastrodespesas() {
                 <RadioButton.Item color="green" label="Outros" value="Outros" />    
               </RadioButton.Group>
               
-                  <Button style={style.botao} mode="contained" onPress={() => console.log('Pressed')}>
+                  <Button style={style.botao} mode="contained" onPress={() => 
+                   Alert.alert('Ops!', 'Algo deu errado, por favor verifique os dados preenchidos', [
+                     {
+                       text: 'Cancel',
+                       onPress: () => console.log('Cancel Pressed'),
+                       style: 'cancel',
+                     },
+                     {text: 'OK', onPress: () => console.log('OK Pressed')},
+                   ])
+                  
+                  
+                  
+                  }>
                   SALVAR
                 </Button>
             </View>
