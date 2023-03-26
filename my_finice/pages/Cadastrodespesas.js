@@ -14,7 +14,8 @@ function Cadastrodespesas() {
     <SafeAreaProvider>
         <View>
 
-            <Cb  icon="keyboard-backspace" title="CADASTRO DE DESPESAS" goBack={()=>navigation.goBack()}/>
+            <Cb icon="keyboard-backspace" title="CADASTRO DE DESPESAS" goBack={()=>navigation.goBack()}/>
+            
             <View>
               <Input
                 label="Data da despesa"
@@ -50,7 +51,7 @@ function Cadastrodespesas() {
             </View>
         </View>
     </View>
-    </SafeAreaProvider>
+  </SafeAreaProvider>
   );
 }
 
