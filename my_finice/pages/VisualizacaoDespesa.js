@@ -1,14 +1,36 @@
-import { StyleSheet, View,Text } from 'react-native';
+import { StyleSheet, View,Text,FlatList } from 'react-native';
+import React,{useEffect, useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 import Botaoflutuante  from '../componentes/Botaoflutuante';
 import Cb from '../componentes/Cb';
+import { insertDespesas,getDespesas} from '../Services/Despesasdb';
 import Icon from 'react-native-vector-icons/MaterialIcons'
 function MyStack() {
+
   const navigation = useNavigation();
+  const [despesas,setDepesas] = useState([])
+
+  useEffect(()=>{
+    getDespesas().then((dados)=>{
+      console.log(dados);
+      setDepesas(dados);
+
+      });
+  },[]);
+
+  
   return (
     <View>
       <Cb title="Visualização das despesas"/>
-      <Text style={aviso.av}>Não temos registro no momento</Text>
+      
+      <FlatList
+        data={despesas}
+        keyExtractor={item => item.id}
+      />
+
+
+
+
       <Botaoflutuante
       onPress={() => navigation.navigate('Cadastrodespesas')}
       />

@@ -6,7 +6,12 @@ import Cb from "../componentes/Cb";
 import Input from "../componentes/Input";
 import { useNavigation } from '@react-navigation/native';
 import { NavigationContainer } from "@react-navigation/native";
+import { insertDespesas,getDespesas} from '../Services/Despesasdb';
 function Cadastrodespesas() {
+  const [text, setText] = useState(null);
+  const [valorDivida, setvalorDivida] = useState(null);
+  const [descricao, setdescricao] = useState(null);
+  const [numeroParcela, setnumeroParcela] = useState(null);
   const [value, setValue] = React.useState('first');
   const navigation = useNavigation();
   return (
@@ -20,21 +25,25 @@ function Cadastrodespesas() {
               <Input
                 label="Data da despesa"
                 placeholder=""
+                value = {text}
               />
                 <Input
                 label="Valor"
                 placeholder="R$0,00"
                 keyboardType="decimal-pad"
+                value={valorDivida}
             
               />
                 <Input
                 label="Descrição"
                 placeholder=""
+                value={descricao}
               />
               <Input
                 label="Numero de parcelas"
                 placeholder=""
                 keyboardType="numeric"
+                value={numeroParcela}
               />
           <View style={style.check}>
             <Text>Categoria da despesa</Text>
@@ -46,17 +55,13 @@ function Cadastrodespesas() {
               </RadioButton.Group>
               
                   <Button style={style.botao} mode="contained" onPress={() => 
-                   Alert.alert('Ops!', 'Algo deu errado, por favor verifique os dados preenchidos', [
-                     {
-                       text: 'Cancel',
-                       onPress: () => console.log('Cancel Pressed'),
-                       style: 'cancel',
-                     },
-                     {text: 'OK', onPress: () => console.log('OK Pressed')},
-                   ])
-                  
-                  
-                  
+                   insertDespesas({
+                    data:text,
+                    valor:valorDivida,
+                    descricao:descricao,
+                    numeroParecela:numeroParcela,
+                    categoria:value
+                  }).then()
                   }>
                   SALVAR
                 </Button>
