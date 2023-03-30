@@ -12,7 +12,7 @@ Para que tenhamos uma boa produtividade no desenvolvimento do nosso software ire
 |--------------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Documentos do Projeto           |One Drive              | https://sgapucminasbr-my.sharepoint.com/:w:/r/personal/1348060_sga_pucminas_br/_layouts/15/Doc.aspx?sourcedoc=%7B8A7122F0-07A5-4299-B679-9A09154F41A9%7D&file=MY%20FINANCES%20.docx&action=default&mobileredirect=true |
 |Repositório de Código Fonte      |Git Hub                | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t6-grupo-5-my-finace |
-|Projeto de Interface e wireframes |Figma                  | |
+|Projeto de Interface e wireframes |Figma                  | https://www.figma.com/file/lLv6vfNhiSkY2ZeCQTSUgM/Mobile-Apps-%E2%80%93-Prototyping-Kit-(Community)?node-id=101-306&t=TwZ3vBHXJgoSNgpA-0 |
 |Gerenciamento de Projeto          |Trello             | https://trello.com/b/TCtybrpI/projeto-eixo-3  |
 
 ## Controle de Versão
