@@ -34,4 +34,4 @@ Para cada tarefa do participante é possível meditar:
 
 | **Tarefa 6** | **Critério de Êxito** | **O que será avaliado** |
 |--------------|----------------------|---------- ---------------|
-|Inclusão de rendas. | Concluir a inclusão de rendas do usuário e retornar a página de visualização de rendas. | Facilidade em realizar uma ação. Efetivação da tarefa. Quantidade de erros cometidos. Tempo necessário para se concluir. |
+|Inclusão de rendas. | Concluir a inclusão de rendas do usuário e retornar a página de visualização de rendas. | Facilidade em realizar uma ação. Efetivação da tarefa. Quantidade de erros cometidos. Tempo necessário para se concluir. | 
