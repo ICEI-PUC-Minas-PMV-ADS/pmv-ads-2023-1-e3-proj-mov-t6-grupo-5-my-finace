@@ -14,7 +14,7 @@ Para cada tarefa do participante é possível meditar:
 
 | **Tarefa 1** | **Critério de Êxito** | **O que será avaliado** |
 |--------------|----------------------|---------- ---------------|
-|Cadastro de novo usuário. | Concluir o cadastro, seguindo o direcionamento do sistema para a homepage | Facilidade em realizar uma ação. Efetivação da tarefa. Quantidade de erros cometidos. Tempo necessário para se concluir. |
+|Cadastro de novo usuário. | Concluir o cadastro, seguindo o direcionamento do sistema para a homepage. | Facilidade em realizar uma ação. Efetivação da tarefa. Quantidade de erros cometidos. Tempo necessário para se concluir. |
 
 | **Tarefa 2** | **Critério de Êxito** | **O que será avaliado** |
 |--------------|----------------------|---------- ---------------|
@@ -27,11 +27,3 @@ Para cada tarefa do participante é possível meditar:
 | **Tarefa 4** | **Critério de Êxito** | **O que será avaliado** |
 |--------------|----------------------|---------- ---------------|
 |Inclusão de gastos. | Concluir a inclusão de gastos do usuário e retornar a página de visualização de gastos. | Facilidade em realizar uma ação. Efetivação da tarefa. Quantidade de erros cometidos. Tempo necessário para se concluir. |
-
-| **Tarefa 5** | **Critério de Êxito** | **O que será avaliado** |
-|--------------|----------------------|---------- ---------------|
-|Visualização de gastos. | O sistema fornecerá visualização das rendas incluídas pelo usuário. | Facilidade em realizar uma ação. Efetivação da tarefa. Quantidade de erros cometidos. Tempo necessário para se concluir. |
-
-| **Tarefa 6** | **Critério de Êxito** | **O que será avaliado** |
-|--------------|----------------------|---------- ---------------|
-|Inclusão de rendas. | Concluir a inclusão de rendas do usuário e retornar a página de visualização de rendas. | Facilidade em realizar uma ação. Efetivação da tarefa. Quantidade de erros cometidos. Tempo necessário para se concluir. | 
