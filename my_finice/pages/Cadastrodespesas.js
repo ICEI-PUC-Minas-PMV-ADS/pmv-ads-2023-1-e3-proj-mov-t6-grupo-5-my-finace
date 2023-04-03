@@ -1,17 +1,12 @@
 import React,{useState}from "react";
-import { View,StyleSheet,Alert } from "react-native";
+import { View,StyleSheet } from "react-native";
 import { TextInput,RadioButton,Switch,Button,Text, Appbar } from "react-native-paper";
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Cb from "../componentes/Cb";
 import Input from "../componentes/Input";
 import { useNavigation } from '@react-navigation/native';
 import { NavigationContainer } from "@react-navigation/native";
-import { insertDespesas,getDespesas} from '../Services/Despesasdb';
 function Cadastrodespesas() {
-  const [text, setText] = useState();
-  const [valorDivida, setvalorDivida] = useState();
-  const [descricao, setdescricao] = useState();
-  const [numeroParcela, setnumeroParcela] = useState();
   const [value, setValue] = React.useState('first');
   const navigation = useNavigation();
   return (
@@ -25,25 +20,21 @@ function Cadastrodespesas() {
               <Input
                 label="Data da despesa"
                 placeholder=""
-                value = {text}
               />
                 <Input
                 label="Valor"
                 placeholder="R$0,00"
                 keyboardType="decimal-pad"
-                value={valorDivida}
             
               />
                 <Input
                 label="Descrição"
                 placeholder=""
-                value={descricao}
               />
               <Input
                 label="Numero de parcelas"
                 placeholder=""
                 keyboardType="numeric"
-                value={numeroParcela}
               />
           <View style={style.check}>
             <Text>Categoria da despesa</Text>
@@ -54,15 +45,7 @@ function Cadastrodespesas() {
                 <RadioButton.Item color="green" label="Outros" value="Outros" />    
               </RadioButton.Group>
               
-                  <Button style={style.botao} mode="contained" onPress={() => 
-                   insertDespesas({
-                    data:text,
-                    valor:valorDivida,
-                    descricao:descricao,
-                    numeroParecela:numeroParcela,
-                    categoria:value
-                  }).then()
-                  }>
+                  <Button style={style.botao} mode="contained" onPress={() => console.log('Pressed')}>
                   SALVAR
                 </Button>
             </View>
