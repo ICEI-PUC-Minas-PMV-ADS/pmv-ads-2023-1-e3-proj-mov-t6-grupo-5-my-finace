@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import Cadastrodespesas from "../pages/Cadastrodespesas";
 import EvolucaoDespesas from "../pages/EvolucaoDespesas";
+import RegistroDeRendas from "../pages/RegistroDeRendas";
 
 const Stack  = createNativeStackNavigator();
 const Main =() =>{
@@ -30,6 +31,14 @@ const Main =() =>{
                 <Stack.Screen
                     name='EvolucaoDespesas'
                     component={EvolucaoDespesas}
+                    options={{
+                        header: ()=>null,
+                        }
+                    }
+                />
+                <Stack.Screen
+                    name='RegistroDeRendas'
+                    component={RegistroDeRendas}
                     options={{
                         header: ()=>null,
                         }
