@@ -30,12 +30,12 @@ const VisualizacaoRendas = () => {
 
     <Text style={styles.dest}>Destinação dos Ganhos</Text>
 
-    <ProgressBar style={styles.iv} progress={0.7} color={MD3Colors.error50} /><Text style={styles.texto}>Investimentos</Text>
-    <ProgressBar style={styles.df} progress={0.5} color={MD3Colors.error50} /><Text style={styles.texto}>Despesa Fixa</Text>
-    <ProgressBar style={styles.poup} progress={0.3} color={MD3Colors.error50} /><Text style={styles.texto}>Poupança</Text>
-    <ProgressBar style={styles.out} progress={0.2} color={MD3Colors.error50} /><Text style={styles.texto}>Outros</Text>
+    <ProgressBar style={styles.iv} progress={0.7} color={MD3Colors.primary60} /><Text style={styles.texto}>Investimentos</Text>
+    <ProgressBar style={styles.df} progress={0.5} color={MD3Colors.primary60} /><Text style={styles.texto}>Despesa Fixa</Text>
+    <ProgressBar style={styles.poup} progress={0.3} color={MD3Colors.primary60} /><Text style={styles.texto}>Poupança</Text>
+    <ProgressBar style={styles.out} progress={0.2} color={MD3Colors.primary60} /><Text style={styles.texto}>Outros</Text>
 
-    <Text style={styles.textodois}>Previsão de Rendas</Text>
+    <Text style={styles.textodois}>Crédito Disponível</Text>
 
     <Surface style={styles.surfacedois} elevation={4}>
         <Text style={styles.sd}>0,00</Text>
