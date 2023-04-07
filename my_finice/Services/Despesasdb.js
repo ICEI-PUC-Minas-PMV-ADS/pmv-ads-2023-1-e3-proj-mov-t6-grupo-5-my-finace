@@ -1,14 +1,34 @@
-import Database from "./DbService";
-const DB_EXEC = Database.getConnection();
 
-export const getDespesas = async()=>{
-    let results = await DB_EXEC('select * from despesas');
-    console.log(results)
-    return results.rows._array
+import {db} from "./DbService";
+
+export const criartabela = ()=> {
+    db.transaction((transaction)=>{
+        transaction.executeSql("CREATE TABLE IF NOT EXISTS "+ 
+        "Despesas "+
+        "(id INTEGER PRIMARY KEY AUTOINCREMENT, Data TEXT, Valor FOALT, Descricao TEXT, Parcela INTEGER);"
+        )
+    })
 }
-export const insertDespesas = async(param)=>{
-    let results = await DB_EXEC('insert into despesas(data,valor,descricao,numeroParecela,categoria) values(?,?,?,?,?)',
-    [param.data,param.valor,param.descricao,param.numeroParecela,param.categoria]);
-    console.log(results)
-    return results.rowsAffected;
+
+export function adicionarDespesas (d){
+    return new Promise((resolve)=>{
+        db.transaction((transaction)=>{
+            transaction.executeSql("INSERT INTO Despesas(Data,Valor,Descricao,Parcela) VALUES(?,?,?,?);",[d.Data,d.Valor,d.Descricao,d.parcelas],()=>{
+                resolve("Adicionado com sucesso")
+                console.log("Adicionado com sucesso")
+            })
+        })
+    })
+}
+
+export function recuperandoDespesas (){
+    return new Promise((resolve)=>{
+        db.transaction((transaction)=>{
+          console.log(  transaction.executeSql("SELECT * FROM Despesas;",[],(transaction, resultados)=>{
+                resolve(resultados.rows._array)
+                console.log(resultados.rows._array)
+            })
+          )
+        })
+    })
 }

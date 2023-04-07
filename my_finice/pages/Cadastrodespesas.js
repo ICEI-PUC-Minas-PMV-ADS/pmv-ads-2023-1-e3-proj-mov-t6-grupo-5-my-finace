@@ -6,9 +6,25 @@ import Cb from "../componentes/Cb";
 import Input from "../componentes/Input";
 import { useNavigation } from '@react-navigation/native';
 import { NavigationContainer } from "@react-navigation/native";
+import {adicionarDespesas} from "../Services/Despesasdb";
 function Cadastrodespesas() {
   const [value, setValue] = React.useState('first');
   const navigation = useNavigation();
+  
+
+    function salve(){
+    const despesa = {
+      Data:'12/12/2022',
+      Valor:12.00,
+      Descricao:'aa',
+      parcelas:1
+  
+    }
+   adicionarDespesas(despesa)
+     
+    console.log(despesa)
+  }
+  
   return (
 
     <SafeAreaProvider>
@@ -45,7 +61,12 @@ function Cadastrodespesas() {
                 <RadioButton.Item color="green" label="Outros" value="Outros" />    
               </RadioButton.Group>
               
-                  <Button style={style.botao} mode="contained" onPress={() => console.log('Pressed')}>
+              
+                  <Button style={style.botao} mode="contained" onPress={()=>{
+
+                   salve()
+                  }
+                  }>
                   SALVAR
                 </Button>
             </View>
