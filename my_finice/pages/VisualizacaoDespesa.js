@@ -1,4 +1,4 @@
-import { StyleSheet, View,Text,FlatList,StatusBar,Icon} from 'react-native';
+import { StyleSheet, View,Text,FlatList,StatusBar,Icon, TouchableOpacity} from 'react-native';
 import{List} from 'react-native-paper';
 import{useEffect, useState} from 'react';
 import { useNavigation,useIsFocused } from '@react-navigation/native';
@@ -8,24 +8,23 @@ import { criartabela,recuperandoDespesas } from '../Services/Despesasdb';
 import React from 'react';
 function MyStack() {
   const [extrato,setExtrato] = useState([])
+  const IsFocused = useIsFocused();
   const navigation = useNavigation();
+  const[selecionada,setSeleciona]= useState({})
   useEffect (()=>{
     criartabela()
   },[])
   
   async function verTabela(){
-    const IsFocused = useIsFocused();
     useEffect (()=>{
       recuperandoDespesas().then((dados)=>{
         setExtrato(dados)
-      });
-     
+      }); 
     },[IsFocused])
     
   }
- verTabela()
- const Item = ({item}) => (
-  <View style={aviso.item}>
+  const Item = ({item}) => (
+    <TouchableOpacity style={aviso.item}>
     <Text>{item.Data}</Text>
     <Text>{'R$ '+item.Valor}</Text>
     <Text>{item.Descricao}</Text>
@@ -33,11 +32,12 @@ function MyStack() {
     <List.Icon
           style={aviso.iconePosicao}
           icon={item.Categoria}
-        />
-  </View>
+          />
+  </TouchableOpacity>
 );
 
-  return (
+verTabela()
+return (
     <View>
       <Cb title="Despesas"/>
       <View style={aviso.container}>

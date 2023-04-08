@@ -30,7 +30,7 @@ function Cadastrodespesas() {
   }
   return (
         <View>
-            <Cb icon="keyboard-backspace" title="CADASTRO DE DESPESAS" goBack={()=>navigation.goBack()}/>
+            <Cb icon="keyboard-backspace" title="CADASTRAR" goBack={()=>navigation.goBack()}/>
               <View>
               <Input 
                 label="Data da despesa"
@@ -61,7 +61,7 @@ function Cadastrodespesas() {
             </View>
   
             <View>
-            <Text>Categoria da despesa</Text>
+            <Text style={style.texto}>Categoria da despesa</Text>
               <RadioButton.Group onValueChange={d => setValue(d)} value={d}>
                 <RadioButton.Item color="green"label="Saúde" value="hospital-box-outline" />
                 <RadioButton.Item color="green" label="Educação" value="school" />
@@ -89,8 +89,12 @@ const style = StyleSheet.create({
     borderColor:"red",
     color:'red'
   },
+  texto:{
+    left:12
+  },
   botao:{
     backgroundColor:"green",
+    top:50
   },
   check:{
     margin:9,
