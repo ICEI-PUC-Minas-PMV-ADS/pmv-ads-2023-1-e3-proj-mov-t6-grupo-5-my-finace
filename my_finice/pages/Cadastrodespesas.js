@@ -8,58 +8,66 @@ import { useNavigation } from '@react-navigation/native';
 import { NavigationContainer } from "@react-navigation/native";
 import {adicionarDespesas} from "../Services/Despesasdb";
 function Cadastrodespesas() {
-  const [value, setValue] = React.useState('first');
+  const [d, setValue] = React.useState('first');
+  const [data,setData]= React.useState();
+  const [valor,setValor]= React.useState();
+  const [Descricao,setDescricao]= React.useState();
+  const [Parcela,setParcela]= React.useState();
   const navigation = useNavigation();
-  
-
-    function salve(){
+    
+  async function salve(){
     const despesa = {
-      Data:'12/12/2022',
-      Valor:12.00,
-      Descricao:'aa',
-      parcelas:1
-  
+      Data:data,
+      Valor:valor,
+      Descricao:Descricao,
+      parcelas:Parcela,
+      Categoria:d
     }
-   adicionarDespesas(despesa)
+    await adicionarDespesas(despesa)
      
-    console.log(despesa)
+
   }
-  
   return (
-
-    <SafeAreaProvider>
         <View>
-
             <Cb icon="keyboard-backspace" title="CADASTRO DE DESPESAS" goBack={()=>navigation.goBack()}/>
-            
-            <View>
-              <Input
+              <View>
+              <Input 
                 label="Data da despesa"
                 placeholder=""
-              />
-                <Input
-                label="Valor"
+                value={data}
+                onChangeText={data => setData(data)}
+                />
+                <Input 
                 placeholder="R$0,00"
                 keyboardType="decimal-pad"
-            
+                value={valor}
+                onChangeText={valor => setValor(valor)}
+                
               />
                 <Input
                 label="Descrição"
                 placeholder=""
-              />
+                value={Descricao}
+                onChangeText={Descricao => setDescricao(Descricao)}
+                />
               <Input
                 label="Numero de parcelas"
                 placeholder=""
                 keyboardType="numeric"
-              />
-          <View style={style.check}>
+                value={Parcela}
+                onChangeText={Parcela => setParcela(Parcela)}
+                />
+            </View>
+  
+            <View>
             <Text>Categoria da despesa</Text>
-              <RadioButton.Group onValueChange={value => setValue(value)} value={value}>
+              <RadioButton.Group onValueChange={d => setValue(d)} value={d}>
                 <RadioButton.Item color="green"label="Saúde" value="Saúde" />
                 <RadioButton.Item color="green" label="Educação" value="Educação" />
                 <RadioButton.Item color="green" label="Lazer" value="Lazer" />
                 <RadioButton.Item color="green" label="Outros" value="Outros" />    
               </RadioButton.Group>
+              </View>
               
               
                   <Button style={style.botao} mode="contained" onPress={()=>{
@@ -69,10 +77,9 @@ function Cadastrodespesas() {
                   }>
                   SALVAR
                 </Button>
-            </View>
         </View>
-    </View>
-  </SafeAreaProvider>
+   
+
   );
 }
 
@@ -82,19 +89,14 @@ const style = StyleSheet.create({
     backgroundColor:"#fff",
     borderColor:"red",
     color:'red'
-
   },
   botao:{
     backgroundColor:"green",
-    top:40
   },
   check:{
-    margin:8
+    margin:9,
   },
-  s:{
-    top:-15,
-   
-  }
+
 })
 
 

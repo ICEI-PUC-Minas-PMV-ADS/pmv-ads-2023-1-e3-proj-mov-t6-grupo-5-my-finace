@@ -10,7 +10,7 @@ import VisualizacaoRendas from "../pages/VisualizacaoRendas";
 const Stack  = createNativeStackNavigator();
 const Main =() =>{
     return(
-        <NavigationContainer>
+        <NavigationContainer independent={true}>
             <Stack.Navigator>
                 <Stack.Screen
                     name="Home"

@@ -2,9 +2,10 @@
 import * as React from 'react';
 import { Appbar } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 const Cb = (props,{goBack}) => (
-  
-    <Appbar.Header mode='center-aligned'>
+
+  <Appbar.Header mode='center-aligned'>
       {
         goBack &&
         <Appbar.BackAction onPress={goBack}/>

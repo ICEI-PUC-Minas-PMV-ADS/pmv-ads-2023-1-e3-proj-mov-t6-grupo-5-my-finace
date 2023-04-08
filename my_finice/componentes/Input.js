@@ -1,15 +1,18 @@
 import React,{useState}from "react";
 import { View,StyleSheet } from "react-native";
-import { TextInput,RadioButton,Switch,Button,Text, Appbar } from "react-native-paper";
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { TextInput,} from "react-native-paper";
 
 const Input =(props) =>{
+
     return (
+      
         <TextInput
             style={style.input}
             mode="outlined"
-            theme={{ colors: { primary: 'green',underlineColor:'transparent',}}}
+            theme={{ colors: { primary: 'green',underlineColor:'transparent'}}}
             {...props}
-          />
+            />
     );
 }
 const style = StyleSheet.create({

@@ -1,7 +1,7 @@
-import SQLite from 'react-native-sqlite-storage'
+import * as SQLite from "expo-sqlite";
 
 const abreConexao = ()=> {
-  const database = SQLite.openDatabase('m.db')
+  const database = SQLite.openDatabase('da.db')
   return database
 }
 export const db = abreConexao()

@@ -6,7 +6,7 @@ import {View, StyleSheet} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NavigationContainer } from "@react-navigation/native";
 import Cb from "../componentes/Cb";
-import { green100 } from 'react-native-paper/lib/typescript/src/styles/themes/v2/colors';
+
 
 const VisualizacaoRendas = () => {
 
