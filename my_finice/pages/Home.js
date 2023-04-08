@@ -11,7 +11,7 @@ const Home = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
     { key: 'T', title: 'Gastos', focusedIcon: 'credit-card-outline'},
-    { key: 'Evolucao', title: 'Evolução das desepsas', focusedIcon: 'chart-bar'},
+    { key: 'Evolucao', title: 'Evolução das desepsas', focusedIcon: 'equalizer'},
     { key: 'Rendas', title: 'Visualização de Rendas', focusedIcon: 'database-arrow-up-outline'}
     
   ]);

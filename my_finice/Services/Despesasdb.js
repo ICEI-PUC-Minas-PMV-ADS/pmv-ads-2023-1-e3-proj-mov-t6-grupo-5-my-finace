@@ -14,9 +14,8 @@ export const criartabela = ()=> {
 export async function adicionarDespesas (d){
     return new Promise((resolve)=>{
         db.transaction((transaction)=>{
-            transaction.executeSql("INSERT INTO Despesas(Data,Valor,Descricao,Parcela,Categoria) VALUES(?,?,?,?,?);",[d.Data,d.Valor,d.Descricao,d.parcelas,d.Categoria],()=>{
+            transaction.executeSql("INSERT INTO Despesas(Data,Valor,Descricao,Parcela,Categoria) VALUES(?,?,?,?,?);",[d.Data,d.Valor,d.Descricao,d.parcela,d.Categoria],()=>{
                 resolve("Adicionado com sucesso")
-                console.log("Adicionado com sucesso")
             })
         })
     })
@@ -27,7 +26,6 @@ export async function recuperandoDespesas (){
         db.transaction((transaction)=>{
           console.log(  transaction.executeSql("SELECT * FROM Despesas;",[],(transaction, resultados)=>{
                 resolve(resultados.rows._array)
-                console.log(resultados.rows._array)
             })
           )
         })

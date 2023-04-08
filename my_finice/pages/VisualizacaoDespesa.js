@@ -1,6 +1,7 @@
-import { StyleSheet, View,Text,FlatList,StatusBar} from 'react-native';
+import { StyleSheet, View,Text,FlatList,StatusBar,Icon} from 'react-native';
+import{List} from 'react-native-paper';
 import{useEffect, useState} from 'react';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation,useIsFocused } from '@react-navigation/native';
 import Botaoflutuante  from '../componentes/Botaoflutuante';
 import Cb from '../componentes/Cb';
 import { criartabela,recuperandoDespesas } from '../Services/Despesasdb';
@@ -8,26 +9,31 @@ import React from 'react';
 function MyStack() {
   const [extrato,setExtrato] = useState([])
   const navigation = useNavigation();
-    useEffect (()=>{
-      criartabela()
-    },[])
+  useEffect (()=>{
+    criartabela()
+  },[])
   
   async function verTabela(){
+    const IsFocused = useIsFocused();
     useEffect (()=>{
       recuperandoDespesas().then((dados)=>{
         setExtrato(dados)
       });
      
-    },[])
+    },[IsFocused])
     
   }
  verTabela()
  const Item = ({item}) => (
   <View style={aviso.item}>
     <Text>{item.Data}</Text>
-    <Text>{item.Valor}</Text>
+    <Text>{'R$ '+item.Valor}</Text>
     <Text>{item.Descricao}</Text>
-    <Text>{item.parcelas}</Text>
+    <Text>{item.parcela}</Text>
+    <List.Icon
+          style={aviso.iconePosicao}
+          icon={item.Categoria}
+        />
   </View>
 );
 
@@ -58,8 +64,15 @@ const aviso = StyleSheet.create({
       flex: 1,
       marginTop: StatusBar.currentHeight || 0,
     },
+    iconePosicao:{
+      left:100,
+      bottom:50,
+      
+    },
     item: {
-      backgroundColor: '#FFF',
+      backgroundColor: '#fff',
+      borderBottomColor:'grenn',
+      borderColor:'green',
       padding: 20,
       marginVertical: 8,
       marginHorizontal: 16,

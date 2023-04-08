@@ -8,7 +8,7 @@ import { useNavigation } from '@react-navigation/native';
 import { NavigationContainer } from "@react-navigation/native";
 import {adicionarDespesas} from "../Services/Despesasdb";
 function Cadastrodespesas() {
-  const [d, setValue] = React.useState('first');
+  const [d, setValue] = React.useState('tag-plus-outline');
   const [data,setData]= React.useState();
   const [valor,setValor]= React.useState();
   const [Descricao,setDescricao]= React.useState();
@@ -20,10 +20,11 @@ function Cadastrodespesas() {
       Data:data,
       Valor:valor,
       Descricao:Descricao,
-      parcelas:Parcela,
+      parcela:Parcela,
       Categoria:d
     }
     await adicionarDespesas(despesa)
+    navigation.goBack();
      
 
   }
@@ -62,16 +63,14 @@ function Cadastrodespesas() {
             <View>
             <Text>Categoria da despesa</Text>
               <RadioButton.Group onValueChange={d => setValue(d)} value={d}>
-                <RadioButton.Item color="green"label="Saúde" value="Saúde" />
-                <RadioButton.Item color="green" label="Educação" value="Educação" />
-                <RadioButton.Item color="green" label="Lazer" value="Lazer" />
-                <RadioButton.Item color="green" label="Outros" value="Outros" />    
+                <RadioButton.Item color="green"label="Saúde" value="hospital-box-outline" />
+                <RadioButton.Item color="green" label="Educação" value="school" />
+                <RadioButton.Item color="green" label="Lazer" value="ferris-wheel" />
+                <RadioButton.Item color="green" label="Alimentação" value="food-turkey" />
+                <RadioButton.Item color="green" label="Outros" value="tag-plus-outline" />    
               </RadioButton.Group>
               </View>
-              
-              
                   <Button style={style.botao} mode="contained" onPress={()=>{
-
                    salve()
                   }
                   }>
