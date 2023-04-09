@@ -6,6 +6,7 @@ import Cadastrodespesas from "../pages/Cadastrodespesas";
 import EvolucaoDespesas from "../pages/EvolucaoDespesas";
 import RegistroDeRendas from "../pages/RegistroDeRendas";
 import VisualizacaoRendas from "../pages/VisualizacaoRendas";
+import EditarDespesas from "../pages/EditarDespesas";
 
 const Stack  = createNativeStackNavigator();
 const Main =() =>{
@@ -48,6 +49,14 @@ const Main =() =>{
                 <Stack.Screen
                     name='VisualizaçãoRendas'
                     component={VisualizacaoRendas}
+                    options={{
+                        header: ()=>null,
+                        }
+                    }
+                />
+                 <Stack.Screen
+                    name='EditarDespesas'
+                    component={EditarDespesas}
                     options={{
                         header: ()=>null,
                         }

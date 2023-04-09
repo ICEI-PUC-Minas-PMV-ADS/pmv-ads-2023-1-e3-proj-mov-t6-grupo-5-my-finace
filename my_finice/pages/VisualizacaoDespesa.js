@@ -1,4 +1,4 @@
-import { StyleSheet, View,Text,FlatList,StatusBar,Icon, TouchableOpacity} from 'react-native';
+import { StyleSheet, View,Text,FlatList,StatusBar, TouchableOpacity} from 'react-native';
 import{List} from 'react-native-paper';
 import{useEffect, useState} from 'react';
 import { useNavigation,useIsFocused } from '@react-navigation/native';
@@ -24,7 +24,7 @@ function MyStack() {
     
   }
   const Item = ({item}) => (
-    <TouchableOpacity style={aviso.item}>
+    <TouchableOpacity style={aviso.item} onPress={() => navigation.navigate('EditarDespesas',{id:item.id})}>
     <Text>{item.Data}</Text>
     <Text>{'R$ '+item.Valor}</Text>
     <Text>{item.Descricao}</Text>

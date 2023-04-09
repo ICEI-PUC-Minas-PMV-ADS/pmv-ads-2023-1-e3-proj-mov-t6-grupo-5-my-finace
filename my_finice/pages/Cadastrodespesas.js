@@ -1,11 +1,9 @@
 import React,{useState}from "react";
 import { View,StyleSheet } from "react-native";
-import { TextInput,RadioButton,Switch,Button,Text, Appbar } from "react-native-paper";
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import {RadioButton,Button,Text} from "react-native-paper";
 import Cb from "../componentes/Cb";
 import Input from "../componentes/Input";
 import { useNavigation } from '@react-navigation/native';
-import { NavigationContainer } from "@react-navigation/native";
 import {adicionarDespesas} from "../Services/Despesasdb";
 function Cadastrodespesas() {
   const [d, setValue] = React.useState('tag-plus-outline');

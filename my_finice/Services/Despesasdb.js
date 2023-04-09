@@ -30,7 +30,16 @@ export async function recuperandoDespesas (){
         })
     })
 }
-
+export async function recuperandoDespesasEspecifica (d){
+    return new Promise((resolve)=>{
+        db.transaction((transaction)=>{
+          transaction.executeSql("SELECT * FROM Despesas WHERE id=?;",[d],(transaction, resultados)=>{
+                resolve(resultados.rows._array)
+            })
+          
+        })
+    })
+}
 export async function atualizarDespesas (d){
     return new Promise((resolve)=>{
         db.transaction((transaction)=>{
