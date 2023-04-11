@@ -24,7 +24,7 @@ const Home = () => {
     cadastro: Cadastrodespesas,
     Registro: RegistroDeRendas,
     Rendas: VisualizacaoRendas,
-    Detalhes: DetalhesRendas,
+    DetalhesRendas: DetalhesRendas,
   });
 
   return (

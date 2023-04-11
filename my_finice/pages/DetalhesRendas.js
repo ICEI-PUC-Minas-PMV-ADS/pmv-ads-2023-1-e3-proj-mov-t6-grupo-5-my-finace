@@ -15,9 +15,42 @@ function StackRendas() {
     CreateTable()
   },[])
   
+  async function verTable(){
+    useEffect (()=>{
+      recuperandoRendas().then((dados)=>{
+        setExtratoRendas(dados)
+      }); 
+    },[IsFocused])
+    
+  }
+  const Item = ({item}) => (
+    <TouchableOpacity style={lista.item} onPress={() => navigation.navigate('EditarRendas',{id:item.id})}>
+    <Text>{item.Dia}</Text>
+    <Text>{'R$ '+item.Quantia}</Text>
+    <Text>{item.Desc}</Text>
+    <Text>{item.Credito}</Text>
+    <List.Icon
+          style={lista.iconePosicao}
+          icon={item.Destinacao}
+          
+          />
+  </TouchableOpacity>
+);
+
+verTable()
 return (
     <View>
       <Cb title="Rendas"/>
+      <View style={lista.container}>
+      <FlatList
+        data={extratoRendas}
+        renderItem={Item}
+        keyExtractor={item => item.id}
+      />
+      </View>
+      <Botaoflutuante
+      onPress={() => navigation.navigate('RegistroDeRendas')}
+      />
     </View>
   );
 }
