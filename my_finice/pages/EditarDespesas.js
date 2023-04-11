@@ -4,9 +4,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import { useNavigation } from '@react-navigation/native';
 import { View} from 'react-native';
 import {StyleSheet } from "react-native";
-import {Button,Text,RadioButton} from "react-native-paper";
+import {Button,Text,RadioButton,IconButton, MD3Colors} from "react-native-paper";
 import Cb from "../componentes/Cb";
 import Input from "../componentes/Input";
+import IconBottum from "../componentes/IconBottum"
 import {recuperandoDespesasEspecifica,deleteDespesas,atualizarDespesas} from "../Services/Despesasdb"
 const Stack  = createNativeStackNavigator();
 const Main =({ route}) =>{
@@ -99,9 +100,11 @@ const Main =({ route}) =>{
             <RadioButton.Item color="green" label="Outros" value="tag-plus-outline" />    
           </RadioButton.Group>
           </View>
-          <Button onPress={()=>{salve()}}>salvar</Button>
-          <Button onPress={()=>{deletar()}}>apagar</Button>
-             
+          <View style={style.rodape}>
+          <IconBottum icon="content-save-check-outline" iconColor="green" onPress={()=>{salve()}}/>
+          <IconBottum  style={style.botao_esquerda} icon="delete-outline" iconColor="red"onPress={()=>{deletar()}}/>
+          </View>
+                    
     </View>
        
     )
@@ -114,7 +117,7 @@ const style = StyleSheet.create({
       color:'red'
     },
     texto:{
-      left:12
+      left:126
     },
     botao:{
       backgroundColor:"green",
@@ -123,6 +126,15 @@ const style = StyleSheet.create({
     check:{
       margin:9,
     },
+    botao_esquerda:{
+      left:50,
+      bottom:57
+    },
+    rodape:{
+      textAlign:"center",
+      left:120,
+      top:30
+    }
   
   })
   
