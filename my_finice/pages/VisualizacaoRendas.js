@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
 import { Appbar, Text, TextInput, Surface, ProgressBar, MD3Colors } from 'react-native-paper';
 import Botaoflutuante  from '../componentes/Botaoflutuante';
-import Input from "../componentes/Input";
 import {View, StyleSheet} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { NavigationContainer } from "@react-navigation/native";
 import Cb from "../componentes/Cb";
+import { CreateTable,recuperandoRendas } from '../Services/RendasDb';
 
 
 const VisualizacaoRendas = () => {

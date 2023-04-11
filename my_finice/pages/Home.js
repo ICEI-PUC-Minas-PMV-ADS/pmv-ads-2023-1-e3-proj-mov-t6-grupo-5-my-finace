@@ -6,13 +6,15 @@ import  VisualizacaoDespesa  from './VisualizacaoDespesa';
 import EvolucaoDespesas from './EvolucaoDespesas';
 import RegistroDeRendas from './RegistroDeRendas';
 import VisualizacaoRendas from './VisualizacaoRendas';
+import DetalhesRendas from './DetalhesRendas';
 
 const Home = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
     { key: 'T', title: 'Gastos', focusedIcon: 'credit-card-outline',color:'#3F51B5' },
     { key: 'Evolucao', title: 'Acompanhamento', focusedIcon: 'equalizer'},
-    { key: 'Rendas', title: 'Visualização de Rendas', focusedIcon: 'database-arrow-up-outline'}
+    { key: 'Rendas', title: 'Visualização de Rendas', focusedIcon: 'database-arrow-up-outline'},
+    { key: 'DetalhesRendas', title: 'Detalhes das Rendas', focusedIcon: 'clipboard-text-outline'}
     
   ]);
 
@@ -20,7 +22,9 @@ const Home = () => {
     T:VisualizacaoDespesa,
     Evolucao:EvolucaoDespesas,
     cadastro: Cadastrodespesas,
+    Registro: RegistroDeRendas,
     Rendas: VisualizacaoRendas,
+    Detalhes: DetalhesRendas,
   });
 
   return (
