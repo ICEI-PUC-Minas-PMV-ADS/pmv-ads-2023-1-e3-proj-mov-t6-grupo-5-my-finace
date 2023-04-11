@@ -32,6 +32,7 @@ function MyStack() {
     <List.Icon
           style={aviso.iconePosicao}
           icon={item.Categoria}
+          
           />
   </TouchableOpacity>
 );
@@ -46,7 +47,6 @@ return (
         renderItem={Item}
         keyExtractor={item => item.id}
       />
-
       </View>
       <Botaoflutuante
       onPress={() => navigation.navigate('Cadastrodespesas')}
@@ -62,20 +62,21 @@ const aviso = StyleSheet.create({
     },
     container: {
       flex: 1,
-      marginTop: StatusBar.currentHeight || 0,
+      marginTop: StatusBar.currentHeight || 0
     },
     iconePosicao:{
       left:100,
       bottom:50,
+      fontSize:100
       
     },
     item: {
       backgroundColor: '#fff',
-      borderBottomColor:'grenn',
-      borderColor:'green',
       padding: 20,
       marginVertical: 8,
       marginHorizontal: 16,
+      borderWidth: 1,
+      borderColor:"green"
     },
     title: {
       fontSize: 32,

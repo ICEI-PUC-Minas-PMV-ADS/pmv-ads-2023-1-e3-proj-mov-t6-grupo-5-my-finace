@@ -7,6 +7,7 @@ const Botaoflutuante = (prop) => (
   <FAB
     icon="plus"
     color='#fff'
+    size="small"
     style={styles.fab}
     {...prop}
    
@@ -17,8 +18,8 @@ const styles = StyleSheet.create({
   fab: {
     position: 'absolute',
     margin: 16,
-    right: 50,
-    top:600,
+    right: 10,
+    top:640,
     backgroundColor:"green"
   },
 })

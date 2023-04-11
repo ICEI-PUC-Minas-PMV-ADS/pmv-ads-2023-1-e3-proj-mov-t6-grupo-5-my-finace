@@ -10,7 +10,7 @@ import VisualizacaoRendas from './VisualizacaoRendas';
 const Home = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-    { key: 'T', title: 'Gastos', focusedIcon: 'credit-card-outline'},
+    { key: 'T', title: 'Gastos', focusedIcon: 'credit-card-outline',color:'#3F51B5' },
     { key: 'Evolucao', title: 'Acompanhamento', focusedIcon: 'equalizer'},
     { key: 'Rendas', title: 'Visualização de Rendas', focusedIcon: 'database-arrow-up-outline'}
     

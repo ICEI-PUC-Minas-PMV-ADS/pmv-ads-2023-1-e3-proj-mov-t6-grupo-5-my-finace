@@ -68,10 +68,7 @@ function Cadastrodespesas() {
                 <RadioButton.Item color="green" label="Outros" value="tag-plus-outline" />    
               </RadioButton.Group>
               </View>
-                  <Button style={style.botao} mode="contained" onPress={()=>{
-                   salve()
-                  }
-                  }>
+                  <Button style={style.botao} mode="contained" onPress={()=>{salve()}}>
                   SALVAR
                 </Button>
         </View>
