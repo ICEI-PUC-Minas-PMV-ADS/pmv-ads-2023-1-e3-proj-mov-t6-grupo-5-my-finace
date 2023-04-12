@@ -93,10 +93,10 @@ const Main =({ route}) =>{
               <View style={style.sel}>
             <Text>Destinação de Rendas</Text>
               <RadioButton.Group onValueChange={dt => setValue(dt)} value={dt}>
-                <RadioButton.Item color="green"label="Investimentos" value="Investimentos" />
-                <RadioButton.Item color="green" label="Despesa Fixa" value="Despesa Fixa" />
-                <RadioButton.Item color="green" label="Poupança" value="Poupança" />
-                <RadioButton.Item color="green" label="Outros" value="Outros" />    
+                <RadioButton.Item color="green"label="Investimentos" value="bank-transfer" />
+                <RadioButton.Item color="green" label="Despesa Fixa" value="newspaper-check" />
+                <RadioButton.Item color="green" label="Poupança" value="safe" />
+                <RadioButton.Item color="green" label="Outros" value="head-question" />       
               </RadioButton.Group>
                 </View>
           <View style={style.rodape}>

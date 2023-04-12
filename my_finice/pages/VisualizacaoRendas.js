@@ -1,17 +1,37 @@
-import React, {useState} from 'react';
+import {useState, useEffect} from 'react';
 import { Appbar, Text, TextInput, Surface, ProgressBar, MD3Colors } from 'react-native-paper';
 import Botaoflutuante  from '../componentes/Botaoflutuante';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Cb from "../componentes/Cb";
-import { CreateTable,recuperandoRendas } from '../Services/RendasDb';
-
+import {CreateTable ,recuperandoRendas } from '../Services/RendasDb';
 
 const VisualizacaoRendas = () => {
 
     const navigation = useNavigation();
 
-    return (
+    const [rendas, setRendas] = useState([]);
+      useEffect (() => {
+        recuperandoRendas().then((dados)=>{
+          setRendas(dados)
+        }); 
+      })
+    
+      const Item = ({item}) => (
+        <TouchableOpacity>
+      <Text>{item.Dia}</Text>
+      <Text>{'R$ '+item.Quantia}</Text>
+      <Text>{item.Desc}</Text>
+      <Text>{item.Credito}</Text>
+      <List.Icon
+            style={lista.iconePosicao}
+            icon={item.Destinacao}
+            
+            />
+            </TouchableOpacity>
+      );
+
+return (
 
         <View>
     
@@ -24,7 +44,7 @@ const VisualizacaoRendas = () => {
       <Text style={styles.tt}>Saldo em conta</Text>
 
     <Surface style={styles.surface} elevation={4}>
-        <Text style={styles.sd}>0,00</Text>
+        <Text style={styles.sd}>{'R$' +Item.Quantia}</Text>
     </Surface>
 
     <Text style={styles.dest}>Destinação dos Ganhos</Text>
@@ -37,15 +57,15 @@ const VisualizacaoRendas = () => {
     <Text style={styles.textodois}>Crédito Disponível</Text>
 
     <Surface style={styles.surfacedois} elevation={4}>
-        <Text style={styles.sd}>0,00</Text>
+        <Text style={styles.sd}>{'R$' +Item.Credito}</Text>
     </Surface>
 
         </View>
 
     );
-
-
 }
+
+
 const styles = StyleSheet.create({
     sd:{
       marginLeft: 8,

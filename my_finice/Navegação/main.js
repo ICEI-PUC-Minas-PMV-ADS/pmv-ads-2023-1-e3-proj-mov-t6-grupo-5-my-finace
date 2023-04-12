@@ -7,6 +7,7 @@ import EvolucaoDespesas from "../pages/EvolucaoDespesas";
 import RegistroDeRendas from "../pages/RegistroDeRendas";
 import DetalhesRendas from "../pages/DetalhesRendas";
 import VisualizacaoRendas from "../pages/VisualizacaoRendas";
+import EditarRendas from "../pages/EditarRendas";
 import EditarDespesas from "../pages/EditarDespesas";
 
 const Stack  = createNativeStackNavigator();
@@ -60,6 +61,14 @@ const Main =() =>{
                 component={DetalhesRendas}
                 options={{
                     header: ()=>null,
+                        }
+                    }
+                />
+                <Stack.Screen
+                    name='EditarRendas'
+                    component={EditarRendas}
+                    options={{
+                        header: ()=>null,
                         }
                     }
                 />
