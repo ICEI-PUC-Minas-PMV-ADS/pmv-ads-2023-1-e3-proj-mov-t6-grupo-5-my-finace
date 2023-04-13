@@ -5,7 +5,7 @@ export const criartabela = ()=> {
     db.transaction((transaction)=>{
         transaction.executeSql("CREATE TABLE IF NOT EXISTS "+ 
         "Despesas "+
-        "(id INTEGER PRIMARY KEY AUTOINCREMENT, Data TEXT, Valor FOALT, Descricao TEXT, Parcela INTEGER, Categoria TEXT);"
+        "(id INTEGER PRIMARY KEY AUTOINCREMENT, Data TEXT, Valor REAL, Descricao TEXT, Parcela REAL, Categoria TEXT);"
         )
     })
 }
@@ -13,7 +13,7 @@ export const criartabela = ()=> {
 export async function adicionarDespesas (d){
     return new Promise((resolve)=>{
         db.transaction((transaction)=>{
-            transaction.executeSql("INSERT INTO Despesas(Data,Valor,Descricao,Parcela,Categoria) VALUES(?,?,?,?,?);",[d.Data,d.Valor,d.Descricao,d.parcela,d.Categoria],()=>{
+            transaction.executeSql("INSERT INTO Despesas(Data,Valor,Descricao,Parcela,Categoria) VALUES(?,?,?,?,?);",[d.Data,d.Valor,d.Descricao,d.Parcela,d.Categoria],()=>{
                 resolve("Adicionado com sucesso")
             })
         })
@@ -44,7 +44,7 @@ export async function atualizarDespesas (d){
     return new Promise((resolve)=>{
         db.transaction((transaction)=>{
             transaction.executeSql("UPDATE Despesas SET Data=?,Valor=?,Descricao=?,Parcela=?,Categoria=? WHERE id=?;",[d.Data,d.Valor,d.Descricao,d.parcela,d.Categoria,d.id],()=>{
-                resolve("Adicionado com sucesso")
+                resolve("Alteração feita com sucesso")
             })
         })
     })

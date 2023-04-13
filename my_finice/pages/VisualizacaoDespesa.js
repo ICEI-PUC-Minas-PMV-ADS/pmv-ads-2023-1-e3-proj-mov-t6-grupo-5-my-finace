@@ -4,6 +4,7 @@ import{useEffect, useState} from 'react';
 import { useNavigation,useIsFocused } from '@react-navigation/native';
 import Botaoflutuante  from '../componentes/Botaoflutuante';
 import Cb from '../componentes/Cb';
+import CbSemVolta from '../componentes/CbSemVolta'
 import { criartabela,recuperandoDespesas } from '../Services/Despesasdb';
 import React from 'react';
 function MyStack() {
@@ -26,9 +27,9 @@ function MyStack() {
   const Item = ({item}) => (
     <TouchableOpacity style={aviso.item} onPress={() => navigation.navigate('EditarDespesas',{id:item.id})}>
     <Text>{item.Data}</Text>
-    <Text>{'R$ '+item.Valor}</Text>
-    <Text>{item.Descricao}</Text>
-    <Text>{item.parcela}</Text>
+    <Text>{'Valor: R$ '+item.Valor}</Text>
+    <Text>{'Descricão: '+item.Descricao}</Text>
+    <Text>{'Nº parcelas: '+item.Parcela}</Text>
     <List.Icon
           style={aviso.iconePosicao}
           icon={item.Categoria}
@@ -40,7 +41,7 @@ function MyStack() {
 verTabela()
 return (
     <View>
-      <Cb title="Despesas"/>
+      <CbSemVolta title="Despesas"/>
       <View style={aviso.container}>
       <FlatList
         data={extrato}

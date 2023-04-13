@@ -7,8 +7,6 @@ import { useNavigation,useIsFocused } from '@react-navigation/native';
 const Cb = (props,{goBack}) => (
 
   <Appbar.Header mode='center-aligned'>
-    
-        <Appbar.BackAction onPress={goBack}/>
       <Appbar.Action {...props}/>
       <Appbar.Content color="green" {...props} />
     </Appbar.Header>

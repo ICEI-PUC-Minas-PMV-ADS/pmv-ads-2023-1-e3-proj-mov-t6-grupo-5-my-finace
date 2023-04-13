@@ -18,7 +18,7 @@ function Cadastrodespesas() {
       Data:data,
       Valor:valor,
       Descricao:Descricao,
-      parcela:Parcela,
+      Parcela:Parcela,
       Categoria:d
     }
     await adicionarDespesas(despesa)
@@ -28,7 +28,7 @@ function Cadastrodespesas() {
   }
   return (
         <View>
-            <Cb icon="keyboard-backspace" title="CADASTRAR" goBack={()=>navigation.goBack()}/>
+            <Cb title="CADASTRAR" />
               <View>
               <Input 
                 label="Data da despesa"
