@@ -6,14 +6,15 @@ import  VisualizacaoDespesa  from './VisualizacaoDespesa';
 import EvolucaoDespesas from './EvolucaoDespesas';
 import RegistroDeRendas from './RegistroDeRendas';
 import VisualizacaoRendas from './VisualizacaoRendas';
+import Metas from './Metas';
 
 const Home = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
     { key: 'T', title: 'Gastos', focusedIcon: 'credit-card-outline'},
     { key: 'Evolucao', title: 'Acompanhamento', focusedIcon: 'equalizer'},
-    { key: 'Rendas', title: 'Visualização de Rendas', focusedIcon: 'database-arrow-up-outline'}
-    
+    { key: 'Rendas', title: 'Visualização de Rendas', focusedIcon: 'database-arrow-up-outline'},
+    { key: 'Metas', title: 'Metas', focusedIcon: 'rocket-launch'}
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
@@ -21,6 +22,7 @@ const Home = () => {
     Evolucao:EvolucaoDespesas,
     cadastro: Cadastrodespesas,
     Rendas: VisualizacaoRendas,
+    Metas: Metas,
   });
 
   return (
