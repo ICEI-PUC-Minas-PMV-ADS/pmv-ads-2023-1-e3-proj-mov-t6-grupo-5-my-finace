@@ -11,7 +11,6 @@ import IconBottum from "../componentes/IconBottum"
 import {recuperandoDespesasEspecifica,deleteDespesas,atualizarDespesas} from "../Services/Despesasdb"
 const Stack  = createNativeStackNavigator();
 const Main =({ route}) =>{
-   
     const {id} = route.params;
     const IsFocused = useIsFocused();
     const [extrato,setExtrato] = useState({})
@@ -39,8 +38,9 @@ const Main =({ route}) =>{
         setDescricao(extrato[0].Descricao)
         setValue(extrato[0].Categoria)
         setParcela(extrato[0].Parcela)
-        setValor(extrato[0].Valor)
-        console.log(valor)
+        setValor(extrato[0].Valor.toString())
+        setParcela(extrato[0].Parcela.toString())
+        
       }
 
     //Atualizando dados
