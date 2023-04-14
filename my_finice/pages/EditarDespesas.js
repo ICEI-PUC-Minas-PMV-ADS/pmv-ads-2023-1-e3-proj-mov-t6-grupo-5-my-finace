@@ -1,6 +1,6 @@
 import React,{useState,useEffect}from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer,useIsFocused } from "@react-navigation/native";
 import { useNavigation } from '@react-navigation/native';
 import { View} from 'react-native';
 import {StyleSheet } from "react-native";
@@ -12,41 +12,44 @@ import {recuperandoDespesasEspecifica,deleteDespesas,atualizarDespesas} from "..
 const Stack  = createNativeStackNavigator();
 const Main =({ route}) =>{
     const {id} = route.params;
-    const [extrato,setExtrato] = useState([])
-    async function verTabela(){
-        useEffect (()=>{
-            recuperandoDespesasEspecifica(id).then((dados)=>{
-                setExtrato(dados)
-            }); 
-        },[])
-        
-    }
-    verTabela()
-    console.log(extrato)
-    
+    const IsFocused = useIsFocused();
+    const [extrato,setExtrato] = useState({})
     const navigation = useNavigation();
-    const [d, setValue] = React.useState(extrato.Categoria);
-    const [data,setData]= React.useState(extrato.Data);
-    const [valor,setValor]= React.useState(extrato.Valor);
-    const [Descricao,setDescricao]= React.useState(extrato.Descricao);
-    const [Parcela,setParcela]= React.useState(extrato.Parcela);
-   //Recuperando tabela
+    const [d, setValue] = React.useState();
+    const [data,setData]= React.useState();
+    const [valor,setValor]= React.useState(0);
+    const [Descricao,setDescricao]= React.useState();
+    const [Parcela,setParcela]= React.useState();
+    
+  verTabela()
+    //Recuperando tabela
     async function verTabela(){
         useEffect (()=>{
           recuperandoDespesasEspecifica(id).then((dados)=>{
-            setExtrato(dados)
+            console.log(dados)
+            console.log(dados[0].Valor)
+           preencher(dados)
           }); 
-        },[])
+        },[IsFocused])
+      }
+      
+      function preencher(extrato){
+        setData(extrato[0].Data)
+        setDescricao(extrato[0].Descricao)
+        setValue(extrato[0].Categoria)
+        setParcela(extrato[0].Parcela)
+        setValor(extrato[0].Valor.toString())
+        setParcela(extrato[0].Parcela.toString())
         
       }
-    verTabela()
+
     //Atualizando dados
     async function salve(){
         const despesa = {
         Data:data,
         Valor:valor,
         Descricao:Descricao,
-        parcela:Parcela,
+        Parcela:Parcela,
         Categoria:d
         }
         await atualizarDespesas(despesa)

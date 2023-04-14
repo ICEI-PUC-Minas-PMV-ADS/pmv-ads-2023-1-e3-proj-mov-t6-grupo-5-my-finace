@@ -5,7 +5,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import Cadastrodespesas from "../pages/Cadastrodespesas";
 import EvolucaoDespesas from "../pages/EvolucaoDespesas";
 import RegistroDeRendas from "../pages/RegistroDeRendas";
+import DetalhesRendas from "../pages/DetalhesRendas";
 import VisualizacaoRendas from "../pages/VisualizacaoRendas";
+import EditarRendas from "../pages/EditarRendas";
 import EditarDespesas from "../pages/EditarDespesas";
 import Metas from "../pages/Metas";
 
@@ -50,6 +52,22 @@ const Main =() =>{
                 <Stack.Screen
                     name='VisualizaçãoRendas'
                     component={VisualizacaoRendas}
+                    options={{
+                        header: ()=>null,
+                        }
+                    }
+                />
+                <Stack.Screen
+                name='DetalhesRendas'
+                component={DetalhesRendas}
+                options={{
+                    header: ()=>null,
+                        }
+                    }
+                />
+                <Stack.Screen
+                    name='EditarRendas'
+                    component={EditarRendas}
                     options={{
                         header: ()=>null,
                         }
