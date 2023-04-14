@@ -10,6 +10,7 @@ import VisualizacaoRendas from "../pages/VisualizacaoRendas";
 import EditarRendas from "../pages/EditarRendas";
 import EditarDespesas from "../pages/EditarDespesas";
 import Metas from "../pages/Metas";
+import RegistroMetas from "../pages/RegistroMetas";
 
 const Stack  = createNativeStackNavigator();
 const Main =() =>{
@@ -84,6 +85,14 @@ const Main =() =>{
                 <Stack.Screen
                     name='Metas'
                     component={Metas}
+                    options={{
+                        header: ()=>null,
+                        }
+                    }
+                />
+                <Stack.Screen
+                    name='RegistroMetas'
+                    component={RegistroMetas}
                     options={{
                         header: ()=>null,
                         }

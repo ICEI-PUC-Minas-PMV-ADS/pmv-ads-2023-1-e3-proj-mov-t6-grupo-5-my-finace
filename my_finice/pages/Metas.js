@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignContent: 'center',
         fontSize: 25,
-        textDecorationStyle: 'bold',
+        textDecorationStyle: 'solid',
     },
 
     descricao:{
