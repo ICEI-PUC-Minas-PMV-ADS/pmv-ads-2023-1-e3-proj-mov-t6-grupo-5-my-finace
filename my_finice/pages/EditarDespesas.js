@@ -4,30 +4,27 @@ import { NavigationContainer,useIsFocused } from "@react-navigation/native";
 import { useNavigation } from '@react-navigation/native';
 import { View} from 'react-native';
 import {StyleSheet } from "react-native";
-import {Button,Text,RadioButton,IconButton, MD3Colors} from "react-native-paper";
+import {Text,RadioButton} from "react-native-paper";
 import Cb from "../componentes/Cb";
 import Input from "../componentes/Input";
 import IconBottum from "../componentes/IconBottum"
 import {recuperandoDespesasEspecifica,deleteDespesas,atualizarDespesas} from "../Services/Despesasdb"
 const Stack  = createNativeStackNavigator();
-const Main =({ route}) =>{
+const Main =({route}) =>{
     const {id} = route.params;
     const IsFocused = useIsFocused();
-    const [extrato,setExtrato] = useState({})
     const navigation = useNavigation();
     const [d, setValue] = React.useState();
     const [data,setData]= React.useState();
-    const [valor,setValor]= React.useState(0);
+    const [valor,setValor]= React.useState();
     const [Descricao,setDescricao]= React.useState();
-    const [Parcela,setParcela]= React.useState();
+    const [Parcela,setParcela]= React.useState(0);
     
   verTabela()
     //Recuperando tabela
     async function verTabela(){
         useEffect (()=>{
           recuperandoDespesasEspecifica(id).then((dados)=>{
-            console.log(dados)
-            console.log(dados[0].Valor)
            preencher(dados)
           }); 
         },[IsFocused])
@@ -46,6 +43,7 @@ const Main =({ route}) =>{
     //Atualizando dados
     async function salve(){
         const despesa = {
+        id:id,
         Data:data,
         Valor:valor,
         Descricao:Descricao,

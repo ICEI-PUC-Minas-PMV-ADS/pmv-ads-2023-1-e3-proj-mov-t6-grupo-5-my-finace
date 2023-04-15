@@ -43,7 +43,7 @@ export async function recuperandoDespesasEspecifica (d){
 export async function atualizarDespesas (d){
     return new Promise((resolve)=>{
         db.transaction((transaction)=>{
-            transaction.executeSql("UPDATE Despesas SET Data=?,Valor=?,Descricao=?,Parcela=?,Categoria=? WHERE id=?;",[d.Data,d.Valor,d.Descricao,d.parcela,d.Categoria,d.id],()=>{
+            transaction.executeSql("UPDATE Despesas SET Data=?,Valor=?,Descricao=?,Parcela=?,Categoria=? WHERE id=?;",[d.Data,d.Valor,d.Descricao,d.Parcela,d.Categoria,d.id],()=>{
                 resolve("Alteração feita com sucesso")
             })
         })

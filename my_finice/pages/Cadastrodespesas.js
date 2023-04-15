@@ -23,7 +23,6 @@ function Cadastrodespesas() {
     }
     await adicionarDespesas(despesa)
     navigation.goBack();
-     
 
   }
   return (

@@ -11,7 +11,6 @@ function MyStack() {
   const [extrato,setExtrato] = useState([])
   const IsFocused = useIsFocused();
   const navigation = useNavigation();
-  const[selecionada,setSeleciona]= useState({})
   useEffect (()=>{
     criartabela()
   },[])
