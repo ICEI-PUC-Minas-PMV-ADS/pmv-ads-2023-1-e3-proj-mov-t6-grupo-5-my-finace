@@ -61,7 +61,7 @@ const Main =({route}) =>{
     return(
 
         <View>
-        <Cb icon="keyboard-backspace" title="CADASTRAR" goBack={()=>navigation.goBack()}/>
+    <Cb title="CADASTRAR"  onPress={() => navigation.goBack()}/>
           <View>
           <Input 
             label="Data da despesa"

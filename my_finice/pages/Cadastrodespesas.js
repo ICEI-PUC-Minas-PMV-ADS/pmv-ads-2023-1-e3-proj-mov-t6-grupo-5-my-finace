@@ -27,7 +27,7 @@ function Cadastrodespesas() {
   }
   return (
         <View>
-            <Cb title="CADASTRAR" />
+            <Cb title="CADASTRAR"  onPress={() => navigation.goBack()}/>
               <View>
               <Input 
                 label="Data da despesa"
