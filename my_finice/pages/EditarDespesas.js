@@ -61,7 +61,7 @@ const Main =({route}) =>{
     return(
 
         <View>
-    <Cb title="CADASTRAR"  onPress={() => navigation.goBack()}/>
+    <Cb title="CADASTRAR"  onPress={() => navigation.goBack()}/>  
           <View>
           <Input 
             label="Data da despesa"
@@ -102,7 +102,7 @@ const Main =({route}) =>{
           </RadioButton.Group>
           </View>
           <View style={style.rodape}>
-          <IconBottum icon="content-save-check-outline" iconColor="green" onPress={()=>{salve()}}/>
+          <IconBottum style={style.botao_direita} icon="content-save-check-outline" iconColor="green" onPress={()=>{salve()}}/>
           <IconBottum  style={style.botao_esquerda} icon="delete-outline" iconColor="red"onPress={()=>{deletar()}}/>
           </View>
                     
@@ -128,8 +128,12 @@ const style = StyleSheet.create({
       margin:9,
     },
     botao_esquerda:{
-      left:50,
+      left:150,
       bottom:57
+    },
+    botao_direita:{
+      right:100,
+   
     },
     rodape:{
       textAlign:"center",
