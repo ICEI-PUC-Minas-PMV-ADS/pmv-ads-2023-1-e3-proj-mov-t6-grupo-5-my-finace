@@ -8,29 +8,24 @@ import {pegarInformacaoParaGrafico} from '../Services/Despesasdb';
 
 function EvolucaoDespesas() {
   const IsFocused = useIsFocused();
-  const [data,setData] = useState()
+  const [data,setData] = useState({})
+
   useEffect (()=>{
     pegarInformacaoParaGrafico().then((dados)=>{
      setData(dados)
     }); 
   },[IsFocused])
 
-  async function puxarDados () {
-    useEffect (()=>{
-      pegarInformacaoParaGrafico().then((dados)=>{
-       setData(dados)
-      }); 
-    },[IsFocused])
 
-  }
-puxarDados()
-console.log(data)
   return (
     <View>
       <CbSemVolta title="Evolução"/>
-      <VictoryBar data={data} x="Data" y="Valor"  style={{ data: { fill: "green", strokeWidth: 2 }}}  />
+      <VictoryChart width={350}>
+          <VictoryBar data={data} x="Data" y="Valor" labels={({ datum }) => datum.y} />
+        </VictoryChart>
     </View>
-  );
+  )
+
   }
 const styles = StyleSheet.create({
   container: {
