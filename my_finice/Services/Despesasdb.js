@@ -59,3 +59,14 @@ export async function deleteDespesas (id){
         })
     })
 }
+
+export async function pegarInformacaoParaGrafico (){
+    return new Promise((resolve)=>{
+        db.transaction((transaction)=>{
+          transaction.executeSql("SELECT Data,sum(Valor) as Valor FROM Despesas GROUP BY Data;",[],(transaction, resultados)=>{
+                resolve(resultados.rows._array)
+            })
+          
+        })
+    })
+}
