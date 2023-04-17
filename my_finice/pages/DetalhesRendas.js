@@ -47,6 +47,9 @@ return (
         renderItem={Item}
         keyExtractor={item => item.id}
       />
+      <TouchableOpacity onPress={() => navigation.navigate('VisualizacaoRendas')}>
+        <Text>Visualizacao de Rendas</Text>
+      </TouchableOpacity>
       </View>
       <Botaoflutuante
       onPress={() => navigation.navigate('RegistroDeRendas')}
@@ -54,6 +57,7 @@ return (
     </View>
   );
 }
+
 const lista = StyleSheet.create({
     container: {
       flex: 1,
