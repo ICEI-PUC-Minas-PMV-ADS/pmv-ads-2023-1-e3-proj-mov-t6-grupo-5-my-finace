@@ -12,9 +12,19 @@ Para cada tarefa do participante é possível meditar:
 - Quanto tempo foi necessário para concluí-la;
 - Se a interface do sistema é apresentável.
 
-| **Tarefa 1** | **Critério de Êxito** | **O que será avaliado** |
-|--------------|----------------------|-------------------------|
-|Cadastro de novo usuário. | Concluir o cadastro, seguindo o direcionamento do sistema para a homepage. | Facilidade em realizar uma ação. Efetivação da tarefa. Quantidade de erros cometidos. Tempo necessário para se concluir. |
+|| 1 - Cadastro de despesas |  |
+|--------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+|Objetivo: | Esse plano tem como objetivo avaliar se o usuário consegue processo de CRUD ,( cadastro, edição e exclusão ), das despesas de maneira fácil e objetiva|
+|Quando e onde o teste será executado: | O teste será realizado de maneira online na semana do dia 20/04/2023                                
+|Tempo médio de duração do teste: |O tempo previsto para realização de cada teste e de aproximadamente 5 minutos                             |
+|Ambiente de execução: | O teste será feito na plataforma expo online .                
+|Usuários evolvidos: | Serão dois usuários que tem o perfil do nosso público alvo.
+|Tarefas a serem executadas: | No teste os usuários terão de criar um registro de uma despesa no aplicativo, e testar se consegue editar ou excluir a despesas cadastrada
+|Usuários evolvidos: | Serão dois usuários que tem o perfil do nosso público alvo.
+|Funcionalidade mais critica:| A funcionalidade mais critica nesta tela e a de excluir despesas
+|Dados coletados:|Será coletado a imagem da tela do usuário durante o processo e o feedback do mesmo sobre a aplicação
+|Caso de sucesso:|Caso de sucesso do teste, se dá quando o usuário consegue fazer todas as tarefas sem nenhum problema ou dúvida quanto ao uso da aplicação
+
 
 | **Tarefa 2** | **Critério de Êxito** | **O que será avaliado** |
 |--------------|----------------------|-------------------------|

@@ -1,6 +1,6 @@
 import React,{useState,useEffect}from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, useIsFocused } from "@react-navigation/native";
 import { useNavigation } from '@react-navigation/native';
 import { View} from 'react-native';
 import {StyleSheet } from "react-native";
@@ -12,34 +12,36 @@ import {recuperandoRendasEspecifica,deleteRendas,atualizarRendas} from "../Servi
 const Stack  = createNativeStackNavigator();
 const Main =({ route}) =>{
     const {id} = route.params;
-    const [extratoRendas,setExtratoRendas] = useState([])
-    async function verTable(){
-        useEffect (()=>{
-            recuperandoRendasEspecifica(id).then((dados)=>{
-                setExtratoRendas(dados)
-            }); 
-        },[])
-        
-    }
-    verTable()
-    console.log(extratoRendas)
+    const IsFocused = useIsFocused();
+    const [extratoRendas,setExtratoRendas] = useState({})
+    const [dt, setValue] = React.useState();
+    const [dia,setDia]= React.useState();
+    const [quantia,setQuantia]= React.useState(0);
+    const [desc,setDesc]= React.useState();
+    const [credito,setCredito]= React.useState();
     
-    const navigation = useNavigation();
-    const [dt, setValue] = React.useState(extratoRendas.Destinacao);
-    const [dia,setDia]= React.useState(extratoRendas.Dia);
-    const [quantia,setQuantia]= React.useState(extratoRendas.Quantia);
-    const [desc,setDesc]= React.useState(extratoRendas.Desc);
-    const [credito,setCredito]= React.useState(extratoRendas.Credito);
-   //Recuperando tabela
+  verTable()
+    //Recuperando tabela
     async function verTable(){
         useEffect (()=>{
           recuperandoRendasEspecifica(id).then((dados)=>{
-            setExtratoRendas(dados)
+            console.log(dados)
+            console.log(dados[0].Quantia)
+           preencher(dados)
           }); 
-        },[])
-        
-      }
-    verTable()
+        },[IsFocused])
+        }
+
+        function preencher(extratoRendas){
+          setDia(extratoRendas[0].Dia)
+          setDesc(extratoRendas[0].Desc)
+          setValue(extratoRendas[0].Destinacao)
+          setCredito(extratoRendas[0].Credito)
+          setQuantia(extratoRendas[0].Quantia.toString())
+          setCredito(extratoRendas[0].Credito.toString())
+          
+        }
+
     //Atualizando dados
     async function salvar(){
         const renda = {
