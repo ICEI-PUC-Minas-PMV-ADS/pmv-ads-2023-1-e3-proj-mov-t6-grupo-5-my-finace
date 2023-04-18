@@ -23,7 +23,7 @@ const Metas = () => {
 
         <Surface style={styles.surface} elevation={8}>
             <Text style={styles.titulo}>Compra de Carro Novo</Text>
-            <Text style={styles.descricao}>Comprar uma Fiorinho</Text>
+            <Text style={styles.descricao}>Comprar uma Fiorinho de drift</Text>
             <Text style={styles.porcent}>48% da Meta Completa</Text>
             <ProgressBar style={styles.progress} progress={0.48} color={MD3Colors.primary60} />
         </Surface>
