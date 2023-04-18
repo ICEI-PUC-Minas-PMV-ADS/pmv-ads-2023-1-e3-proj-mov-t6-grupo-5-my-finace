@@ -54,7 +54,7 @@ export async function deleteDespesas (id){
     return new Promise((resolve)=>{
         db.transaction((transaction)=>{
             transaction.executeSql("DELETE FROM Despesas WHERE id=?;",[id],()=>{
-                resolve("Adicionado com sucesso")
+              console.log(resolve("Deletada com sucesso"))
             })
         })
     })

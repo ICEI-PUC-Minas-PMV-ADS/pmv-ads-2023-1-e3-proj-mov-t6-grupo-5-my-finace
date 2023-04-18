@@ -50,12 +50,12 @@ const Main =({route}) =>{
         Parcela:Parcela,
         Categoria:d
         }
-        await atualizarDespesas(despesa)
+        console.log(await atualizarDespesas(despesa))
         navigation.goBack();
     }
     //Deletando dados
     async function deletar(){
-       await deleteDespesas(id)
+       console.log(await deleteDespesas(id))
         navigation.goBack();
     }
     return(
