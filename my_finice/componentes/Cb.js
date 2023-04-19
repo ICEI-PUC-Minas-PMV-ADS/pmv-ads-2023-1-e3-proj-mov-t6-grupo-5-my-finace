@@ -4,17 +4,11 @@ import { Appbar } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { useNavigation,useIsFocused } from '@react-navigation/native';
-import { IconButton, MD3Colors } from 'react-native-paper';
-import{List} from 'react-native-paper';
-//const navigation = useNavigation();
-const Cb = (props) => (
-  <Appbar.Header >
-          <IconButton
-        icon="keyboard-backspace"
-        iconColor={'green'}
-        size={20}
-        {...props}
-      />
+const Cb = (props,{goBack}) => (
+
+  <Appbar.Header mode='center-aligned'>
+    
+        <Appbar.BackAction onPress={goBack}/>
       <Appbar.Action {...props}/>
       <Appbar.Content color="green" {...props} />
     </Appbar.Header>
@@ -22,8 +16,7 @@ const Cb = (props) => (
 
   const estilo = StyleSheet.create({
       cabecalho:{
-      backgroundColor:"green",
-      left:500
+      backgroundColor:"green"
       }
   })
 export default Cb;

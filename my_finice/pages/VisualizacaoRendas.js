@@ -36,10 +36,13 @@ return (
         <View>
     
         <Cb title="Visualização de Rendas"/>
+
         <Botaoflutuante
       onPress={() => navigation.navigate('RegistroDeRendas')}
       />
+
       <Text style={styles.tt}>Saldo em conta</Text>
+
     <Surface style={styles.surface} elevation={4}>
         <Text style={styles.sd}>{'R$' +Item.Quantia}</Text>
     </Surface>

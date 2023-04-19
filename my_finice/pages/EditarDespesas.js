@@ -4,27 +4,31 @@ import { NavigationContainer,useIsFocused } from "@react-navigation/native";
 import { useNavigation } from '@react-navigation/native';
 import { View} from 'react-native';
 import {StyleSheet } from "react-native";
-import {Text,RadioButton} from "react-native-paper";
+import {Button,Text,RadioButton,IconButton, MD3Colors} from "react-native-paper";
 import Cb from "../componentes/Cb";
 import Input from "../componentes/Input";
 import IconBottum from "../componentes/IconBottum"
 import {recuperandoDespesasEspecifica,deleteDespesas,atualizarDespesas} from "../Services/Despesasdb"
 const Stack  = createNativeStackNavigator();
-const Main =({route}) =>{
+const Main =({ route}) =>{
+   
     const {id} = route.params;
     const IsFocused = useIsFocused();
+    const [extrato,setExtrato] = useState({})
     const navigation = useNavigation();
     const [d, setValue] = React.useState();
     const [data,setData]= React.useState();
-    const [valor,setValor]= React.useState();
+    const [valor,setValor]= React.useState(0);
     const [Descricao,setDescricao]= React.useState();
-    const [Parcela,setParcela]= React.useState(0);
+    const [Parcela,setParcela]= React.useState();
     
   verTabela()
     //Recuperando tabela
     async function verTabela(){
         useEffect (()=>{
           recuperandoDespesasEspecifica(id).then((dados)=>{
+            console.log(dados)
+            console.log(dados[0].Valor)
            preencher(dados)
           }); 
         },[IsFocused])
@@ -35,15 +39,13 @@ const Main =({route}) =>{
         setDescricao(extrato[0].Descricao)
         setValue(extrato[0].Categoria)
         setParcela(extrato[0].Parcela)
-        setValor(extrato[0].Valor.toString())
-        setParcela(extrato[0].Parcela.toString())
-        
+        setValor(extrato[0].Valor)
+        console.log(valor)
       }
 
     //Atualizando dados
     async function salve(){
         const despesa = {
-        id:id,
         Data:data,
         Valor:valor,
         Descricao:Descricao,
@@ -61,7 +63,7 @@ const Main =({route}) =>{
     return(
 
         <View>
-    <Cb title="CADASTRAR"  onPress={() => navigation.goBack()}/>  
+        <Cb icon="keyboard-backspace" title="CADASTRAR" goBack={()=>navigation.goBack()}/>
           <View>
           <Input 
             label="Data da despesa"
@@ -102,7 +104,7 @@ const Main =({route}) =>{
           </RadioButton.Group>
           </View>
           <View style={style.rodape}>
-          <IconBottum style={style.botao_direita} icon="content-save-check-outline" iconColor="green" onPress={()=>{salve()}}/>
+          <IconBottum icon="content-save-check-outline" iconColor="green" onPress={()=>{salve()}}/>
           <IconBottum  style={style.botao_esquerda} icon="delete-outline" iconColor="red"onPress={()=>{deletar()}}/>
           </View>
                     
@@ -128,12 +130,8 @@ const style = StyleSheet.create({
       margin:9,
     },
     botao_esquerda:{
-      left:150,
+      left:50,
       bottom:57
-    },
-    botao_direita:{
-      right:100,
-   
     },
     rodape:{
       textAlign:"center",

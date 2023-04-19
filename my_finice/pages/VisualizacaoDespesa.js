@@ -11,9 +11,9 @@ function MyStack() {
   const [extrato,setExtrato] = useState([])
   const IsFocused = useIsFocused();
   const navigation = useNavigation();
+  const[selecionada,setSeleciona]= useState({})
   useEffect (()=>{
     criartabela()
-   //verTabela()
   },[])
   
   async function verTabela(){
@@ -26,14 +26,15 @@ function MyStack() {
   }
   const Item = ({item}) => (
     <TouchableOpacity style={aviso.item} onPress={() => navigation.navigate('EditarDespesas',{id:item.id})}>
-    <List.Icon style={aviso.iconePosicao} icon={item.Categoria}/>
-    <View style={aviso.lista}>
-      <Text>{item.Data}</Text>
-      <Text>{'Valor: R$ '+item.Valor}</Text>
-      <Text>{'Nº parcelas: '+item.Parcela}</Text>
-      <Text>{'Descricão: '+item.Descricao}</Text>
-    </View>
-    <List.Icon style={aviso.verMais}icon={'chevron-right'} color={'green'}/>
+    <Text>{item.Data}</Text>
+    <Text>{'Valor: R$ '+item.Valor}</Text>
+    <Text>{'Descricão: '+item.Descricao}</Text>
+    <Text>{'Nº parcelas: '+item.Parcela}</Text>
+    <List.Icon
+          style={aviso.iconePosicao}
+          icon={item.Categoria}
+          
+          />
   </TouchableOpacity>
 );
 
@@ -41,7 +42,7 @@ verTabela()
 return (
     <View>
       <CbSemVolta title="Despesas"/>
-      <View>
+      <View style={aviso.container}>
       <FlatList
         data={extrato}
         renderItem={Item}
@@ -65,30 +66,25 @@ const aviso = StyleSheet.create({
       marginTop: StatusBar.currentHeight || 0
     },
     iconePosicao:{
-      right:130,
-      top:50,
+      left:100,
+      bottom:50,
+      fontSize:100
+      
     },
     item: {
       backgroundColor: '#fff',
       padding: 20,
       marginVertical: 8,
       marginHorizontal: 16,
-      borderLeftWidth: 1,
+      borderWidth: 1,
       borderColor:"green"
     },
     title: {
       fontSize: 32,
     },
     container: {
-     backgroundColor:'#c5e5b4'
+     
     },
-    verMais:{
-      left:150,
-      bottom:60,
-      fontSize:350
-    },
-    lista:{
-      left:70
-    }
+    
 })
 export default MyStack;

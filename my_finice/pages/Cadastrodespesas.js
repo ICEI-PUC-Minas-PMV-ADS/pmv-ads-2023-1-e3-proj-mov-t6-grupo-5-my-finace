@@ -23,11 +23,12 @@ function Cadastrodespesas() {
     }
     await adicionarDespesas(despesa)
     navigation.goBack();
+     
 
   }
   return (
         <View>
-            <Cb title="CADASTRAR"  onPress={() => navigation.goBack()}/>
+            <Cb title="CADASTRAR" />
               <View>
               <Input 
                 label="Data da despesa"
