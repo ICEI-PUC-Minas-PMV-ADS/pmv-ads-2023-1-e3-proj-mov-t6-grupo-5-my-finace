@@ -44,7 +44,7 @@ export async function atualizarRendas (dt){
     return new Promise((resolve)=>{
         db.transaction((transaction)=>{
             transaction.executeSql("UPDATE Rendas SET Dia=?,Quantia=?,Desc=?,Credito=?,Destinacao=? WHERE id=?;",[dt.Dia,dt.Quantia,dt.Desc,dt.Credito,dt.Destinacao,dt.id],()=>{
-                resolve("Atualizado com sucesso")
+                resolve("Alteração realizada com sucesso")
             })
         })
     })
