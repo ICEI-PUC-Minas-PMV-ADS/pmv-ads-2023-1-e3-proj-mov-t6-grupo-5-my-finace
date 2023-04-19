@@ -5,7 +5,7 @@ export const CreateTable = ()=> {
     db.transaction((transaction)=>{
         transaction.executeSql("CREATE TABLE IF NOT EXISTS "+ 
         "Rendas "+
-        "(id INTEGER PRIMARY KEY AUTOINCREMENT, Dia TEXT, Quantia FLOAT, Desc TEXT, Credito FLOAT, Destinacao TEXT);"
+        "(id INTEGER PRIMARY KEY AUTOINCREMENT, Dia TEXT, Quantia REAL, Desc TEXT, Credito REAL, Destinacao TEXT);"
         )
     })
 }
@@ -44,7 +44,7 @@ export async function atualizarRendas (dt){
     return new Promise((resolve)=>{
         db.transaction((transaction)=>{
             transaction.executeSql("UPDATE Rendas SET Dia=?,Quantia=?,Desc=?,Credito=?,Destinacao=? WHERE id=?;",[dt.Dia,dt.Quantia,dt.Desc,dt.Credito,dt.Destinacao,dt.id],()=>{
-                resolve("Adicionado com sucesso")
+                resolve("Atualizado com sucesso")
             })
         })
     })
