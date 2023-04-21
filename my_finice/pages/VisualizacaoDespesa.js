@@ -3,17 +3,16 @@ import{List} from 'react-native-paper';
 import{useEffect, useState} from 'react';
 import { useNavigation,useIsFocused } from '@react-navigation/native';
 import Botaoflutuante  from '../componentes/Botaoflutuante';
-import Cb from '../componentes/Cb';
 import CbSemVolta from '../componentes/CbSemVolta'
 import { criartabela,recuperandoDespesas } from '../Services/Despesasdb';
 import React from 'react';
+
 function MyStack() {
   const [extrato,setExtrato] = useState([])
   const IsFocused = useIsFocused();
   const navigation = useNavigation();
   useEffect (()=>{
     criartabela()
-   //verTabela()
   },[])
   
   async function verTabela(){
@@ -21,8 +20,7 @@ function MyStack() {
       recuperandoDespesas().then((dados)=>{
         setExtrato(dados)
       }); 
-    },[IsFocused])
-    
+    },[IsFocused]) 
   }
   const Item = ({item}) => (
     <TouchableOpacity style={aviso.item} onPress={() => navigation.navigate('EditarDespesas',{id:item.id})}>

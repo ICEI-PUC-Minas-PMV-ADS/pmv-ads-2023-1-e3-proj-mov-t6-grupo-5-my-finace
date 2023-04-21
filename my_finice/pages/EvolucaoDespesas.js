@@ -1,72 +1,77 @@
-import { StyleSheet, View,Text} from 'react-native';
+import { StyleSheet, View,Text,FlatList} from 'react-native';
+import { ProgressBar} from 'react-native-paper';
 import React,{useState,useEffect}from "react";
 import CbSemVolta from '../componentes/CbSemVolta'
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { NavigationContainer,useIsFocused } from "@react-navigation/native";
-import { VictoryBar, VictoryChart, VictoryLabel } from "victory-native";
-import {pegarInformacaoParaGrafico} from '../Services/Despesasdb';
-import { BarChart, Grid, YAxis,XAxis} from 'react-native-svg-charts'
-//import { BarChart, Grid, YAxis } from 'react-native-svg-charts'
-import * as scale from 'd3-scale'
+import {useIsFocused } from "@react-navigation/native";
+import { VictoryBar, VictoryChart, VictoryLabel,VictoryGroup,VictoryTheme } from "victory-native";
+import {pegarInformacaoParaGrafico,gastosPorCategoria} from '../Services/Despesasdb';
 
 function EvolucaoDespesas() {
   const IsFocused = useIsFocused();
-  const [data,setData] = useState([])
+  const [data,setData] = useState([]);
+  const [Categoria,setCategoria] = useState([]);
 
   useEffect (()=>{
-    pegarInformacaoParaGrafico().then((dados)=>{
-     setData(dados)
+      pegarInformacaoParaGrafico().then((dados)=>{
+      setData(dados)
     }); 
-  },[IsFocused])
-  const fill = 'rgb(134, 65, 244)'
-  const d = [50, 10, 40, 95, -4, -24, null, 85, undefined, 0, 35, 53, -53, 24, 50, -20, -80]
+    gastosPorCategoria().then((ctg)=>{
+        setCategoria(ctg)
+      }); 
+    },[IsFocused])
 
-console.log(data)
-
-const CUT_OFF = 50
-const Labels = ({  x, y, bandwidth, data }) => (
-  //console.log(data.map(item => item.Data)),
-  data.map( item => (
-      <Text
-          key={ item.Valor }
-          x={ item.Valor }
-          y={ item.Valor}
-          fontSize={ 14 }
-         // fill={ value > CUT_OFF ? 'white' : 'black' }
-          alignmentBaseline={ 'middle' }
-      >
-          {item.Valor}
-      </Text>
-  ))
-)
-  return (
-    <View>
-      <CbSemVolta Title="Evolução"></CbSemVolta>
-     
-    <View style={{ flexDirection: 'row', height: 200, paddingVertical: 16 }}>
+  console.log(data)
  
- <BarChart
-      style={{ flex: 1, marginLeft: 8 }}
-      data={data}
-      horizontal={false}
-      yAccessor={({ item }) => item.Valor}
-      svg={{ fill: 'green' }}
-      contentInset={{ top: 10, bottom: 10 }}
-      spacing={0.2}
-      gridMin={0}>
-  <Grid direction={Grid.Direction.HORIZONTAL}/>
-  <Labels/>
-  </BarChart>
-</View>
-        </View>
-  )
+  const Item = ({item}) => (
+    <View style={styles.lista}>
+      <Text>{item.categoria}</Text>
+      <ProgressBar progress={item.QTD/100} color={'green'} />
+    </View>
+  );
 
-  }
+  return ( 
+    <View>
+      <CbSemVolta title="Evolução"/>
+      <VictoryChart   theme={VictoryTheme.material} domainPadding={{ x: 50 }}>
+        <VictoryGroup>
+          <VictoryBar 
+              data={data} 
+              x="Data" 
+              y="Valor" 
+              labels={({ datum }) => datum.Valor}
+              style={{ labels: { fill: "#000" }, data:{fill:"green"}}}
+               labelComponent={<VictoryLabel dy={3}/>}
+              > 
+          </VictoryBar>
+        </VictoryGroup>
+      </VictoryChart>
+    <Text style={styles.titulo}>Concentração dos gastos</Text>
+      <FlatList
+        data={Categoria}
+        renderItem={Item}
+        keyExtractor={item => item.id}
+        style={styles.t}
+      />
+    </View>
+  )
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center",
- 
-  }})
+    alignItems: "center", 
+  },
+  lista:{
+    width:320,
+    padding:2,
+    left:20,
+  },
+  t:{
+      top:100
+  },
+  titulo:{
+    textAlign:'center',
+    top:30
+  }
+})
 export default EvolucaoDespesas;
