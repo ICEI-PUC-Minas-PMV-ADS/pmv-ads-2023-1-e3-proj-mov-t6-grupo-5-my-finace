@@ -54,8 +54,31 @@ export async function deleteRendas (id){
     return new Promise((resolve)=>{
         db.transaction((transaction)=>{
             transaction.executeSql("DELETE FROM Rendas WHERE id=?;",[id],()=>{
-                resolve("Adicionado com sucesso")
+                resolve("Excluído com sucesso")
             })
+        })
+    })
+}
+
+export async function somaRendas (){
+    return new Promise((resolve)=>{
+        db.transaction((transaction)=>{
+          transaction.executeSql("SELECT Dia,sum(Quantia) as Quantia FROM Rendas GROUP BY Dia ;",[],(transaction, resultados)=>{
+                resolve(resultados.rows._array)
+            })
+          
+        })
+    })
+}
+
+export async function DestinacaoRend (){
+    return new Promise((resolve)=>{
+        db.transaction((transaction)=>{
+          transaction.executeSql(
+            "SELECT CASE Destinacao WHEN 'bank-transfer' THEN 'Investimentos' WHEN 'newspaper-check' THEN 'Despesa Fixa' WHEN 'safe' THEN 'Poupança' WHEN 'head-question' THEN 'Outros' ELSE 'ND' END AS destinacao, COUNT(*) as QTD FROM Rendas GROUP BY destinacao;",[],(transaction, resultados)=>{
+                resolve(resultados.rows._array)
+            })
+          
         })
     })
 }

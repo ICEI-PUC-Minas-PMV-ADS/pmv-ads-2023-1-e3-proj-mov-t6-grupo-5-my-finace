@@ -25,15 +25,14 @@ function StackRendas() {
   }
   const Item = ({item}) => (
     <TouchableOpacity style={lista.item} onPress={() => navigation.navigate('EditarRendas',{id:item.id})}>
+      <List.Icon style={lista.iconePosicao} icon={item.Destinacao}/>
+      <View style={lista.topicos}>
     <Text>{item.Dia}</Text>
     <Text>{'R$ '+item.Quantia}</Text>
     <Text>{item.Desc}</Text>
     <Text>{item.Credito}</Text>
-    <List.Icon
-          style={lista.iconePosicao}
-          icon={item.Destinacao}
-          
-          />
+    </View>
+    <List.Icon style={lista.verMais}icon={'chevron-right'} color={'green'}/>
   </TouchableOpacity>
 );
 
@@ -41,15 +40,12 @@ verTable()
 return (
     <View>
       <Cb title="Rendas"/>
-      <View style={lista.container}>
+      <View>
       <FlatList
         data={extratoRendas}
         renderItem={Item}
         keyExtractor={item => item.id}
       />
-      <TouchableOpacity onPress={() => navigation.navigate('VisualizacaoRendas')}>
-        <Text>Visualizacao de Rendas</Text>
-      </TouchableOpacity>
       </View>
       <Botaoflutuante
       onPress={() => navigation.navigate('RegistroDeRendas')}
@@ -59,30 +55,41 @@ return (
 }
 
 const lista = StyleSheet.create({
-    container: {
-      flex: 1,
-      marginTop: StatusBar.currentHeight || 0
-    },
-    iconePosicao:{
-      left:100,
-      bottom:50,
-      fontSize:100
-      
-    },
-    item: {
-      backgroundColor: '#fff',
-      padding: 20,
-      marginVertical: 8,
-      marginHorizontal: 16,
-      borderWidth: 1,
-      borderColor:"green"
-    },
-    title: {
-      fontSize: 32,
-    },
-    container: {
-     
-    },
+  lista:{
+    left:60,
+    top:200,
+    fontSize:20
+  },
+  container: {
+    flex: 1,
+    marginTop: StatusBar.currentHeight || 0
+  },
+  iconePosicao:{
+    right:130,
+    top:50,
+  },
+  item: {
+    backgroundColor: '#fff',
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
+    borderLeftWidth: 1,
+    borderColor:"green"
+  },
+  title: {
+    fontSize: 32,
+  },
+  container: {
+   backgroundColor:'#c5e5b4'
+  },
+  verMais:{
+    left:150,
+    bottom:60,
+    fontSize:350
+  },
+  topicos:{
+    left:70
+  }
     
 })
 export default StackRendas;
