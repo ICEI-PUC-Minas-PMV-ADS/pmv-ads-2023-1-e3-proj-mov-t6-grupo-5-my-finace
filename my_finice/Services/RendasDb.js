@@ -5,7 +5,7 @@ export const CreateTable = ()=> {
     db.transaction((transaction)=>{
         transaction.executeSql("CREATE TABLE IF NOT EXISTS "+ 
         "Rendas "+
-        "(id INTEGER PRIMARY KEY AUTOINCREMENT, Dia TEXT, Quantia REAL, Desc TEXT, Credito REAL, Destinacao TEXT);"
+        "(id INTEGER PRIMARY KEY AUTOINCREMENT, Dia INTEGER, Quantia REAL, Desc TEXT, Credito REAL, Destinacao TEXT);"
         )
     })
 }

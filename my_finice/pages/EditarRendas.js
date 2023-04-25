@@ -1,10 +1,9 @@
 import React,{useState,useEffect}from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer, useIsFocused } from "@react-navigation/native";
 import { useNavigation } from '@react-navigation/native';
 import { View, Alert} from 'react-native';
 import {StyleSheet } from "react-native";
-import {Button,Text,RadioButton,IconButton, MD3Colors} from "react-native-paper";
+import { Text,RadioButton } from "react-native-paper";
 import Cb from "../componentes/Cb";
 import Input from "../componentes/Input";
 import IconBottum from "../componentes/IconBottum"
@@ -13,10 +12,9 @@ import {recuperandoRendasEspecifica,deleteRendas,atualizarRendas} from "../Servi
 const Main =({ route}) =>{
     const {id} = route.params;
     const IsFocused = useIsFocused();
-    const [extratoRendas,setExtratoRendas] = useState({})
     const [dt, setValue] = React.useState();
     const [dia,setDia]= React.useState();
-    const [quantia,setQuantia]= React.useState(0);
+    const [quantia,setQuantia]= React.useState();
     const [desc,setDesc]= React.useState();
     const [credito,setCredito]= React.useState();
     const navigation = useNavigation();
@@ -26,8 +24,6 @@ const Main =({ route}) =>{
     async function verTable(){
         useEffect (()=>{
           recuperandoRendasEspecifica(id).then((dados)=>{
-            console.log(dados)
-            console.log(dados[0].Quantia)
            preencher(dados)
           }); 
         },[IsFocused])
@@ -56,6 +52,7 @@ const Main =({ route}) =>{
     //Atualizando dados
     async function salvar(){
         const renda = {
+        id:id,
         Dia:dia,
         Quantia:quantia,
         Desc:desc,
