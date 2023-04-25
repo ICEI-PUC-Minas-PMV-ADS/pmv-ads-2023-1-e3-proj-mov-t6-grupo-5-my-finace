@@ -30,7 +30,7 @@ function RegistroDeRendas () {
 
     return (
         <View>
-        <Cb icon="keyboard-backspace" title="Registro de Rendas" goBack={()=>navigation.goBack()}/>
+        <Cb title="Registro de Rendas" onPress={()=>navigation.goBack()}/>
           <View>
             <Input
                 label="Descrição de renda"

@@ -3,7 +3,7 @@ import{List} from 'react-native-paper';
 import{useEffect, useState} from 'react';
 import { useNavigation,useIsFocused } from '@react-navigation/native';
 import Botaoflutuante  from '../componentes/Botaoflutuante';
-import Cb from '../componentes/Cb';
+import CbSemVolta from '../componentes/CbSemVolta'
 import { CreateTable,recuperandoRendas } from '../Services/RendasDb';
 import React from 'react';
 function StackRendas() {
@@ -39,7 +39,7 @@ function StackRendas() {
 verTable()
 return (
     <View>
-      <Cb title="Rendas"/>
+      <CbSemVolta title="Rendas"/>
       <View>
       <FlatList
         data={extratoRendas}

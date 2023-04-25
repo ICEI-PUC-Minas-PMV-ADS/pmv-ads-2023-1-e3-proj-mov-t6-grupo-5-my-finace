@@ -2,14 +2,14 @@ import React,{useState,useEffect}from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer, useIsFocused } from "@react-navigation/native";
 import { useNavigation } from '@react-navigation/native';
-import { View} from 'react-native';
+import { View, Alert} from 'react-native';
 import {StyleSheet } from "react-native";
 import {Button,Text,RadioButton,IconButton, MD3Colors} from "react-native-paper";
 import Cb from "../componentes/Cb";
 import Input from "../componentes/Input";
 import IconBottum from "../componentes/IconBottum"
 import {recuperandoRendasEspecifica,deleteRendas,atualizarRendas} from "../Services/RendasDb"
-const Stack  = createNativeStackNavigator();
+
 const Main =({ route}) =>{
     const {id} = route.params;
     const IsFocused = useIsFocused();
@@ -19,6 +19,7 @@ const Main =({ route}) =>{
     const [quantia,setQuantia]= React.useState(0);
     const [desc,setDesc]= React.useState();
     const [credito,setCredito]= React.useState();
+    const navigation = useNavigation();
     
   verTable()
     //Recuperando tabela
@@ -42,6 +43,16 @@ const Main =({ route}) =>{
           
         }
 
+        const confirmarDelete = () =>
+        Alert.alert('Excluir', 'Deseja realmente continuar com a exclusão ?', [
+          {
+            text: 'Cancelar',
+            onPress: () => console.log('Cancel Pressed'),
+            style: 'destructive',StyleSheet:{color:'#fff'}
+          },
+          {text: 'Confirmar', onPress: () => deletar()},
+        ]);
+
     //Atualizando dados
     async function salvar(){
         const renda = {
@@ -62,7 +73,7 @@ const Main =({ route}) =>{
 
     return (
         <View>
-        <Cb icon="keyboard-backspace" title="Registro de Rendas" goBack={()=>navigation.goBack()}/>
+        <Cb title="Editar Rendas" onPress={()=>navigation.goBack()}/>
           <View>
             <Input
                 label="Descrição de renda"
@@ -103,7 +114,7 @@ const Main =({ route}) =>{
                 </View>
           <View style={style.rodape}>
           <IconBottum icon="content-save-check-outline" iconColor="green" onPress={()=>{salvar()}}/>
-          <IconBottum  style={style.botao_esquerda} icon="delete-outline" iconColor="red"onPress={()=>{deletar()}}/>
+          <IconBottum  style={style.botao_esquerda} icon="delete-outline" iconColor="red"onPress={()=>{confirmarDelete()}}/>
           </View>
                     
     </View>

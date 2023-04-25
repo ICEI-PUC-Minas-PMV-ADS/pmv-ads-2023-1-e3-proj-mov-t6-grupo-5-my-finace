@@ -1,57 +1,59 @@
 import {useState, useEffect} from 'react';
-import { Appbar, Text, TextInput, Surface, ProgressBar, MD3Colors } from 'react-native-paper';
-import Botaoflutuante  from '../componentes/Botaoflutuante';
-import {View, StyleSheet, TouchableOpacity} from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import Cb from "../componentes/Cb";
-import { recuperandoRendas,somaRendas } from '../Services/RendasDb';
+import { Text, Surface, ProgressBar, List } from 'react-native-paper';
+import {View, StyleSheet, FlatList,} from 'react-native';
+import {useIsFocused } from "@react-navigation/native";
+import CbSemVolta from '../componentes/CbSemVolta'
+import { somaRendas, DestinacaoRend } from '../Services/RendasDb';
 
-const VisualizacaoRendas = () => {
+function VisualizacaoRendas() {
+  const IsFocused = useIsFocused();
+  const [quantia,setQuantia] = useState([]);
+  const [Destinacao,setDestinacao] = useState([]);
 
-    const navigation = useNavigation();
+  useEffect (()=>{
+      somaRendas().then((dados)=>{
+      setQuantia(dados)
+    }); 
+    DestinacaoRend().then((dtn)=>{
+      setDestinacao(dtn)
+    }); 
+  },[IsFocused])
 
-    const [rendas, setRendas] = useState([]);
-      useEffect (() => {
-        recuperandoRendas().then((dados)=>{
-          setRendas(dados)
-        }); 
-      })
-    
-      const Item = ({item}) => (
-        <TouchableOpacity>
-      <Text>{item.Dia}</Text>
-      <Text>{'R$ '+item.Quantia}</Text>
-      <Text>{item.Desc}</Text>
-      <Text>{item.Credito}</Text>
-      <List.Icon
-            style={lista.iconePosicao}
-            icon={item.Destinacao}
-            
-            />
-            </TouchableOpacity>
-      );
+console.log(quantia)
+
+const Item = ({item}) => (
+  <View style={styles.lista}>
+    <Text>{item.destinacao}</Text>
+    <ProgressBar progress={item.QTD/100} color={'green'} />
+  </View>
+);
 
 return (
 
         <View>
     
-        <Cb title="Visualização de Rendas"/>
+        <CbSemVolta title="Visualização de Rendas"/>
       <Text style={styles.tt}>Saldo em conta</Text>
     <Surface style={styles.surface} elevation={4}>
-        <Text style={styles.sd}>{'R$' +Item.Quantia}</Text>
+        <Text
+        data={quantia}
+        renderItem={Item}
+        keyExtractor={item => item.id}
+        style={styles.sd}>{'R$' + quantia} </Text>
     </Surface>
 
     <Text style={styles.dest}>Destinação dos Ganhos</Text>
-
-    <ProgressBar style={styles.iv} progress={0.7} color={MD3Colors.primary60} /><Text style={styles.texto}>Investimentos</Text>
-    <ProgressBar style={styles.df} progress={0.5} color={MD3Colors.primary60} /><Text style={styles.texto}>Despesa Fixa</Text>
-    <ProgressBar style={styles.poup} progress={0.3} color={MD3Colors.primary60} /><Text style={styles.texto}>Poupança</Text>
-    <ProgressBar style={styles.out} progress={0.2} color={MD3Colors.primary60} /><Text style={styles.texto}>Outros</Text>
+      <FlatList
+        data={Destinacao}
+        renderItem={Item}
+        keyExtractor={item => item.id}
+        style={styles.t}
+      />
 
     <Text style={styles.textodois}>Crédito Disponível</Text>
 
     <Surface style={styles.surfacedois} elevation={4}>
-        <Text style={styles.sd}>{'R$' +Item.Credito}</Text>
+        <Text style={styles.sd}>{+quantia}</Text>
     </Surface>
 
         </View>
@@ -74,45 +76,18 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
       },
       tt:{
+        textAlign:'center',
         marginLeft: 12,
         marginTop: 15,
       },
       dest:{
-        marginLeft: 12,
-        marginTop: 40,
-      },
-      iv:{
-        width: 230,
-        marginTop: 15,
-        marginLeft: 12,
-        marginBottom: 20,
-      },
-      df:{
-        width: 230,
-        marginTop: 15,
-        marginLeft: 12,
-        marginBottom: 20,
-      },
-      poup:{
-        width: 230,
-        marginTop: 15,
-        marginLeft: 12,
-        marginBottom: 20,
-      },
-      out:{
-        width: 230,
-        marginTop: 15,
-        marginLeft: 12,
-        marginBottom: 20,
-      },
-      texto:{
-        textAlign:"right",
-        marginEnd: 10,
-        marginTop: -30,
+        textAlign:'center',
+        top:20,
       },
       textodois:{
+        textAlign:'center',
         marginLeft: 12,
-        marginTop: 40,
+        marginTop: 90,
       },
       surfacedois:{
         padding: 0,
@@ -121,6 +96,14 @@ const styles = StyleSheet.create({
         height: 80,
         width: 370,
         justifyContent: 'center',
+      },
+      t:{
+        top:60,
+      },
+      lista:{
+        width:320,
+        padding:2,
+        left:20,
       },
 })
 
