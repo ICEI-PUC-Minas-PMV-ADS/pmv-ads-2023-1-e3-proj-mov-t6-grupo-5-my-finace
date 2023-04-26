@@ -10,7 +10,6 @@ Temos como objetivo a criação de uma plataforma de gestão financeira, que pos
 
 ## Integrantes
 
-* Luis Othávio Santos da Silva
 * Matheus Ferreira Pires
 * Matheus Lemos Sampaio
 * Pedro Assis Silva de Almeida
