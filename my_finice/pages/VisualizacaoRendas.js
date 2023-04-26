@@ -19,12 +19,10 @@ function VisualizacaoRendas() {
     }); 
   },[IsFocused])
 
-console.log(quantia)
-
 const Item = ({item}) => (
   <View style={styles.lista}>
     <Text>{item.destinacao}</Text>
-    <ProgressBar progress={item.QTD/100} color={'green'} />
+    <ProgressBar progress={item.QTD/10} color={'green'} />
   </View>
 );
 
@@ -35,11 +33,7 @@ return (
         <CbSemVolta title="Visualização de Rendas"/>
       <Text style={styles.tt}>Saldo em conta</Text>
     <Surface style={styles.surface} elevation={4}>
-        <Text
-        data={quantia}
-        renderItem={Item}
-        keyExtractor={item => item.id}
-        style={styles.sd}>{'R$' + quantia} </Text>
+        <Text style={styles.sd}>{'R$ ' + quantia[0].Valor} </Text>
     </Surface>
 
     <Text style={styles.dest}>Destinação dos Ganhos</Text>

@@ -63,7 +63,7 @@ export async function deleteRendas (id){
 export async function somaRendas (){
     return new Promise((resolve)=>{
         db.transaction((transaction)=>{
-          transaction.executeSql("SELECT SUM(Quantia) FROM Rendas ;",[],(transaction, resultados)=>{
+          transaction.executeSql("SELECT SUM(Quantia) as Valor FROM Rendas ;",[],(transaction, resultados)=>{
                 resolve(resultados.rows._array)
             })
           
