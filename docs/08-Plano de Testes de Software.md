@@ -39,7 +39,7 @@
 |  	|  	|
 
 
-| **Caso de Teste** 	| **CT-03.0 – Cadastrar rendas** 	|
+| **Caso de Teste** 	| **CT-03.0 – Cadastrar Rendas** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| O sistema deve registrar as rendas do usuário com a finalidade do mesmo ter maior controle sobre suas rendas períodicas. |
 | Objetivo do Teste 	| Verificar se as informações cadastradas pelo usuário estão sendo mostradas na tela de visualização de maneira correta e sendo somada ao seu saldo e crédito. |

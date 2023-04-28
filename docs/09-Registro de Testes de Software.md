@@ -39,3 +39,36 @@ Confirmação da exclusão da nota selecionada
 
 ![imagem de sucesso do registro](img/1.0.1.jpeg)
 
+## Caso de teste 02.0 - Realizar o cadastro das rendas
+
+Registrando Rendas
+
+![Iniciando Registro](img/Tela%20para%20incluir.jpg)
+
+![Incluindo Rendas](img/Incluindo.jpg)
+
+![Caso de Sucesso](img/Aparece%20incluida.jpg)
+
+![Visualização de Rendas](img/Visualiza%C3%A7%C3%A3o%201.jpg)
+
+## Caso de teste 02.1 - Realizar o cadastro das rendas
+
+Editando Rendas
+
+![Iniciando Edição](img/Aparece%20para%20Editar.jpg)
+
+![Editando Rendas](img/Editando.jpg)
+
+![Caso de Sucesso](img/editada.jpeg)
+
+![Visualização Edição](img/Visualiza%C3%A7%C3%A3o%202.jpg)
+
+## Caso de teste 02.2 - Realizar o cadastro das rendas
+
+Excluindo Rendas
+
+![Iniciando Exclusão](img/Aparece%20para%20Editar.jpg)
+
+![Excluindo Renda](img/Excluir%202.jpg)
+
+![Caso de Sucesso](img/Excluido.jpg)
