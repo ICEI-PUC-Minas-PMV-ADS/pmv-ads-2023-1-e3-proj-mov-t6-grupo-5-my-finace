@@ -1,5 +1,5 @@
-import React,{useState,useEffect}from "react";
-import { NavigationContainer, useIsFocused } from "@react-navigation/native";
+import React,{useEffect}from "react";
+import { useIsFocused } from "@react-navigation/native";
 import { useNavigation } from '@react-navigation/native';
 import { View, Alert} from 'react-native';
 import {StyleSheet } from "react-native";

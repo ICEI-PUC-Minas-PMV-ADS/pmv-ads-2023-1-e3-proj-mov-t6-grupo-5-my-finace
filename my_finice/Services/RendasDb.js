@@ -71,6 +71,17 @@ export async function somaRendas (){
     })
 }
 
+export async function somaCredit (){
+    return new Promise((resolve)=>{
+        db.transaction((transaction)=>{
+          transaction.executeSql("SELECT SUM(Credito) as Value FROM Rendas ;",[],(transaction, resultados)=>{
+                resolve(resultados.rows._array)
+            })
+          
+        })
+    })
+}
+
 export async function DestinacaoRend (){
     return new Promise((resolve)=>{
         db.transaction((transaction)=>{
