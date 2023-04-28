@@ -23,6 +23,18 @@ Para cada tarefa do participante é possível meditar:
 |Dados coletados:|Será coletado a imagem da tela do usuário durante o processo e o feedback do mesmo sobre a aplicação
 |Caso de sucesso:|Caso de sucesso do teste, se dá quando o usuário consegue fazer todas as tarefas sem nenhum problema ou dúvida quanto ao uso da aplicação
 
+|| 2 - Cadastro de rendas |  |
+|--------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+|Objetivo: | Esse plano tem como objetivo avaliar se o usuário consegue realizar o processo de CRUD ,( cadastro, edição e exclusão ), das rendas de maneira simples e objetiva.|
+|Quando e onde o teste será executado: | O teste será realizado de maneira online na semana do dia 20/04/2023.                                
+|Tempo médio de duração do teste: |O tempo previsto para realização de cada teste e de aproximadamente 5 minutos.                             |
+|Ambiente de execução: | O teste será feito na plataforma expo online .                
+|Usuários envolvidos: | Dois usuários que tem o perfil do nosso público alvo.
+|Tarefas a serem executadas: | No teste os usuários irão criar o registro de rendas, e testar a facilidade e usabilidade de editar e excluir a renda cadastrada.
+|Funcionalidade mais critica:| A funcionalidade mais critica nesta tela é excluir o registro de renda criado.
+|Dados coletados:|Será coletado a imagem da tela do usuário durante o processo e o feedback do mesmo sobre a aplicação.
+|Caso de sucesso:|Caso de sucesso do teste, se dá quando o usuário consegue realizar todas as tarefas sem nenhum problema ou dúvida quanto ao uso da aplicação.
+
 
 | **Tarefa 2** | **Critério de Êxito** | **O que será avaliado** |
 |--------------|----------------------|-------------------------|
