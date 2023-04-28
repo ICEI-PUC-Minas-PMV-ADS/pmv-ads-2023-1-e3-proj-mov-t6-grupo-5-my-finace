@@ -8,12 +8,17 @@ import { somaRendas, DestinacaoRend, somaCredit } from '../Services/RendasDb';
 function VisualizacaoRendas() {
   const IsFocused = useIsFocused();
   const [quantia,setQuantia] = useState([]);
+  const [credito,setCredito] = useState([]);
   const [Destinacao,setDestinacao] = useState([]);
 
   useEffect (()=>{
       somaRendas().then((dados)=>{
       PegarValor(dados)
     });
+    somaCredit().then((cred)=>{
+      PegarCredito(cred)
+     });
+ 
     DestinacaoRend().then((dtn)=>{
     setDestinacao(dtn)
     }); 
@@ -21,7 +26,10 @@ function VisualizacaoRendas() {
 
 function PegarValor(e) {
   setQuantia(e[0].Valor)
-  console.log(quantia)
+}
+
+function PegarCredito(c) {
+  setCredito(c[0].Value)
 }
 
 const Item = ({item}) => (
@@ -52,7 +60,7 @@ return (
     <Text style={styles.textodois}>Crédito Disponível</Text>
 
     <Surface style={styles.surfacedois} elevation={4}>
-        <Text style={styles.sd}>{'R$ ' + quantia[0]}</Text>
+        <Text style={styles.sd}>{'R$ ' + credito}</Text>
     </Surface>
 
         </View>
@@ -65,7 +73,6 @@ const styles = StyleSheet.create({
     sd:{
       marginLeft: 8,
       fontSize:35,
-      color:808080,
       padding:2,
     },
     surface:{
