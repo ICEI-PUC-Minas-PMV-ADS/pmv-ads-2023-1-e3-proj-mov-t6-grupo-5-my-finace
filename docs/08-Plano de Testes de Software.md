@@ -37,3 +37,44 @@
 | Objetivo do Teste 	| Verificar se todas as despesas cadastradas sejam apresentadas no formato de grafico |
 |Critério de Êxito | Grafico aparecendo com as informações |
 |  	|  	|
+
+
+| **Caso de Teste** 	| **CT-03.0 – Cadastrar rendas** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| O sistema deve registrar as rendas do usuário com a finalidade do mesmo ter maior controle sobre suas rendas períodicas. |
+| Objetivo do Teste 	| Verificar se as informações cadastradas pelo usuário estão sendo mostradas na tela de visualização de maneira correta e sendo somada ao seu saldo e crédito. |
+| Passos 	| O usuario deve entrar na aplicação, ir selecionar a tela de 'Detalhes de Rendas' e selecionar o botão de '+' para adicionar sua renda. |
+|Critério de Êxito | Caso haja sucesso na inclusão, o sistema informará por meio de uma mensagem na tela. |
+|  	|  	|
+
+
+| **Caso de Teste** 	| **CT-03.1 – Detalhes de Rendas** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| O sistema deve registrar as rendas do usuário com a finalidade do mesmo ter maior controle sobre suas rendas períodicas.	 |
+| Objetivo do Teste 	| Verificar se todas as rendas cadastradas estão sendo carregadas com as informações corretas inseridas pelo usuário. |
+|Critério de Êxito | Informações aparecendo corretamente para serem editadas. |
+|  	|  	|
+
+
+| **Caso de Teste** 	| **CT-03.2 – Edição de Rendas** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| O sistema deve registrar as rendas do usuário com a finalidade do mesmo ter maior controle sobre suas rendas períodicas.	 |
+| Objetivo do Teste 	| Verificar se quando editada, as informções alteram de forma correta. |
+|Critério de Êxito | Informações aparecendo corretamente após a edição e somando corretamente na visualização. |
+|  	|  	|
+
+
+| **Caso de Teste** 	| **CT-03.2 – Exclusão de Rendas** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| O sistema deve registrar as rendas do usuário com a finalidade do mesmo ter maior controle sobre suas rendas períodicas.	 |
+| Objetivo do Teste 	| Verificar se quando excluida, foi eliminada a renda correta selecionada pelo usuário. |
+|Critério de Êxito | Tópico excluído totalmente das visualizações de rendas. |
+|  	|  	|
+
+
+| **Caso de Teste** 	| **CT-04.0 – Visualização de Rendas** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| O sistema deve registrar as rendas do usuário somando corretamente os valores das rendas e créditos registrados, e aparecendo uma barra de progresso para acompanhamento das destinações das rendas. |
+| Objetivo do Teste 	| Verificar se todas as rendas cadastradas estão sendo somadas corretamente e incluidas na barra de destinação. |
+|Critério de Êxito | Informações aparecendo corretamente na tela. |
+|  	|  	|
