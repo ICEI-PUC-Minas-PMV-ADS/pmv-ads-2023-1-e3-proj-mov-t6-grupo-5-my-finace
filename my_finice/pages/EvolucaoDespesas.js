@@ -3,7 +3,7 @@ import { ProgressBar} from 'react-native-paper';
 import React,{useState,useEffect}from "react";
 import CbSemVolta from '../componentes/CbSemVolta'
 import {useIsFocused } from "@react-navigation/native";
-import { VictoryBar, VictoryChart, VictoryLabel,VictoryGroup,VictoryTheme } from "victory-native";
+//QQimport { VictoryBar, VictoryChart, VictoryLabel,VictoryGroup,VictoryTheme } from "victory-native";
 import {pegarInformacaoParaGrafico,gastosPorCategoria} from '../Services/Despesasdb';
 
 function EvolucaoDespesas() {
@@ -32,19 +32,7 @@ function EvolucaoDespesas() {
   return ( 
     <View>
       <CbSemVolta title="Evolução"/>
-      <VictoryChart   theme={VictoryTheme.material} domainPadding={{ x: 50 }}>
-        <VictoryGroup>
-          <VictoryBar 
-              data={data} 
-              x="Data" 
-              y="Valor" 
-              labels={({ datum }) => datum.Valor}
-              style={{ labels: { fill: "#000" }, data:{fill:"green"}}}
-               labelComponent={<VictoryLabel dy={3}/>}
-              > 
-          </VictoryBar>
-        </VictoryGroup>
-      </VictoryChart>
+
     <Text style={styles.titulo}>Concentração dos gastos</Text>
       <FlatList
         data={Categoria}

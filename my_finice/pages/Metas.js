@@ -16,8 +16,8 @@ const Metas = () => {
         <Cb title="Metas"/>
 
         <Botaoflutuante
-        positon="end"
-        align="center"
+        //positon="end"
+        //align="center"
         onPress={() => navigation.navigate('RegistroMetas')}
         />
 
@@ -51,26 +51,23 @@ const styles = StyleSheet.create({
         marginLeft:12,
         height: 150,
         width: 370,
-        justifyContent: 'center',
+        //justifyContent: 'center',
     },
 
     titulo:{
-        justifyContent: 'center',
-        alignContent: 'center',
+        //justifyContent: 'center',
         fontSize: 25,
         textDecorationStyle: 'solid',
     },
 
     descricao:{
-        justifyContent: 'center',
-        alignContent: 'center',
+       // justifyContent: 'center',
         fontSize: 15,
         color: '#8585ad'
     },
 
     porcent:{
-        justifyContent: 'end',
-        alignContent: 'end',
+       // justifyContent: 'end',
         fontSize: 15,
         color: '#8585ad'
     },
