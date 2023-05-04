@@ -11,12 +11,21 @@ import EditarRendas from "../pages/EditarRendas";
 import EditarDespesas from "../pages/EditarDespesas";
 import Metas from "../pages/Metas";
 import RegistroMetas from "../pages/RegistroMetas";
+import TelaLogin from "../pages/TelaLogin";
 
 const Stack  = createNativeStackNavigator();
 const Main =() =>{
     return(
         <NavigationContainer independent={true}>
             <Stack.Navigator>
+            <Stack.Screen
+                    name="TelaLogin"
+                    component={TelaLogin}
+                    options={{
+                        header: ()=>null,
+                        }
+                    }
+                />
                 <Stack.Screen
                     name="Home"
                     component={Home}
