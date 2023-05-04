@@ -12,7 +12,7 @@ import EditarDespesas from "../pages/EditarDespesas";
 import Metas from "../pages/Metas";
 import RegistroMetas from "../pages/RegistroMetas";
 import TelaLogin from "../pages/TelaLogin";
-
+import TelaCadastro from "../pages/TelaCadastro";
 const Stack  = createNativeStackNavigator();
 const Main =() =>{
     return(
@@ -21,6 +21,14 @@ const Main =() =>{
             <Stack.Screen
                     name="TelaLogin"
                     component={TelaLogin}
+                    options={{
+                        header: ()=>null,
+                        }
+                    }
+                />
+                 <Stack.Screen
+                    name="TelaCadastro"
+                    component={TelaCadastro}
                     options={{
                         header: ()=>null,
                         }
