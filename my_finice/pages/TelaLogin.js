@@ -30,7 +30,7 @@ const result = await validarlogin(dados)
       
           <View>
               
-          <View>
+          <View style={style.campos}>
             <Input
                 label="E-mail"
                 value={email}
@@ -44,13 +44,13 @@ const result = await validarlogin(dados)
                 onChangeText={senha => setPassword(senha)}
               />
             
-              </View>
-
                 <Button style={style.save} mode="contained" onPress={() =>recuperarcadastro()} >
                   ENTRAR  
                 </Button>
+              </View>
+
                 
-                <TouchableOpacity onPress={() => navigation.navigate('TelaCadastro')} >
+                <TouchableOpacity style={style.div} onPress={() => navigation.navigate('TelaCadastro')} >
                         <Text>Ainda não possui uma conta!</Text>
                     </TouchableOpacity>
            
@@ -67,6 +67,14 @@ const style = StyleSheet.create({
   sel:{
     margin:8
   },
+  div:{
+    top:322,
+    left:90
+  },
+  campos:{
+    top:262,
+  
+  }
 })
 
 
