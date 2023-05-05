@@ -86,4 +86,4 @@ Utilizaremos com base na norma de qualidade de produto de software ISO/IEC 9126.
 
 * **Capacidade de instalação:** Nesse tópico será feito a avaliação das possíveis dificuldades enfrentadas para a instalação do aplicativo. 
 
-* **Coexistência:** Será avaliado se há conflitos com os sistemas operacionais mobile.
+* **Coexistência:** Será avaliado se há conflitos com os sistemas operacionais móbile.

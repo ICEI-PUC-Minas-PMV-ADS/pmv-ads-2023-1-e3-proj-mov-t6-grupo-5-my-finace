@@ -46,7 +46,7 @@ A seguir temos as personas com os perfis criados com os diferentes tipos de usu�
 
 
 
-## Historias de Usuários
+## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
@@ -81,25 +81,25 @@ Abaixo demonstra-se o diagrama BPMN de como deverá funcionar o sistema de acord
 ## Indicadores de Desempenho
 
 ![Indicadores de Desempenho](img/indicador.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
+Obs.: todas as informações para gerar os indicadores devem está no diagrama de classe a ser apresentado a posteriomente.
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
+As tabelas apresentam os pré-requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicamos uma técnica de priorização de requisito e detalhamos como a técnica deverá ser aplicada.
 
 ### Requisitos Funcionais
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| Permitir ao usuário cadastrar tarefas | ALTA | 
+|RF-002| Permitir Emissão de relatórios de tarefas no mês   | MÉDIA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| O sistema deverá ser responsivo para funcionar em dispositivos móvel | MÉDIA | 
+|RNF-002| Deverá processar requisições do usuário no máximo 3s |  BAIXA | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
@@ -133,9 +133,9 @@ Com o mapeamento dos processos organizacionais demonstrado anteriormente no Diag
 
 | REQUISITOS NÃO-FUNCIONAIS | PROCESSOS | BPMN |
 |:---:|:---:|:---:|
-| RNF-01: Aplicações deve ser compatível com os principais sistemas mobile. | - Todos | Ambas |
-| RNF-02: Site terá um layout minimalista.   | - Todos | Cliente |
-| RNF-03: Sistema deve ser organizado e de fácil visibilidade e ter uma interface dinâmica.  | - Todos | Cleinte |
+| RNF-01: Aplicações deve ser compatível com os principais sistemas móbile. | - Todos | Ambas |
+| RNF-02: Site deverá ter layout minimalista.   | - Todos | Cliente |
+| RNF-03: Sistema deverá ser organizado, obter fácil visibilidade é interface dinâmica.  | - Todos | Cleinte |
 
 
 
@@ -148,8 +148,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|01| O projeto deverá ser entregue até o final do semestre.|
+|02| Não pode ser desenvolvido um módulo de backend.       |
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 

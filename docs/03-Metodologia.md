@@ -7,46 +7,44 @@ Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Defini�
 
 ## Relação de Ambientes de Trabalho
 
-Para que tenhamos uma boa produtividade no desenvolvimento do nosso software iremos usar as seguintes ferramentas:
+Para que tenhamos uma boa produtividade no desenvolvimento do nosso software usaremos as seguintes ferramentas:
 |Ambiente                        | Plataforma            |Link de Acesso                                           |
 |--------------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|Documentos do Projeto           |One Drive              | https://sgapucminasbr-my.sharepoint.com/:w:/r/personal/1348060_sga_pucminas_br/_layouts/15/Doc.aspx?sourcedoc=%7B8A7122F0-07A5-4299-B679-9A09154F41A9%7D&file=MY%20FINANCES%20.docx&action=default&mobileredirect=true |
-|Repositório de Código Fonte      |Git Hub                | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t6-grupo-5-my-finace |
-|Projeto de Interface e wireframes |Figma                  | https://www.figma.com/file/lLv6vfNhiSkY2ZeCQTSUgM/Mobile-Apps-%E2%80%93-Prototyping-Kit-(Community)?node-id=101-306&t=TwZ3vBHXJgoSNgpA-0 |
+|Documentação do Projeto           |One Drive              | https://sgapucminasbr-my.sharepoint.com/:w:/r/personal/1348060_sga_pucminas_br/_layouts/15/Doc.aspx?sourcedoc=%7B8A7122F0-07A5-4299-B679-9A09154F41A9%7D&file=MY%20FINANCES%20.docx&action=default&mobileredirect=true |
+|Repositório do Código Fonte      |Git Hub                | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t6-grupo-5-my-finace |
+|Projeto de Interface e Wireframes |Figma                  | https://www.figma.com/file/lLv6vfNhiSkY2ZeCQTSUgM/Mobile-Apps-%E2%80%93-Prototyping-Kit-(Community)?node-id=101-306&t=TwZ3vBHXJgoSNgpA-0 |
 |Gerenciamento de Projeto          |Trello             | https://trello.com/b/TCtybrpI/projeto-eixo-3  |
 
 ## Controle de Versão
 O controle de versão é importante para que haja uma organização de atualizações e mudanças que estão sendo feitas pela equipe no projeto. 
 
-A ferramenta de controle de versão adotada no projeto foi o Git, sendo que o Github foi utilizado para hospedagem do repositório. 
+A ferramenta de controle de versão adotada no projeto foi o Git, o GitHub foi utilizado para hospedagem do repositório. 
 
 O projeto segue a seguinte convenção para o nome de branches: 
 
-- `main`: versão estável já testada do software. 
+- `main`: Versão estável já testada do software. 
 
-- `unstable`: versão já testada do software, porém instável. 
+- `unstable`: Versão já testada do software, porém instável. 
 
-- `testing`: versão em testes do software. 
+- `testing`: Versão em testes do software. 
 
-- `dev`: versão de desenvolvimento do software. 
+- `dev`: Versão de desenvolvimento do software. 
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas: 
 
-- `documentation`: melhorias ou acréscimos à documentação. 
+- `documentation`: Melhorias ou acréscimos à documentação. 
 
-- `bug`: uma funcionalidade encontra-se com problemas. 
+- `bug`: Uma funcionalidade encontra-se com problemas. 
 
-- `enhancement`: uma funcionalidade precisa ser melhorada. 
+- `enhancement`: Uma funcionalidade precisa ser melhorada. 
 
-- `feature`: uma nova funcionalidade precisa ser introduzida. 
+- `feature`: Uma nova funcionalidade precisa ser introduzida. 
 
 ## Gerenciamento de Projeto
 
 Para gerenciamento do projeto utilizaremos a metodologia ágil scrum. 
 
 ### Divisão de Papéis
-
-- Luis Othávio Santos da Silva - Desenvolvedor
 
 - Matheus Ferreira Pires – Desenvolvedor  
 
@@ -58,15 +56,15 @@ Para gerenciamento do projeto utilizaremos a metodologia ágil scrum.
 
 Para organização e distribuição de tarefas do projeto, utilizaremos o Trello estruturado da seguinte forma: 
 
-- `Backlog`: Nessa parte fica todas as tarefas que vão ser desenvolvidas no projeto. Caso apareça alguma nova e direcionada nessa parte. 
+- `Backlog`: Parte onde está todas as tarefas que será desenvolvidas no projeto. Caso apareça nova atividades será redirecionada nessa parte. 
 
-- `A Fazer (Sprint Backlog)`: E a sprint atual que estamos trabalhando. 
+- `A Fazer (Sprint Backlog)`: Sprint atual de trabalho. 
 
-- `Em Andamento`: Quando a tarefas foi iniciada. 
+- `Em Andamento`: Tarefas que foram iniciadas. 
 
-- `Concluido`: Quando a tarefa for finalizada.
+- `Concluido`: Tarefa que foram finalizadas.
 
-O quadro kanban do grupo no Trello disponível em: https://trello.com/b/TCtybrpI/projeto-eixo-3, na imagem abaixo mostra como ele está.
+O quadro kanban do grupo está disponível Trello em: https://trello.com/b/TCtybrpI/projeto-eixo-3, na imagem a seguir é possivel vizualizar como está o quadro kanban.
 
 ![Trello](img/TrelloConfig.png)
 
@@ -103,5 +101,4 @@ A seguir temos as ferramentas empregadas no projeto:
 - **Ferramentas de desenho de tela (wireframing):** A ferramenta escolhida para a elaboração dos wireframes foi o _Figma_. A escolha se deu dado a sua capacidade de geração de wireframes interativos detalhados.
 - **Ferramentas de elaboração de diagramas:** Para a elaboração dos diversos diagramas do projeto (diagramas de fluxo, diagramas de classes, modelo ER e esquema relacional), a ferramenta _Figma_ foi escolhida por conta de sua versatilidade para elaboração de diagramas de diversos tipos.
 - **Ferramentas de controle de versão:** A ferramenta de controle de versão escolhida foi o _Git_, cuja utilização se deu através da integração com o editor de código _Visual Studio_, para a hospedagem do repositório será utilizado o _GitHub_. Essa escolha foi feita devido à robustez dessas ferramentas e a familiaridade dos membros da equipe com as elas.
-- **Ferramenta de gerenciamento de projeto:** A ferramenta _Github_ foi escolhida para a organização e distribuição das tarefas seguindo o modelo Scrum, conforme descrito na subseção “Processo”. A ferramenta foi escolhida dada sua facilidade de uso e sua compatibilidade com a metodologia Scrum, com diversos materiais disponíveis sobre sua integração com esta.
-   
+- **Ferramenta de gerenciamento de projeto:** A ferramenta _Github_ foi escolhida para a organização e distribuição das tarefas seguindo o modelo Scrum, conforme descrito na subseção “Processo”. A ferramenta foi escolhida dada sua facilidade de uso e sua compatibilidade com a metodologia Scrum, com diversos materiais disponíveis sobre sua integração.   
