@@ -51,7 +51,7 @@ const result = await validarlogin(dados)
 
                 
                 <TouchableOpacity style={style.div} onPress={() => navigation.navigate('TelaCadastro')} >
-                        <Text>Ainda não possui uma conta!</Text>
+                        <Text>Ainda não possui uma conta?</Text>
                     </TouchableOpacity>
            
             </View>
@@ -62,14 +62,14 @@ const result = await validarlogin(dados)
 const style = StyleSheet.create({
   save:{
     backgroundColor:"green",
-    top:40
+    top:30,
   },
   sel:{
-    margin:8
+    margin:8,
   },
   div:{
     top:322,
-    left:90
+    left:90,
   },
   campos:{
     top:262,
