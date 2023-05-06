@@ -10,11 +10,11 @@ Para cada tarefa do participante é possível meditar:
 - Quanto tempo foi necessário para concluí-la;
 - Se a interface do sistema é apresentável.
 
-|| 1 - Cadastro do usuário |  |
+|| 1 - Cadastro do Usuário |  |
 |--------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 |Objetivo: | Esse plano tem como objetivo avaliar se o usuário consegue processo de CRUD ,( cadastro, edição e exclusão ), das informações inceridas na tela de cadastro de maneira fácil e objetiva. |
 |Quando e onde o teste será executado: | O teste será realizado de maneira online na semana do dia 20/04/2023.                                
-|Tempo médio de duração do teste: |O tempo previsto para realização de cada teste e de aproximadamente 5 minutos.                             |
+|Tempo médio de duração do teste: |O tempo previsto para realização de cada teste e de aproximadamente 4 a 10 minutos.                             |
 |Ambiente de execução: | O teste será feito na plataforma expo online.                
 |Usuários evolvidos: | Serão dois usuários que tem o perfil do nosso público alvo.
 |Tarefas a serem executadas: | No teste os usuários terão de criar um registro de uma despesa no aplicativo, e testar se consegue editar ou excluir a despesas cadastrada.
@@ -23,11 +23,11 @@ Para cada tarefa do participante é possível meditar:
 |Dados coletados:|Será coletado a imagem da tela do usuário durante o processo e o feedback do mesmo sobre a aplicação.
 |Caso de sucesso:|Caso de sucesso do teste, se dá quando o usuário consegue fazer todas as tarefas sem nenhum problema ou dúvida quanto ao uso da aplicação.
 
-|| 2 - Login do usuário |  |
+|| 2 - Login do Usuário |  |
 |--------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 |Objetivo: | Esse plano tem como objetivo avaliar se o usuário consegue processo de CRUD ,( cadastro, edição e exclusão ), das informações inceridas na tela de login de maneira fácil e objetiva.|
 |Quando e onde o teste será executado: | O teste será realizado de maneira online na semana do dia 20/04/2023.                                
-|Tempo médio de duração do teste: |O tempo previsto para realização de cada teste e de aproximadamente 5 minutos.                             |
+|Tempo médio de duração do teste: |O tempo previsto para realização de cada teste e de aproximadamente 4 minutos.                             |
 |Ambiente de execução: | O teste será feito na plataforma expo online.                
 |Usuários evolvidos: | Serão dois usuários que tem o perfil do nosso público alvo.
 |Tarefas a serem executadas: | No teste os usuários terão de criar um registro de uma despesa no aplicativo, e testar se consegue editar ou excluir a despesas cadastrada.

@@ -81,7 +81,7 @@
 
 
  
-| **Caso de Teste** 	| **CT-05.0 – Cadastro do usuário** 	|
+| **Caso de Teste** 	| **CT-05.0 – Cadastro do Usuário** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| O sistema deverá possibilitar o usuário criar seu cadastro com nome, e-mail, senha e confirmação de senha. |
 | Objetivo do Teste 	| Verificar se o usuário conseguiu se cadastrar sem dificuldade. |
@@ -89,7 +89,7 @@
 |Critério de Êxito | O usuário se registra no sistema e a mensagem "Cadastro realizado com sucesso!" é apresentada. |
 |  	|  	|
 
-| **Caso de Teste** 	| **CT-06.0 – Acesso ao sistema através do login** 	|
+| **Caso de Teste** 	| **CT-06.0 – Acesso ao sistema através do Login** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| O software deverá ter sistema de Login. 		 |
 | Objetivo do Teste 	| Verificar se o usuário realiza o login de forma corretamente.|

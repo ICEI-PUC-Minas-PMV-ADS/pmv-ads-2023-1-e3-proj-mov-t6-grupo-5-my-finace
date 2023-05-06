@@ -14,7 +14,7 @@ Para a entrega da segunda etapa implementamos a tela de registro de despesas com
 
 ![coficacao tela Cadastro](img/C%C3%B3digoTelaCadastro.png)
 
-## Tela Login Finalizada
+## Tela de Cadastro Finalizada
 
 ![tela de Cadastro](img/TelaDeCadastro.png)
 
