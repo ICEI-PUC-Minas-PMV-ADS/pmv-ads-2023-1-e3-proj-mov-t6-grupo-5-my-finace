@@ -1,7 +1,24 @@
 # Programação de Funcionalidades
 
 Para a entrega da segunda etapa implementamos a tela de registro de despesas como podemos ver nas imagens a seguir
-## Códificação da tela
+
+## Códificação da tela de Login
+
+![coficacao tela Login](img/C%C3%B3digoTelaLogin.png)
+
+## Tela Login Finalizada
+
+![tela de login](img/TelaDeLogin.png)
+
+## Códificação da tela de Cadastro
+
+![coficacao tela Cadastro](img/C%C3%B3digoTelaCadastro.png)
+
+## Tela Login Finalizada
+
+![tela de Cadastro](img/TelaDeCadastro.png)
+
+## Códificação da tela de Despesas
 
 ![coficacao tela despesas](img/tela%20de%20despas.png)
 
