@@ -72,3 +72,14 @@ Excluindo Rendas
 ![Excluindo Renda](img/Excluir%202.jpg)
 
 ![Caso de Sucesso](img/Excluido.jpg)
+
+## Caso de teste 03.0 - Realizar o cadastro do usuário
+
+![Iniciando Cadastro](img/TelaDeCadastro.png)
+
+## Caso de teste 04.0 - Realizar o Login do do usuário
+
+![Iniciando Login](img/TelaDeLogin.png)
+
+
+

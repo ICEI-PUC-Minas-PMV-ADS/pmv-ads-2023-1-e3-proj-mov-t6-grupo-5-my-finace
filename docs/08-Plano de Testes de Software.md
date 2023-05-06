@@ -78,3 +78,21 @@
 | Objetivo do Teste 	| Verificar se todas as rendas cadastradas estão sendo somadas corretamente e incluidas na barra de destinação. |
 |Critério de Êxito | Informações aparecendo corretamente na tela. |
 |  	|  	|
+
+
+ 
+| **Caso de Teste** 	| **CT-05.0 – Cadastro do usuário** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| O sistema deverá possibilitar o usuário criar seu cadastro com nome, e-mail, senha e confirmação de senha. |
+| Objetivo do Teste 	| Verificar se o usuário conseguiu se cadastrar sem dificuldade. |
+| Passos 	| O usuário deve acessar o site, clicar em realizar login e clicar em "Ainda não possui uma conta".  |
+|Critério de Êxito | O usuário se registra no sistema e a mensagem "Cadastro realizado com sucesso!" é apresentada. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-06.0 – Acesso ao sistema através do login** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| O software deverá ter sistema de Login. 		 |
+| Objetivo do Teste 	| Verificar se o usuário realiza o login de forma corretamente.|
+| Passos 	| O usuário deve acessar o sistema, preencher corretamente todos os campos solicitados, e-mail e senha e clicar no botão "Entrar". |
+|Critério de Êxito |  Ao clicar em "Entrar" o sistema deverá redirecionar o usuário para a tela principal dentro do sistema.|
+|  	|  	|
