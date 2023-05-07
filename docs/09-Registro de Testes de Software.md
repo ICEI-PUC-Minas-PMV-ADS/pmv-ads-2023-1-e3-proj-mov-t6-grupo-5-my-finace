@@ -82,4 +82,27 @@ Excluindo Rendas
 ![Iniciando Login](img/TelaDeLogin.png)
 
 
+## Caso de teste 07.0 – Cadastrar Metas
 
+![Tela de meta](img/tela_meta.jpg)
+
+![Tela Cadastro meta](img/cadastro_meta.jpg)
+
+![Meta Cadastrada](img/meta_cadastrada.jpg)
+
+
+## Caso de teste 07.1 – Cadastrar Metas
+
+![Meta Cadastrada](img/meta_cadastrada.jpg)
+
+![Informações Meta](img/exclusao_meta.jpg)
+
+## Caso de teste 07.2 – Cadastrar Metas
+
+![Meta Cadastrada](img/meta_cadastrada.jpg)
+
+![Informações Meta](img/exclusao_meta.jpg)
+
+![Log Meta Delete](img/exclusao_meta_log.png)
+
+![Tela de meta](img/tela_meta.jpg)
