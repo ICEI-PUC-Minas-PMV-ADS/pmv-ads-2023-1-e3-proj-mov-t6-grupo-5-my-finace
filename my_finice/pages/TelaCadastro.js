@@ -35,10 +35,10 @@ await cadastrar (dados)
     
       
           <View>
-                <Cb title="Registro de Rendas" onPress={()=>navigation.goBack()}/>
+                <Cb title="Cadastro My Finance" onPress={()=>navigation.goBack()}/>
           <View>
                 <Input
-                label="username"
+                label="Username"
                 value={username}
                 placeholder=""
                 onChangeText={username => setUsername(username)}
@@ -74,5 +74,9 @@ const style = StyleSheet.create({
   sel:{
     margin:8
   },
+  campos:{
+    top:262,
+  
+  }
 })
 export default Login;
