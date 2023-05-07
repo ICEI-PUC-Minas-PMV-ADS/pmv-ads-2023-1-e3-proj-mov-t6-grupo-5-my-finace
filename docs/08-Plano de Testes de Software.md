@@ -96,3 +96,31 @@
 | Passos 	| O usuário deve acessar o sistema, preencher corretamente todos os campos solicitados, e-mail e senha e clicar no botão "Entrar". |
 |Critério de Êxito |  Ao clicar em "Entrar" o sistema deverá redirecionar o usuário para a tela principal dentro do sistema.|
 |  	|  	|
+
+| **Caso de Teste** 	| **CT-07.0 – Cadastrar Metas** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| O software deve possibilitar o usuário a criar metas para poupar dinheiro. 		 |
+| Objetivo do Teste 	| Verificar se o usuário consegue cadastrar uma meta.|
+| Passos 	| O usuário deve acessar a aplicação, clicar em "Metas", apertar o botão com o simbolo "+" e preenhcer os campos. | 
+|Critério de Êxito |  Caso haja sucesso no cadastro, aparecera uma mensagem indicando que o cadastro foi concluido.|
+
+| **Caso de Teste** 	| **CT-07.1 – Cadastrar Metas** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| O software deve possibilitar o usuário a criar metas para poupar dinheiro. 		 |
+| Objetivo do Teste 	| Verificar se as informações das metas cadastradas estão sendo carregadas de maneira correta.|
+| Passos 	| O usuário deve acessar a aplicação, clicar em "Metas" e clicar na meta cadastrada| 
+|Critério de Êxito |  Informações das metas aparecendo de forma certa para editar.|
+
+| **Caso de Teste** 	| **CT-07.2 – Cadastrar Metas** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| O software deve possibilitar o usuário a criar metas para poupar dinheiro. 		 |
+| Objetivo do Teste 	| Verificar se a meta foi apagada.|
+| Passos 	| O usuário deve acessar a aplicação, clicar em "Metas", clicar na meta desejada e clciar no ícone de lixeira| 
+|Critério de Êxito |  Meta não aparecerá na tela de visualização de metas.|
+
+| **Caso de Teste** 	| **CT-07.2 – Cadastrar Metas** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| O software deve possibilitar o usuário a criar metas para poupar dinheiro. 		 |
+| Objetivo do Teste 	| Verificar se quando a meta é editada, as informação são atualizadas corretamente.|
+| Passos 	| O usuário deve acessar a aplicação, clicar em "Metas", clicar na meta desejada alterar os campos e clicar no ícone do disquete.| 
+|Critério de Êxito |  Meta editada com sucesso.|

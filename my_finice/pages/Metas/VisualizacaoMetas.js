@@ -31,7 +31,7 @@ function Metas() {
             <Text>{'Valor: R$' + item.valor_meta}</Text>
             <Text>{'Descrição Meta: ' + item.descricao_meta}</Text>
             <Text>{'Valor a ser Poupado: R$ ' + item.poupar_mes}</Text>
-            <ProgressBar progress={item.poupar_mes/item.valor_meta} color={'green'} />
+            <ProgressBar progress={item.poupar_mes/item.valor_meta} color={'green'} /> 
         </View>
         <List.Icon style={aviso.verMais} icon={'chevron-right'} color={'green'}/>
         </TouchableOpacity>
