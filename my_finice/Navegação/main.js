@@ -9,8 +9,9 @@ import DetalhesRendas from "../pages/DetalhesRendas";
 import VisualizacaoRendas from "../pages/VisualizacaoRendas";
 import EditarRendas from "../pages/EditarRendas";
 import EditarDespesas from "../pages/EditarDespesas";
-import Metas from "../pages/Metas";
-import RegistroMetas from "../pages/RegistroMetas";
+import VisualizacaoMetas from "../pages/Metas/VisualizacaoMetas";
+import RegistroMetas from "../pages/Metas/RegistroMetas";
+import EditarMetas from "../pages/Metas/EditarMetas";
 import TelaLogin from "../pages/TelaLogin";
 import TelaCadastro from "../pages/TelaCadastro";
 const Stack  = createNativeStackNavigator();
@@ -101,7 +102,7 @@ const Main =() =>{
                 />
                 <Stack.Screen
                     name='Metas'
-                    component={Metas}
+                    component={VisualizacaoMetas}
                     options={{
                         header: ()=>null,
                         }
@@ -110,6 +111,14 @@ const Main =() =>{
                 <Stack.Screen
                     name='RegistroMetas'
                     component={RegistroMetas}
+                    options={{
+                        header: ()=>null,
+                        }
+                    }
+                />
+                <Stack.Screen
+                    name='EditarMetas'
+                    component={EditarMetas}
                     options={{
                         header: ()=>null,
                         }

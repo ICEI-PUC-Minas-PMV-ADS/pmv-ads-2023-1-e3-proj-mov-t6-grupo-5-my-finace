@@ -6,9 +6,9 @@ import  VisualizacaoDespesa  from './VisualizacaoDespesa';
 import EvolucaoDespesas from './EvolucaoDespesas';
 import RegistroDeRendas from './RegistroDeRendas';
 import VisualizacaoRendas from './VisualizacaoRendas';
-import Metas from './Metas';
+import Metas from './Metas/VisualizacaoMetas';
 import DetalhesRendas from './DetalhesRendas';
-import RegistroMetas from './RegistroMetas';
+import RegistroMetas from './Metas/RegistroMetas';
 
 const Home = () => {
   const [index, setIndex] = React.useState(0);

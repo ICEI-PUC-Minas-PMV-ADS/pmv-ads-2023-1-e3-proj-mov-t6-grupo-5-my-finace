@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import { Button, RadioButton, Text } from 'react-native-paper';
-import Input from "../componentes/Input";
+import Input from "../../componentes/Input";
 import {View, StyleSheet} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Cb from "../componentes/Cb";
+import Cb from "../../componentes/Cb";
+import {adicionarMeta} from "../../Services/MetasDB";
 
 function RegistroMetas () {
     const navigation = useNavigation();
@@ -57,7 +58,7 @@ function RegistroMetas () {
             </View>
 
             <Button style={styles.save} mode='cotained' onPress={()=>{salvar()}}>
-                <Text style={styles.text}>Cadastrar Meta</Text>
+                Cadastrar Meta
             </Button>
         </View>
     );
@@ -67,9 +68,8 @@ function RegistroMetas () {
 
 const styles = StyleSheet.create({
     save: {
-        backgroundColor: '#00BFFF',
-        width: 300,
-        height: 50,
+        backgroundColor: '#green',
+        top:50
 
     },
 })
