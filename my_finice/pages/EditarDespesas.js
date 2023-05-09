@@ -56,12 +56,10 @@ const Main =({route}) =>{
         Parcela:Parcela,
         Categoria:d
         }
-        console.log(await atualizarDespesas(despesa))
         navigation.goBack();
     }
     //Deletando dados
     async function deletar(){
-       console.log(await deleteDespesas(id))
         navigation.goBack();
     }
     return(

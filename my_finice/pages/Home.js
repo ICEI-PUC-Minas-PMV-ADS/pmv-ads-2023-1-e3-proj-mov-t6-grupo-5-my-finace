@@ -13,12 +13,11 @@ import RegistroMetas from './Metas/RegistroMetas';
 const Home = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-    { key: 'T', title: 'Gastos', focusedIcon: 'credit-card-outline',color:'#3F51B5' },
-    { key: 'Evolucao', title: 'Acompanhamento', focusedIcon: 'equalizer'},
-    { key: 'Rendas', title: 'Visualização de Rendas', focusedIcon: 'database-arrow-up-outline'},
-    { key: 'Metas', title: 'Metas', focusedIcon: 'rocket-launch'},
-    { key: 'DetalhesRendas', title: 'Detalhes das Rendas', focusedIcon: 'clipboard-text-outline'}
-    
+    { key: 'T', title: '', focusedIcon: 'credit-card-outline',color:'#3F51B5' },
+    { key: 'Evolucao', title: '', focusedIcon: 'equalizer'},
+    { key: 'Rendas', title: '', focusedIcon: 'database-arrow-up-outline'},
+    { key: 'Metas', title: '', focusedIcon: 'rocket-launch'},
+    { key: 'DetalhesRendas', title: '', focusedIcon: 'clipboard-text-outline'}
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
