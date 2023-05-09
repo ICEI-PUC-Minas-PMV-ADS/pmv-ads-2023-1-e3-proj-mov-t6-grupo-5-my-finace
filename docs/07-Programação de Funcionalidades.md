@@ -3,56 +3,43 @@
 Para a entrega da segunda etapa implementamos a tela de registro de despesas como podemos ver nas imagens a seguir
 
 ## Códificação da tela de Login
-
-![coficacao tela Login](img/C%C3%B3digoTelaLogin.png)
+<img src="img/C%C3%B3digoTelaLogin.png" whidth="500px" height="500px">
 
 ## Tela Login Finalizada
-
-![tela de login](img/TelaDeLogin.png)
+<img src="img/TelaDeLogin.png" whidth="500px" height="500px">
 
 ## Códificação da tela de Cadastro
-
-![coficacao tela Cadastro](img/C%C3%B3digoTelaCadastro.png)
+<img src="img/C%C3%B3digoTelaCadastro.png" whidth="500px" height="500px">
 
 ## Tela de Cadastro Finalizada
-
-![tela de Cadastro](img/TelaDeCadastro.png)
+<img src="img/TelaDeCadastro.png" whidth="500px" height="500px">
 
 ## Códificação da tela de Despesas
-
-![coficacao tela despesas](img/tela%20de%20despas.png)
+<img src="img/tela%20de%20despas.png" whidth="500px" height="500px">
 
 ## Tela finalizada
-![tela de despesas finalizada](img/tela%20de%20cadastro%20de%20desepesas%20.png)
+<img src="img/tela%20de%20cadastro%20de%20desepesas%20.png" whidth="500px" height="500px">
 
 ## Codificação Tela de Registro de Rendas
-
-![Codificação Tela Registro](img/CODRegistroRendas.png)
+<img src="img/CODRegistroRendas.png" whidth="500px" height="500px">
 
 ## Tela Registro de Rendas Finalizada
-
-![Tela de Registro Finalizada](img/Incluindo.jpg)
+<img src="img/Incluindo.jpg" whidth="500px" height="500px">
 
 ## Codificação Tela de Visualização de Rendas
-
-![Codificação Tela Visualização](img/CODVisualizacaoRendas.png)
+<img src="img/CODVisualizacaoRendas.png" whidth="500px" height="500px">
 
 ## Tela Visualização de Rendas Finalizada
-
-![Tela de Visualização Finalizada](img/Visualiza%C3%A7%C3%A3o%201.jpg)
+<img src="img/Visualiza%C3%A7%C3%A3o%201.jpg" whidth="500px" height="500px">
 
 ## Codificação Tela de Detalhes de Rendas
-
-![Codificação Tela Detalhes](img/CODDetalhesRendas.png)
+<img src="img/CODDetalhesRendas.png" whidth="500px" height="500px">
 
 ## Tela de Detalhes de Rendas Finalizada
-
-![Tela de Detalhes Finalizada](img/Edi%C3%A7%C3%A3o%20Concluida.jpg)
+<img src="img/Edi%C3%A7%C3%A3o%20Concluida.jpg" whidth="500px" height="500px">
 
 ## Codificação Tela de Edição de Rendas
-
-![Codificação Tela Edição](img/CODEditarRendas.png)
+<img src="img/CODEditarRendas.png" whidth="500px" height="500px">
 
 ## Tela de Edição de Rendas Finalizada
-
-![Tela de Edição Finalizada](img/Editando.jpg)
+<img src="img/Editando.jpg" whidth="500px" height="500px">
