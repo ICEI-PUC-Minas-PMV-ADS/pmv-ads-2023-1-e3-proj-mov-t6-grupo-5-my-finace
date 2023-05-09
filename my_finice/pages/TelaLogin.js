@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Button, RadioButton, Text } from 'react-native-paper';
 import Input from "../componentes/Input";
-import {View, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, TouchableOpacity, Image, text} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Cb from "../componentes/Cb";
 import { validarlogin } from '../Services/LoginDB';
@@ -28,38 +28,50 @@ const result = await validarlogin(dados)
   return(
     
       
-          <View>
-              
+        <View>
+
+        <View stayle={style.tituloprincipal}>
+           <text>MY FINANCE</text>
+        </View>
+
           <View style={style.campos}>
+
             <Input
-                label="E-mail"
+                label="Email"
                 value={email}
                 placeholder=""
                 onChangeText={email => setEmail(email)}
               />
                 <Input
-                label="Senha"
+                label="Password"
                 value={senha}
                 placeholder=""
                 onChangeText={senha => setPassword(senha)}
               />
             
-                <Button style={style.save} mode="contained" onPress={() =>recuperarcadastro()} >
+              <Button style={style.save} mode="contained" onPress={() =>recuperarcadastro()} >
                   ENTRAR  
                 </Button>
               </View>
 
                 
                 <TouchableOpacity style={style.div} onPress={() => navigation.navigate('TelaCadastro')} >
-                        <Text>Ainda não possui uma conta?</Text>
-                    </TouchableOpacity>
+                  <Text>Ainda não possui uma conta?</Text>
+                </TouchableOpacity>
            
-            </View>
+          </View>
 
   );
 }
 
 const style = StyleSheet.create({
+  tituloprincipal:{
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 50,
+    backgroundColor:"red",
+  },
   save:{
     backgroundColor:"green",
     top:30,
@@ -68,11 +80,11 @@ const style = StyleSheet.create({
     margin:8,
   },
   div:{
-    top:322,
+    top:285,
     left:90,
   },
   campos:{
-    top:262,
+    top:230,
   
   }
 })

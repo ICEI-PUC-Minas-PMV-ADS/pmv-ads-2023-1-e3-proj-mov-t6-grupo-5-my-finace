@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { Button, RadioButton, Text } from 'react-native-paper';
 import Input from "../componentes/Input";
-import {View, StyleSheet} from 'react-native';
+import {Image, View, StyleSheet} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Cb from "../componentes/Cb";
 import {criartabela,cadastrar} from '../Services/LoginDB'
@@ -34,32 +34,33 @@ await cadastrar (dados)
   return(
     
       
-          <View>
-                <Cb title="Cadastro My Finance" onPress={()=>navigation.goBack()}/>
-          <View>
+    <View>
+      <Cb title="CADASTRO MY FINANCE" onPress={()=>navigation.goBack()}/>
+
+        <View style={style.campos}>
+          <Input
+          label="Username"
+          value={username}
+          placeholder=""
+          onChangeText={username => setUsername(username)}
+          />
                 <Input
-                label="Username"
-                value={username}
-                placeholder=""
-                onChangeText={username => setUsername(username)}
-              />
-                <Input
-                label="E-mail"
+                label="Email"
                 value={email}
                 placeholder=""
                 onChangeText={email => setEmail(email)}
               />
                 <Input
-                label="Senha"
+                label="Password"
                 value={senha}
                 placeholder=""
                 onChangeText={senha => setPassword(senha)}
               />
             
-          </View>
+            </View>
 
                 <Button style={style.save} mode="contained" onPress={()=>{criarcadastro()}}>
-                  ENTRAR  
+                  CRIAR CADASTRO  
                 </Button>
             </View>
 
@@ -69,13 +70,17 @@ await cadastrar (dados)
 const style = StyleSheet.create({
   save:{
     backgroundColor:"green",
-    top:40
+    top:190,
   },
   sel:{
-    margin:8
+    margin:8,
+  },
+  div:{
+    top:322,
+    left:90,
   },
   campos:{
-    top:262,
+    top:165,
   
   }
 })
