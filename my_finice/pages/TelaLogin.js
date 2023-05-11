@@ -31,7 +31,7 @@ const result = await validarlogin(dados)
         <View>
 
         <View stayle={style.tituloprincipal}>
-           <text>MY FINANCE</text>
+           <Text>MY FINANCE</Text>
         </View>
 
           <View style={style.campos}>

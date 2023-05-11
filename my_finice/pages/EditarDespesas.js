@@ -56,10 +56,12 @@ const Main =({route}) =>{
         Parcela:Parcela,
         Categoria:d
         }
+
         navigation.goBack();
     }
     //Deletando dados
     async function deletar(){
+        deleteDespesas(id)
         navigation.goBack();
     }
     return(
