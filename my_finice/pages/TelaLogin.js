@@ -25,41 +25,41 @@ const result = await validarlogin(dados)
 
 }
 
-  return(
+return(
     
       
-        <View>
+  <View>
 
         <View stayle={style.tituloprincipal}>
            <Text>MY FINANCE</Text>
         </View>
 
-          <View style={style.campos}>
+   <View style={style.campos}>
 
-            <Input
-                label="Email"
-                value={email}
-                placeholder=""
-                onChangeText={email => setEmail(email)}
-              />
-                <Input
-                label="Password"
-                value={senha}
-                placeholder=""
-                onChangeText={senha => setPassword(senha)}
-              />
-            
-              <Button style={style.save} mode="contained" onPress={() =>recuperarcadastro()} >
-                  ENTRAR  
-                </Button>
-              </View>
+   <Input
+      label="Email"
+      value={email}
+      placeholder=""
+      onChangeText={email => setEmail(email)}
+   />
+      <Input
+      label="Password"
+      value={senha}
+      placeholder=""
+      onChangeText={senha => setPassword(senha)}
+   />
+  
+    <Button style={style.save} mode="contained" onPress={() =>recuperarcadastro()} >
+        ENTRAR  
+    </Button>
+ </View>
 
-                
-                <TouchableOpacity style={style.div} onPress={() => navigation.navigate('TelaCadastro')} >
-                  <Text>Ainda não possui uma conta?</Text>
-                </TouchableOpacity>
-           
-          </View>
+              
+    <TouchableOpacity style={style.div} onPress={() => navigation.navigate('TelaCadastro')} >
+      <Text>Ainda não possui uma conta?</Text>
+    </TouchableOpacity>
+          
+  </View>
 
   );
 }
