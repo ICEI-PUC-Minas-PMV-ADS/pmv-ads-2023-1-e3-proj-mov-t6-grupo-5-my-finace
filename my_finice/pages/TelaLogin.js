@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Button, RadioButton, Text } from 'react-native-paper';
 import Input from "../componentes/Input";
-import {View, StyleSheet, TouchableOpacity, Image, text} from 'react-native';
+import {View, StyleSheet, TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Cb from "../componentes/Cb";
 import { validarlogin } from '../Services/LoginDB';
@@ -27,15 +27,14 @@ const result = await validarlogin(dados)
 
 return(
     
-      
   <View>
 
-    <View stayle={style.tituloprincipal}>
-      <Text>MY FINANCE</Text>
+    <View style={style.titulo}>
+       <Text style={style.texto01}>MY FINANCE</Text>
+       <Text style={style.texto02}>Bem-Vindo (a)</Text>
     </View>
 
    <View style={style.campos}>
-
    <Input
       label="Email"
       value={email}
@@ -47,45 +46,54 @@ return(
       value={senha}
       placeholder=""
       onChangeText={senha => setPassword(senha)}
+      secureTextEntry={true}
    />
-  
     <Button style={style.save} mode="contained" onPress={() =>recuperarcadastro()} >
-        ENTRAR  
+      ENTRAR  
     </Button>
- </View>
+  </View>
 
-              
     <TouchableOpacity style={style.div} onPress={() => navigation.navigate('TelaCadastro')} >
-      <Text>Ainda não possui uma conta?</Text>
+      <Text style={style.cadastro}>Ainda não possui uma conta?</Text>
     </TouchableOpacity>
-          
+    
   </View>
 
   );
 }
 
 const style = StyleSheet.create({
-  tituloprincipal:{
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 50,
-    backgroundColor:"red",
+  titulo:{
+    top: 180,
+
+  },
+  texto01:{
+    fontStyle: "italic",
+    fontSize: 30,
+    textAlign: "center",
+    
+  },
+  texto02:{
+    fontStyle: "italic",
+    textAlign: "center",
+  },
+  campos:{
+  top:230,
   },
   save:{
     backgroundColor:"green",
     top:30,
   },
-  sel:{
-    margin:8,
-  },
   div:{
     top:285,
     left:90,
+    margin:8,
   },
-  campos:{
-    top:230,
-  
+  sel:{
+    margin:8,
+  },
+  cadastro:{
+    color:"green",
   }
 })
 

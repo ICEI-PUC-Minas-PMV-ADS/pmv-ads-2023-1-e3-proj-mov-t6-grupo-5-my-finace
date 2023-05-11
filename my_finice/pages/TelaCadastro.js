@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import { Button, RadioButton, Text } from 'react-native-paper';
+import { Button, RadioButton, Text, TextInputMask, TextInput} from 'react-native-paper';
 import Input from "../componentes/Input";
-import {Image, View, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Cb from "../componentes/Cb";
 import {criartabela,cadastrar} from '../Services/LoginDB'
@@ -26,16 +26,18 @@ async function criarcadastro () {
   }
 
 await cadastrar (dados)
-
-}
-
-
+navigation.navigate('TelaLogin')
+} 
 
   return(
-    
-      
+   
     <View>
-      <Cb title="CADASTRO MY FINANCE" onPress={()=>navigation.goBack()}/>
+      <Cb title="" onPress={()=>navigation.goBack()}/>
+
+      <View style={style.titulo}>
+       <Text>CADASTRE-SE</Text>
+       <Text>E fácil e rápido!</Text>
+      </View>
 
         <View style={style.campos}>
           <Input
@@ -44,30 +46,43 @@ await cadastrar (dados)
           placeholder=""
           onChangeText={username => setUsername(username)}
           />
-                <Input
-                label="Email"
-                value={email}
-                placeholder=""
-                onChangeText={email => setEmail(email)}
-              />
-                <Input
-                label="Password"
-                value={senha}
-                placeholder=""
-                onChangeText={senha => setPassword(senha)}
-              />
-            
-            </View>
-
-                <Button style={style.save} mode="contained" onPress={()=>{criarcadastro()}}>
-                  CRIAR CADASTRO  
-                </Button>
-            </View>
+           <Input
+          label="Fone"        
+          placeholder=''
+          onChangeText={fone => setFone(fone)}
+          />
+          <Input
+          label="Email"
+          value={email}
+          placeholder=""
+          onChangeText={email => setEmail(email)}
+          />
+          <Input
+          label="Password"
+          value={senha}
+          placeholder=""
+          onChangeText={senha => setPassword(senha)}
+          />   
+          <Input
+          label="Confirm your password"
+          onChangeText={senha => setPassword(senha)}
+          />
+        
+        </View>
+          <Button style={style.save} mode="contained" onPress={()=>{criarcadastro()}}>
+            CADASTRA-SE  
+          </Button>
+        </View>
 
   );
 }
 
 const style = StyleSheet.create({
+  titulo:{
+    fontStyle:"italic",
+    top: 120,
+    left: 135,
+  },
   save:{
     backgroundColor:"green",
     top:190,
