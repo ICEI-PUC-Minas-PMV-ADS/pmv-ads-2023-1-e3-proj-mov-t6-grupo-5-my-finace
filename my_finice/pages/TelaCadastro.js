@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Button, RadioButton, Text, TextInputMask, TextInput} from 'react-native-paper';
+import { Button, RadioButton, Text} from 'react-native-paper';
 import Input from "../componentes/Input";
 import {View, StyleSheet} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -33,10 +33,10 @@ navigation.navigate('TelaLogin')
    
     <View>
       <Cb title="" onPress={()=>navigation.goBack()}/>
-
+     
       <View style={style.titulo}>
-       <Text>CADASTRE-SE</Text>
-       <Text>E fácil e rápido!</Text>
+       <Text style={style.texto01}>CADASTRE-SE</Text>
+       <Text style={style.texto02}>E fácil e rápido!</Text>
       </View>
 
         <View style={style.campos}>
@@ -62,10 +62,11 @@ navigation.navigate('TelaLogin')
           value={senha}
           placeholder=""
           onChangeText={senha => setPassword(senha)}
+          secureTextEntry={true}
           />   
           <Input
           label="Confirm your password"
-          onChangeText={senha => setPassword(senha)}
+          secureTextEntry={true}
           />
         
         </View>
@@ -79,9 +80,20 @@ navigation.navigate('TelaLogin')
 
 const style = StyleSheet.create({
   titulo:{
-    fontStyle:"italic",
-    top: 120,
-    left: 135,
+    top: 80,
+  },
+  texto01:{
+    fontStyle: "impact",
+    fontSize: 52,
+    textAlign: "center",
+    color:"green",
+  },
+  texto02:{
+    fontStyle: "italic",
+    textAlign: "center",
+  },
+  campos:{
+    top:110,
   },
   save:{
     backgroundColor:"green",
@@ -91,12 +103,8 @@ const style = StyleSheet.create({
     margin:8,
   },
   div:{
-    top:322,
+    top:300,
     left:90,
-  },
-  campos:{
-    top:165,
-  
-  }
+   }
 })
 export default Login;

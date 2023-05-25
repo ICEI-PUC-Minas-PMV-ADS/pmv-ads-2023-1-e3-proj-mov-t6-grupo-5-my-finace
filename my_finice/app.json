@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "banana",
-    "slug": "banana",
+    "name": "My Finance",
+    "slug": "My Finance",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
