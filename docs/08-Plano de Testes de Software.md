@@ -124,3 +124,10 @@
 | Objetivo do Teste 	| Verificar se quando a meta é editada, as informação são atualizadas corretamente.|
 | Passos 	| O usuário deve acessar a aplicação, clicar em "Metas", clicar na meta desejada alterar os campos e clicar no ícone do disquete.| 
 |Critério de Êxito |  Meta editada com sucesso.|
+
+| **Caso de Teste** 	| **CT-08.0 – Visualizar gastos de forma mensal e por categoria** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	|  O sistema deve disponibilizar um gráfico que mostre a evolução das despesas do usuário mês a mês, para que o mesmo veja se está conseguindo alcançar seus objetivos. |
+| Objetivo do Teste 	| Verificar se as informações aparecem de maneira esperada na tela de evolução de despesas|
+| Passos 	| Após o cadastro da despesas o usuario deverar ir na tela de evolução de desepesas e verificar se as informações aparecem lá| 
+|Critério de Êxito | Quando o usuario consegue ver seus gastos dias a dia e em qual categoria ele está gastando mais| 
