@@ -61,6 +61,20 @@ Para cada tarefa do participante é possível meditar:
 |Dados coletados:|Será coletado a imagem da tela do usuário durante o processo e o feedback do mesmo sobre a aplicação.
 |Caso de sucesso:|Caso de sucesso do teste, se dá quando o usuário consegue realizar todas as tarefas sem nenhum problema ou dúvida quanto ao uso da aplicação.
 
+|| 5 - Evolução de renda |  |
+|--------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+|Objetivo: | Esse plano tem como objetivo avaliar se o usuário consegue acompanhar seus gastos de forma mensal|
+|Quando e onde o teste será executado: | O teste será realizado de maneira online na semana do dia 28/05/2023.                                
+|Tempo médio de duração do teste: |O tempo previsto para realização de cada teste e de aproximadamente 4 a 10 minutos.                             |
+|Ambiente de execução: | O teste será feito na plataforma expo online.                
+|Usuários evolvidos: | Serão dois usuários que tem o perfil do nosso público alvo.
+|Tarefas a serem executadas: |Abrir a tela de evolução de despesas após ter cadastrado uma e verificar se a mesma aparece la
+|Usuários evolvidos: | Serão dois usuários que tem o perfil do nosso público alvo.
+|Funcionalidade mais critica:| A funcionalidade mais critica e a informação não aparecer.
+|Dados coletados:|Será coletado a imagem da tela do usuário durante o processo e o feedback do mesmo sobre a aplicação.
+|Caso de sucesso:|Caso de sucesso do teste, se dá quando o usuário consegue visualizar suas despesas com suas respectivas datas.
+
+
 | **Tarefa 1** | **Critério de Êxito** | **O que será avaliado** |
 |--------------|----------------------|-------------------------|
 |Cadastrar no aplicativo. | O sistema possibilitará direcionamento para uma página de cadastro para preechimento das informações do próprio usuário. | Facilidade em realizar uma ação. Efetivação da tarefa. Quantidade de erros cometidos. Tempo necessário para se concluir. Interface apresentável. |
