@@ -19,10 +19,10 @@ Após teste realizado pelo usuário 003, não foi constatado dificuldade para fa
 
 Após ser realizado o teste com o usuário 004, não foi informado dificuldades para executar as funções de CRUD no porcesso de cadastro do sistema my finance. Assim podemos constatar que o teste ocorreu de acordo com o planejado pela equipe. Em anexo segue as imagens do teste sendo realizado:
 
->-[Teste de usabilidade - Tela cadastro de Usuário](https://youtube.com/shorts/7gTnpcBXfhw?feature=share)
+>-[Teste de usabilidade - Tela cadastro de Usuário](https://youtube.com/shorts/2ZAkqW-wugI)
 
 ### Teste de usabilidade - Tela de Login do Usuário 
 
 Após ser realizado o teste com o usuário 005, Não foi informado dificuldades para executar as funções de CRUD no porcesso de login do usuário no sistema my finance. Assim podemos constatar que o teste ocorreu de acordo com o planejado pela equipe. Em anexo segue as imagens do teste sendo realizado:
 
->-[Teste de usabilidade - Tela Login do Usuário](https://youtube.com/shorts/OrMF0NzoYPg?feature=share)
+>-[Teste de usabilidade - Tela Login do Usuário](https://youtube.com/shorts/vHQ46FCYLNo)
