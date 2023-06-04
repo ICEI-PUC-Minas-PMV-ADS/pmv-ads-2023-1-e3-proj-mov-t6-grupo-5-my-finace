@@ -43,3 +43,9 @@ Para a entrega da segunda etapa implementamos a tela de registro de despesas com
 
 ## Tela de Edição de Rendas Finalizada
 <img src="img/Editando.jpg" whidth="500px" height="500px">
+
+## Codificação Tela de acompanhamento das despesas
+<img src="img/codetelaEvolução.png" whidth="500px" height="500px">
+
+## Tela de acompanhamento
+<img src="img/evolução.jpg" whidth="500px" height="500px">
