@@ -40,18 +40,19 @@ function Metas() {
     }
   };
 
-  const Item = ({ item }) => {
+  const Item = ({ item, index }) => {
     const valorAtual = valorAdicional[item.id] || 0;
     const porcentagemMeta = (valorAtual / item.valor_meta) * 100 || 0;
+    const itemStyle = index % 2 === 0 ? aviso.item : [aviso.item, { backgroundColor: '#F5F5F5' }];
 
     return (
       <TouchableOpacity
-        style={aviso.item}
+        style={itemStyle}
         onPress={() => navigation.navigate('EditarMetas', { id: item.id })}
       >
         <List.Icon style={aviso.iconePosicao} />
         <View style={aviso.lista}>
-          <Text>{item.titulo_meta}</Text>
+          <Text style={{fontWeight: 'bold' }}>{item.titulo_meta}</Text>
           <Text>{'Valor: R$' + item.valor_meta}</Text>
           <Text>{'Descrição Meta: ' + item.descricao_meta}</Text>
           <Text>{'Valor a ser Poupado: R$ ' + item.poupar_mes}</Text>
@@ -103,8 +104,7 @@ const aviso = StyleSheet.create({
       top:50,
     },
     item: {
-      backgroundColor: '#fff',
-      padding: 20,
+      paddingTop: 5,
       marginVertical: 8,
       marginHorizontal: 16,
       borderLeftWidth: 1,
