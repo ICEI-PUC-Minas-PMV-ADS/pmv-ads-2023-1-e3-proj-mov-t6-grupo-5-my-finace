@@ -6,7 +6,6 @@ import {useIsFocused } from "@react-navigation/native";
 import { BarChart, XAxis,YAxis,Grid } from 'react-native-svg-charts'
 import * as scale from 'd3-scale'
 
-//QQimport { VictoryBar, VictoryChart, VictoryLabel,VictoryGroup,VictoryTheme } from "victory-native";
 import {pegarInformacaoParaGrafico,gastosPorCategoria} from '../Services/Despesasdb';
 
 function EvolucaoDespesas() {
